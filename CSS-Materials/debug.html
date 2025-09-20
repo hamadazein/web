@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Materials - Debug</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .error { color: red; }
+        .success { color: green; }
+        .info { color: blue; }
+    </style>
+</head>
+<body>
+    <h1>CSS Materials - Debug Page</h1>
+    
+    <h2>File Structure Test:</h2>
+    <ul>
+        <li class="info">Current file: CSS-Materials/debug.html</li>
+        <li class="info">Main CSS file: <a href="../style.css" target="_blank">../style.css</a></li>
+        <li class="info">Local CSS file: <a href="style.css" target="_blank">./style.css</a></li>
+        <li class="info">Main index: <a href="../index.html">../index.html</a></li>
+        <li class="info">CSS index: <a href="index.html">index.html</a></li>
+    </ul>
+
+    <h2>Navigation Test:</h2>
+    <p><a href="index.html" class="success">Go to CSS-Materials/index.html</a></p>
+    <p><a href="../index.html" class="success">Go to main index.html</a></p>
+
+    <script>
+        // Test CSS loading
+        window.addEventListener('load', function() {
+            const links = document.querySelectorAll('link[rel="stylesheet"]');
+            links.forEach(link => {
+                link.addEventListener('load', () => {
+                    console.log('CSS loaded successfully:', link.href);
+                });
+                link.addEventListener('error', () => {
+                    console.error('CSS failed to load:', link.href);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
