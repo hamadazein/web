@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="id-ID">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Materi pembelajaran pemrograman web HTML lengkap dari dasar hingga lanjut. Tutorial HTML dalam bahasa Indonesia.">
+    <meta name="keywords" content="HTML, tutorial, pemrograman web, belajar HTML, Indonesia">
+    <meta name="author" content="Materi Pemrograman Web">
+    <title>Materi Pemrograman Web - HTML</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <div class="logo-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="url(#gradient)" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M2 17L12 22L22 17" stroke="url(#gradient)" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M2 12L12 17L22 12" stroke="url(#gradient)" stroke-width="2" stroke-linejoin="round"/>
+                            <defs>
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#667eea"/>
+                                    <stop offset="100%" style="stop-color:#764ba2"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#tentang" class="nav-link">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#materi" class="nav-link">Materi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://github.com/mysitleh/materi-pemrograman-web" target="_blank" class="nav-link">GitHub</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="hero-title">Belajar HTML dari Dasar</h2>
+                    <p class="hero-description">
+                        Kumpulan materi pembelajaran HTML lengkap dalam bahasa Indonesia. 
+                        Dari definisi dasar hingga topik lanjutan seperti HTML5, semantic elements, dan multimedia.
+                    </p>
+                    <a href="#materi" class="btn btn-primary">Mulai Belajar</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="tentang" class="about">
+            <div class="container">
+                <h2 class="section-title">Tentang Materi Ini</h2>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="card-icon">🎯</div>
+                        <h3>Sistematis</h3>
+                        <p>Materi disusun secara berurutan dari konsep dasar hingga lanjutan untuk memudahkan pembelajaran.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon">💻</div>
+                        <h3>Praktis</h3>
+                        <p>Dilengkapi dengan contoh kode dan penjelasan yang mudah dipahami untuk praktik langsung.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="materi" class="topics">
+            <div class="container">
+                <h2 class="section-title">Daftar Materi HTML</h2>
+                <div class="topics-grid">
+                    
+                    <!-- Dasar HTML -->
+                    <div class="topic-category">
+                        <h3 class="category-title">Dasar HTML</h3>
+                        <div class="topic-cards">
+                            <a href="000 Definisi HTML/README.md" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">000</span>
+                                    <span class="card-badge new">Dasar</span>
+                                </div>
+                                <h4>Definisi HTML</h4>
+                                <p>Pengenalan dan definisi HTML sebagai bahasa markup</p>
+                            </a>
+                            <a href="001 HTML Introduction/README.md" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">001</span>
+                                    <span class="card-badge new">Dasar</span>
+                                </div>
+                                <h4>HTML Introduction</h4>
+                                <p>Pengenalan struktur dasar dokumen HTML</p>
+                            </a>
+                            <a href="002 HTML Basic/README.md" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">002</span>
+                                    <span class="card-badge new">Dasar</span>
+                                </div>
+                                <h4>HTML Basic</h4>
+                                <p>Konsep dasar dan syntax HTML</p>
+                            </a>
+                            <a href="003 HTML Editors/README.md" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">003</span>
+                                    <span class="card-badge new">Dasar</span>
+                                </div>
+                                <h4>HTML Editors</h4>
+                                <p>Tools dan editor untuk menulis HTML</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Elemen HTML -->
+                    <div class="topic-category">
+                        <h3 class="category-title">Elemen & Atribut</h3>
+                        <div class="topic-cards">
+                            <a href="004 HTML Elements/README.md" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">004</span>
+                                    <span class="card-badge">Elemen</span>
+                                </div>
+                                <h4>HTML Elements</h4>
+                                <p>Struktur dan jenis elemen HTML</p>
+                            </a>
+                            <a href="005 HTML Attributes/README.md" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">005</span>
+                                    <span class="card-badge">Elemen</span>
+                                </div>
+                                <h4>HTML Attributes</h4>
+                                <p>Atribut dan properti elemen HTML</p>
+                            </a>
+                            <a href="020 HTML Classes/README.md" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">020</span>
+                                    <span class="card-badge">Elemen</span>
+                                </div>
+                                <h4>HTML Classes</h4>
+                                <p>Penggunaan class untuk styling</p>
+                            </a>
+                            <a href="021 HTML Id/README.md" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">021</span>
+                                    <span class="card-badge">Elemen</span>
+                                </div>
+                                <h4>HTML Id</h4>
+                                <p>Penggunaan ID sebagai identifier unik</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Teks & Formatting -->
+                    <div class="topic-category">
+                        <h3 class="category-title">Teks & Format</h3>
+                        <div class="topic-cards">
+                            <a href="006 HTML Headings/README.md" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">006</span>
+                                    <span class="card-badge text">Teks</span>
+                                </div>
+                                <h4>HTML Headings</h4>
+                                <p>Penggunaan heading H1-H6</p>
+                            </a>
+                            <a href="007 HTML Paragraphs/README.md" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">007</span>
+                                    <span class="card-badge text">Teks</span>
+                                </div>
+                                <h4>HTML Paragraphs</h4>
+                                <p>Membuat dan mengatur paragraf</p>
+                            </a>
+                            <a href="009 HTML Text Formatting/README.md" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">009</span>
+                                    <span class="card-badge text">Teks</span>
+                                </div>
+                                <h4>Text Formatting</h4>
+                                <p>Bold, italic, underline, dan format teks lainnya</p>
+                            </a>
+                            <a href="010 HTML Quotation/README.md" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">010</span>
+                                    <span class="card-badge text">Teks</span>
+                                </div>
+                                <h4>HTML Quotation</h4>
+                                <p>Kutipan dan blockquote</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Styling -->
+                    <div class="topic-category">
+                        <h3 class="category-title">Styling & CSS</h3>
+                        <div class="topic-cards">
+                            <a href="008 HTML Style/README.md" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">008</span>
+                                    <span class="card-badge style">Style</span>
+                                </div>
+                                <h4>HTML Style</h4>
+                                <p>Pengenalan styling dalam HTML</p>
+                            </a>
+                            <a href="012 HTML Color/README.md" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">012</span>
+                                    <span class="card-badge style">Style</span>
+                                </div>
+                                <h4>HTML Color</h4>
+                                <p>Penggunaan warna dalam HTML</p>
+                            </a>
+                            <a href="013 HTML CSS/README.md" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">013</span>
+                                    <span class="card-badge style">Style</span>
+                                </div>
+                                <h4>HTML CSS</h4>
+                                <p>Integrasi CSS dengan HTML</p>
+                            </a>
+                            <a href="029 HTML Responsive/README.md" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">029</span>
+                                    <span class="card-badge style">Style</span>
+                                </div>
+                                <h4>HTML Responsive</h4>
+                                <p>Desain responsif untuk berbagai perangkat</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Media & Link -->
+                    <div class="topic-category">
+                        <h3 class="category-title">Media & Link</h3>
+                        <div class="topic-cards">
+                            <a href="014 HTML HyperLink/README.md" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">014</span>
+                                    <span class="card-badge media">Media</span>
+                                </div>
+                                <h4>HTML HyperLink</h4>
+                                <p>Membuat tautan ke halaman lain</p>
+                            </a>
+                            <a href="015 HTML Images/README.md" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">015</span>
+                                    <span class="card-badge media">Media</span>
+                                </div>
+                                <h4>HTML Images</h4>
+                                <p>Menampilkan gambar dalam halaman web</p>
+                            </a>
+                            <a href="047 HTML Video/README.md" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">047</span>
+                                    <span class="card-badge media">Media</span>
+                                </div>
+                                <h4>HTML Video</h4>
+                                <p>Embed video dalam halaman web</p>
+                            </a>
+                            <a href="048 HTML Audio/README.md" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">048</span>
+                                    <span class="card-badge media">Media</span>
+                                </div>
+                                <h4>HTML Audio</h4>
+                                <p>Menambahkan audio ke halaman web</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Tabel & Daftar -->
+                    <div class="topic-category">
+                        <h3 class="category-title">Tabel & Daftar</h3>
+                        <div class="topic-cards">
+                            <a href="017 HTML Tables/README.md" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">017</span>
+                                    <span class="card-badge table">Tabel</span>
+                                </div>
+                                <h4>HTML Tables</h4>
+                                <p>Membuat tabel dan struktur data</p>
+                            </a>
+                            <a href="018 HTML Lists/README.md" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">018</span>
+                                    <span class="card-badge table">Tabel</span>
+                                </div>
+                                <h4>HTML Lists</h4>
+                                <p>Daftar berurut dan tidak berurut</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Form -->
+                    <div class="topic-category">
+                        <h3 class="category-title">Formulir</h3>
+                        <div class="topic-cards">
+                            <a href="035 HTML Forms/README.md" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">035</span>
+                                    <span class="card-badge form">Form</span>
+                                </div>
+                                <h4>HTML Forms</h4>
+                                <p>Membuat formulir input pengguna</p>
+                            </a>
+                            <a href="036 HTML Input Types/README.md" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">036</span>
+                                    <span class="card-badge form">Form</span>
+                                </div>
+                                <h4>Input Types</h4>
+                                <p>Berbagai jenis input dalam formulir</p>
+                            </a>
+                            <a href="038 HTML Label/README.md" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">038</span>
+                                    <span class="card-badge form">Form</span>
+                                </div>
+                                <h4>HTML Label</h4>
+                                <p>Label untuk elemen formulir</p>
+                            </a>
+                            <a href="040 HTML Button/README.md" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">040</span>
+                                    <span class="card-badge form">Form</span>
+                                </div>
+                                <h4>HTML Button</h4>
+                                <p>Tombol untuk interaksi pengguna</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Advanced -->
+                    <div class="topic-category">
+                        <h3 class="category-title">Tingkat Lanjut</h3>
+                        <div class="topic-cards">
+                            <a href="031 HTML Semantic/README.md" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">031</span>
+                                    <span class="card-badge advanced">Lanjut</span>
+                                </div>
+                                <h4>HTML Semantic</h4>
+                                <p>Elemen semantik HTML5</p>
+                            </a>
+                            <a href="043 HTML Canvas/README.md" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">043</span>
+                                    <span class="card-badge advanced">Lanjut</span>
+                                </div>
+                                <h4>HTML Canvas</h4>
+                                <p>Menggambar grafik dengan JavaScript</p>
+                            </a>
+                            <a href="045 HTML SVG/README.md" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">045</span>
+                                    <span class="card-badge advanced">Lanjut</span>
+                                </div>
+                                <h4>HTML SVG</h4>
+                                <p>Grafik vektor scalable</p>
+                            </a>
+                            <a href="050 HTML Tags List/README.md" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">050</span>
+                                    <span class="card-badge advanced">Lanjut</span>
+                                </div>
+                                <h4>HTML Tags List</h4>
+                                <p>Daftar lengkap semua tag HTML</p>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                
+                <div class="all-topics">
+                    <h3>Semua Topik</h3>
+                    <div class="topics-list">
+                        <a href="000 Definisi HTML/README.md">000 - Definisi HTML</a>
+                        <a href="001 HTML Introduction/README.md">001 - HTML Introduction</a>
+                        <a href="002 HTML Basic/README.md">002 - HTML Basic</a>
+                        <a href="003 HTML Editors/README.md">003 - HTML Editors</a>
+                        <a href="004 HTML Elements/README.md">004 - HTML Elements</a>
+                        <a href="005 HTML Attributes/README.md">005 - HTML Attributes</a>
+                        <a href="006 HTML Headings/README.md">006 - HTML Headings</a>
+                        <a href="007 HTML Paragraphs/README.md">007 - HTML Paragraphs</a>
+                        <a href="008 HTML Style/README.md">008 - HTML Style</a>
+                        <a href="009 HTML Text Formatting/README.md">009 - HTML Text Formatting</a>
+                        <a href="010 HTML Quotation/README.md">010 - HTML Quotation</a>
+                        <a href="011 HTML Comments/README.md">011 - HTML Comments</a>
+                        <a href="012 HTML Color/README.md">012 - HTML Color</a>
+                        <a href="013 HTML CSS/README.md">013 - HTML CSS</a>
+                        <a href="014 HTML HyperLink/README.md">014 - HTML HyperLink</a>
+                        <a href="015 HTML Images/README.md">015 - HTML Images</a>
+                        <a href="016 HTML Picture/README.md">016 - HTML Picture</a>
+                        <a href="017 HTML Tables/README.md">017 - HTML Tables</a>
+                        <a href="018 HTML Lists/README.md">018 - HTML Lists</a>
+                        <a href="019 HTML Block & Inline/README.md">019 - HTML Block & Inline</a>
+                        <a href="020 HTML Classes/README.md">020 - HTML Classes</a>
+                        <a href="021 HTML Id/README.md">021 - HTML Id</a>
+                        <a href="022 HTML IFrame/README.md">022 - HTML IFrame</a>
+                        <a href="023 HTML Script/README.md">023 - HTML Script</a>
+                        <a href="024 HTML FilePath/README.md">024 - HTML FilePath</a>
+                        <a href="025 HTML Head/README.md">025 - HTML Head</a>
+                        <a href="026 HTML Link/README.md">026 - HTML Link</a>
+                        <a href="027 HTML Meta/README.md">027 - HTML Meta</a>
+                        <a href="028 HTML Base/README.md">028 - HTML Base</a>
+                        <a href="029 HTML Responsive/README.md">029 - HTML Responsive</a>
+                        <a href="030 HTML Computer Code/README.md">030 - HTML Computer Code</a>
+                        <a href="031 HTML Semantic/README.md">031 - HTML Semantic</a>
+                        <a href="032 HTML Entity/README.md">032 - HTML Entity</a>
+                        <a href="033 HTML Symbols/README.md">033 - HTML Symbols</a>
+                        <a href="034 HTML Emojis/README.md">034 - HTML Emojis</a>
+                        <a href="035 HTML Forms/README.md">035 - HTML Forms</a>
+                        <a href="036 HTML Input Types/README.md">036 - HTML Input Types</a>
+                        <a href="037 HTML Input Attributes/README.md">037 - HTML Input Attributes</a>
+                        <a href="038 HTML Label/README.md">038 - HTML Label</a>
+                        <a href="039 HTML Select/README.md">039 - HTML Select</a>
+                        <a href="040 HTML Button/README.md">040 - HTML Button</a>
+                        <a href="041 HTML Textarea/README.md">041 - HTML Textarea</a>
+                        <a href="042 HTML Data/README.md">042 - HTML Data</a>
+                        <a href="043 HTML Canvas/README.md">043 - HTML Canvas</a>
+                        <a href="044 HTML Multimedia/README.md">044 - HTML Multimedia</a>
+                        <a href="045 HTML SVG/README.md">045 - HTML SVG</a>
+                        <a href="046 HTML Figure/README.md">046 - HTML Figure</a>
+                        <a href="047 HTML Video/README.md">047 - HTML Video</a>
+                        <a href="048 HTML Audio/README.md">048 - HTML Audio</a>
+                        <a href="049 HTML Lang Code/README.md">049 - HTML Lang Code</a>
+                        <a href="050 HTML Tags List/README.md">050 - HTML Tags List</a>
+                        <a href="051 HTML Section/README.md">051 - HTML Section</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Materi Pemrograman Web</h4>
+                    <p>Sumber pembelajaran HTML terlengkap dalam bahasa Indonesia.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontak</h4>
+                    <p>GitHub: <a href="https://github.com/mysitleh" target="_blank">@mysitleh</a></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Lisensi</h4>
+                    <p>Materi ini tersedia untuk pembelajaran dan pengembangan.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Materi Pemrograman Web.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add active state to navigation
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Mobile menu toggle
+        const navbar = document.querySelector('.navbar');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        // Create mobile menu button
+        const mobileMenuBtn = document.createElement('button');
+        mobileMenuBtn.className = 'mobile-menu-btn';
+        mobileMenuBtn.innerHTML = '☰';
+        mobileMenuBtn.setAttribute('aria-label', 'Toggle menu');
+        
+        navbar.querySelector('.nav-container').appendChild(mobileMenuBtn);
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navMenu.classList.contains('active') ? '✕' : '☰';
+        });
+
+        // Close mobile menu when clicking on a link
+        navMenu.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileMenuBtn.innerHTML = '☰';
+            });
+        });
+    </script>
+</body>
+</html>
