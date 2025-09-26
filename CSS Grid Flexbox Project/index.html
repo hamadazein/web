@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid & Flexbox Project</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        header h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        header p {
+            color: #666;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+        
+        .project-info {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .project-info h2 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .feature {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .feature h3 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        
+        .pages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .page-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .page-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .page-card h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+        
+        .page-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background: #2980b9;
+        }
+        
+        .btn-code {
+            background: #2c3e50;
+            border: none;
+        }
+        
+        .btn-code:hover {
+            background: #34495e;
+        }
+        
+        .page-buttons {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+        
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 2rem;
+            padding: 0.75rem 1.5rem;
+            background: rgba(255, 255, 255, 0.9);
+            color: #2c3e50;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid #3498db;
+        }
+        
+        .back-btn:hover {
+            background: #3498db;
+            color: white;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1.5rem 0;
+            justify-content: center;
+        }
+        
+        .tech-tag {
+            background: #3498db;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .pages-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html" class="back-btn">← Kembali ke Beranda</a>
+        
+        <header>
+            <h1>CSS Grid & Flexbox Project</h1>
+            <p>Website responsif minimalist yang mendemonstrasikan penggunaan CSS Grid dan Flexbox untuk layout modern</p>
+            
+            <div class="tech-stack">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">CSS Grid</span>
+                <span class="tech-tag">CSS Flexbox</span>
+                <span class="tech-tag">Responsive Design</span>
+            </div>
+        </header>
+        
+        <div class="project-info">
+            <h2>📋 Tentang Project</h2>
+            <p>Project ini dibuat sebagai pembelajaran praktis untuk memahami konsep CSS Grid dan Flexbox. Website terdiri dari 4 halaman dengan desain minimalist dan fully responsive.</p>
+            
+            <div class="features">
+                <div class="feature">
+                    <h3>🎨 CSS Grid</h3>
+                    <p>Layout container utama, form layout dengan auto-fit columns, dan gallery grid responsive</p>
+                </div>
+                <div class="feature">
+                    <h3>📱 CSS Flexbox</h3>
+                    <p>Navigation bar, form groups, gallery items alignment, dan header/footer centering</p>
+                </div>
+                <div class="feature">
+                    <h3>🔧 Responsive Design</h3>
+                    <p>Mobile-first approach dengan breakpoint yang optimal untuk berbagai ukuran layar</p>
+                </div>
+                <div class="feature">
+                    <h3>✨ Clean Code</h3>
+                    <p>Struktur HTML yang semantic dan CSS yang terorganisir dengan baik</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="project-info">
+            <h2>🗂️ Halaman Website</h2>
+            <div class="pages-grid">
+                <div class="page-card">
+                    <h3>🏠 Beranda</h3>
+                    <p>Halaman utama dengan form input data dan tabel yang menampilkan data. Menggunakan CSS Grid untuk layout dan Flexbox untuk form alignment.</p>
+                    <div class="page-buttons">
+                        <a href="beranda.html" class="btn">Lihat Halaman</a>
+                        <a href="https://github.com/hamadazein/web/blob/main/CSS%20Grid%20Flexbox%20Project/beranda.html" target="_blank" class="btn btn-code">Code</a>
+                    </div>
+                </div>
+                
+                <div class="page-card">
+                    <h3>👤 Tentang Saya</h3>
+                    <p>Halaman profil dengan foto bulat dan deskripsi. Layout menggunakan CSS Grid dengan foto di kiri dan deskripsi di kanan.</p>
+                    <div class="page-buttons">
+                        <a href="tentang.html" class="btn">Lihat Halaman</a>
+                        <a href="https://github.com/hamadazein/web/blob/main/CSS%20Grid%20Flexbox%20Project/tentang.html" target="_blank" class="btn btn-code">Code</a>
+                    </div>
+                </div>
+                
+                <div class="page-card">
+                    <h3>📞 Kontak</h3>
+                    <p>Halaman kontak dengan form dan informasi kontak. Menggunakan Grid layout untuk membagi form dan info kontak.</p>
+                    <div class="page-buttons">
+                        <a href="kontak.html" class="btn">Lihat Halaman</a>
+                        <a href="https://github.com/hamadazein/web/blob/main/CSS%20Grid%20Flexbox%20Project/kontak.html" target="_blank" class="btn btn-code">Code</a>
+                    </div>
+                </div>
+                
+                <div class="page-card">
+                    <h3>🖼️ Galeri</h3>
+                    <p>Halaman galeri foto dengan grid layout responsif. Menggunakan CSS Grid dengan auto-fit columns untuk tampilan yang optimal.</p>
+                    <div class="page-buttons">
+                        <a href="galeri.html" class="btn">Lihat Halaman</a>
+                        <a href="https://github.com/hamadazein/web/blob/main/CSS%20Grid%20Flexbox%20Project/galeri.html" target="_blank" class="btn btn-code">Code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="project-info">
+            <h2>💡 Konsep Pembelajaran</h2>
+            <div class="features">
+                <div class="feature">
+                    <h3>CSS Grid Concepts</h3>
+                    <p>grid-template-areas, grid-template-columns, repeat(), auto-fit, minmax(), gap properties</p>
+                </div>
+                <div class="feature">
+                    <h3>CSS Flexbox Concepts</h3>
+                    <p>justify-content, align-items, flex-direction, flex-wrap, gap, align-self</p>
+                </div>
+                <div class="feature">
+                    <h3>Responsive Techniques</h3>
+                    <p>Media queries, mobile-first approach, flexible units (rem, %), viewport units</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

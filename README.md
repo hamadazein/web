@@ -11,13 +11,13 @@ Berisi tutorial lengkap HTML dari dasar hingga advanced
 Berisi tutorial lengkap CSS dari dasar hingga advanced
 
 ### CSS Grid & Flexbox Project
-Project praktis website responsif dengan 4 halaman:
+Project praktis website responsif dengan 4 halaman yang tersimpan di folder `CSS Grid Flexbox Project/`:
 
-- `beranda.html` - Halaman utama dengan form input dan tabel data
-- `tentang.html` - Halaman profil dengan foto dan deskripsi  
-- `kontak.html` - Halaman kontak dengan form dan info kontak
-- `galeri.html` - Halaman galeri foto dengan grid layout
-- `ronaldo.jpg` - Foto untuk halaman profil
+- `CSS Grid Flexbox Project/beranda.html` - Halaman utama dengan form input dan tabel data
+- `CSS Grid Flexbox Project/tentang.html` - Halaman profil dengan foto dan deskripsi  
+- `CSS Grid Flexbox Project/kontak.html` - Halaman kontak dengan form dan info kontak
+- `CSS Grid Flexbox Project/galeri.html` - Halaman galeri foto dengan grid layout
+- `CSS Grid Flexbox Project/ronaldo.jpg` - Foto untuk halaman profil
 
 ## 🎨 CSS Concepts Yang Digunakan
 
@@ -36,8 +36,9 @@ Project praktis website responsif dengan 4 halaman:
 ## 🚀 Cara Menggunakan
 
 1. Clone repository ini
-2. Buka file `beranda.html` di browser
-3. Navigate menggunakan menu navbar
+2. Masuk ke folder `CSS Grid Flexbox Project/`
+3. Buka file `beranda.html` di browser
+4. Navigate menggunakan menu navbar
 
 ## 📱 Responsive Design
 
