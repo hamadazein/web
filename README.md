@@ -1,24 +1,23 @@
-# CSS Grid & Flexbox Website 
+# Materi Pemrograman Web - HTML & CSS
 
-Website responsif sederhana yang dibuat untuk pembelajaran CSS Grid dan Flexbox dengan desain minimalist.
+Repository ini berisi materi pembelajaran HTML dan CSS, termasuk project praktis CSS Grid & Flexbox.
 
-## 📋 Fitur
+## � Struktur Repository
 
-- 4 Halaman utama (Beranda, Tentang Saya, Kontak, Galeri)
-- Design minimalist dengan CSS Grid & Flexbox
-- Fully responsive untuk mobile dan desktop
-- Clean code structure
+### HTML Materials
+Berisi tutorial lengkap HTML dari dasar hingga advanced
 
-## 🗂️ Struktur File
+### CSS Materials  
+Berisi tutorial lengkap CSS dari dasar hingga advanced
 
-```
-├── beranda.html     # Halaman utama dengan form input dan tabel data
-├── tentang.html     # Halaman profil dengan foto dan deskripsi
-├── kontak.html      # Halaman kontak dengan form dan info kontak
-├── galeri.html      # Halaman galeri foto dengan grid layout
-├── ronaldo.jpg      # Foto untuk halaman profil
-└── README.md        # Dokumentasi project
-```
+### CSS Grid & Flexbox Project
+Project praktis website responsif dengan 4 halaman:
+
+- `beranda.html` - Halaman utama dengan form input dan tabel data
+- `tentang.html` - Halaman profil dengan foto dan deskripsi  
+- `kontak.html` - Halaman kontak dengan form dan info kontak
+- `galeri.html` - Halaman galeri foto dengan grid layout
+- `ronaldo.jpg` - Foto untuk halaman profil
 
 ## 🎨 CSS Concepts Yang Digunakan
 
@@ -56,4 +55,4 @@ Project ini dibuat untuk memahami:
 - Modern CSS practices
 
 ---
-**Dibuat untuk pembelajaran CSS Grid & Flexbox**
+**Materi Pemrograman Web - HTML & CSS**

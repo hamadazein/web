@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Materi pembelajaran CSS lengkap dari dasar hingga lanjut. Tutorial CSS dalam bahasa Indonesia.">
+    <meta name="keywords" content="CSS, tutorial, pemrograman web, belajar CSS, Indonesia">
+    <meta name="author" content="Materi Pemrograman Web">
+    <title>Pembelajaran CSS Lengkap | CSS Materials</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css" onerror="console.error('CSS file not found')">
+    <style>
+        .css-hero .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .css-brand {
+            font-weight: 800;
+        }
+        .hero .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+        }
+        .hero .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+            color: white;
+        }
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .css-hero .hero-title {
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9ff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="navbar">
+            <div class="nav-container">
+                <div class="brand">
+                    <div class="logo-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="4" y="4" width="16" height="16" rx="2" fill="none" stroke="url(#gradient)" stroke-width="2"/>
+                            <rect x="7" y="7" width="10" height="2" rx="1" fill="url(#gradient)"/>
+                            <rect x="7" y="11" width="6" height="2" rx="1" fill="url(#gradient)"/>
+                            <rect x="7" y="15" width="8" height="2" rx="1" fill="url(#gradient)"/>
+                            <defs>
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#667eea"/>
+                                    <stop offset="100%" style="stop-color:#764ba2"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="../index.html" class="nav-link">HTML</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#materi" class="nav-link">CSS</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="main css-hero">
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h2 class="hero-title">Pembelajaran <span class="css-brand">CSS</span> Lengkap</h2>
+                    <p class="hero-description">
+                        Pelajari CSS dari dasar hingga mahir dengan materi yang terstruktur dan mudah dipahami.
+                        Dari selector dasar hingga CSS Grid dan Animation.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#materi" class="btn btn-primary">Mulai Belajar CSS</a>
+                        <a href="../index.html" class="btn btn-secondary">← Kembali ke HTML</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tentang" class="about">
+            <div class="container">
+                <h2 class="section-title">Tentang Pembelajaran CSS</h2>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="card-icon">🎨</div>
+                        <h3>CSS</h3>
+                        <p>Dari dasar CSS hingga topik advanced seperti Grid, Flexbox, dan Animation.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon">💻</div>
+                        <h3>Praktis</h3>
+                        <p>Dilengkapi dengan contoh kode yang mudah dipahami dan bisa langsung dipraktikkan.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon">📱</div>
+                        <h3>Responsive Design</h3>
+                        <p>Pelajari cara membuat website yang responsif untuk berbagai ukuran layar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="materi" class="topics">
+            <div class="container">
+                <h2 class="section-title">Daftar Materi CSS</h2>
+                <div class="topics-grid">
+                    
+                    <!-- CSS Fundamentals -->
+                    <div class="topic-category">
+                        <h3 class="category-title">CSS Fundamentals</h3>
+                        <div class="topic-cards">
+                            <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/000%20CSS%20Introduction" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">000</span>
+                                    <span class="card-badge new">Dasar</span>
+                                </div>
+                                <h4>CSS Introduction</h4>
+                                <p>Pengenalan CSS dan manfaatnya</p>
+                            </a>
+                            <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/002%20CSS%20Basic" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">002</span>
+                                    <span class="card-badge new">Dasar</span>
+                                </div>
+                                <h4>CSS Basic</h4>
+                                <p>Cara penulisan CSS dasar</p>
+                            </a>
+                            <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/003%20CSS%20Syntax" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">003</span>
+                                    <span class="card-badge new">Dasar</span>
+                                </div>
+                                <h4>CSS Syntax</h4>
+                                <p>Sintaks dan struktur CSS</p>
+                            </a>
+                            <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/004%20CSS%20Selectors" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">004</span>
+                                    <span class="card-badge new">Dasar</span>
+                                </div>
+                                <h4>CSS Selectors</h4>
+                                <p>Memilih elemen dengan selector</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- CSS Styling -->
+                    <div class="topic-category">
+                        <h3 class="category-title">CSS Styling & Design</h3>
+                        <div class="topic-cards">
+                            <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/006%20CSS%20Colors" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">006</span>
+                                    <span class="card-badge popular">Styling</span>
+                                </div>
+                                <h4>CSS Colors</h4>
+                                <p>Penggunaan warna dalam CSS</p>
+                            </a>
+                            <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/007%20CSS%20Background" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">007</span>
+                                    <span class="card-badge popular">Styling</span>
+                                </div>
+                                <h4>CSS Background</h4>
+                                <p>Background dan gradien</p>
+                            </a>
+                            <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/018%20CSS%20Fonts" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">018</span>
+                                    <span class="card-badge popular">Styling</span>
+                                </div>
+                                <h4>CSS Fonts</h4>
+                                <p>Typography dan font styling</p>
+                            </a>
+                            <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/039%20CSS%20Gradient" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">039</span>
+                                    <span class="card-badge popular">Styling</span>
+                                </div>
+                                <h4>CSS Gradient</h4>
+                                <p>Gradien warna yang indah</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- CSS Layout -->
+                    <div class="topic-category">
+                        <h3 class="category-title">CSS Layout & Positioning</h3>
+                        <div class="topic-cards">
+                            <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/013%20CSS%20Box%20Model" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">013</span>
+                                    <span class="card-badge intermediate">Layout</span>
+                                </div>
+                                <h4>CSS Box Model</h4>
+                                <p>Model kotak CSS</p>
+                            </a>
+                            <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/024%20CSS%20Position" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">024</span>
+                                    <span class="card-badge intermediate">Layout</span>
+                                </div>
+                                <h4>CSS Position</h4>
+                                <p>Positioning elemen</p>
+                            </a>
+                            <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/056%20CSS%20Flexbox" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">056</span>
+                                    <span class="card-badge advanced">Layout</span>
+                                </div>
+                                <h4>CSS Flexbox</h4>
+                                <p>Layout dengan Flexbox</p>
+                            </a>
+                            <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/057%20CSS%20Grid" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">057</span>
+                                    <span class="card-badge advanced">Layout</span>
+                                </div>
+                                <h4>CSS Grid</h4>
+                                <p>Layout dengan CSS Grid</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- CSS Advanced -->
+                    <div class="topic-category">
+                        <h3 class="category-title">CSS Advanced</h3>
+                        <div class="topic-cards">
+                            <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/044%20CSS%20Transform" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">044</span>
+                                    <span class="card-badge advanced">Advanced</span>
+                                </div>
+                                <h4>CSS Transform</h4>
+                                <p>Transformasi elemen</p>
+                            </a>
+                            <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/045%20CSS%20Transitions" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">045</span>
+                                    <span class="card-badge advanced">Advanced</span>
+                                </div>
+                                <h4>CSS Transitions</h4>
+                                <p>Transisi dan animasi</p>
+                            </a>
+                            <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/058%20CSS%20Animation" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">058</span>
+                                    <span class="card-badge advanced">Advanced</span>
+                                </div>
+                                <h4>CSS Animation</h4>
+                                <p>Animasi CSS lanjutan</p>
+                            </a>
+                            <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/055%20CSS%20Media%20Query" class="topic-card">
+                                <div class="card-header">
+                                    <span class="card-number">055</span>
+                                    <span class="card-badge advanced">Advanced</span>
+                                </div>
+                                <h4>CSS Media Query</h4>
+                                <p>Responsive design</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- All Topics List -->
+                <div class="all-topics">
+                    <h3 class="all-topics-title">Semua Topik CSS</h3>
+                    <div class="topics-list">
+                        <div class="topics-column">
+                            <div class="column-title">CSS Dasar (000-020)</div>
+                            <div class="topics-links">
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/000%20CSS%20Introduction">000 - CSS Introduction</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/002%20CSS%20Basic">002 - CSS Basic</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/003%20CSS%20Syntax">003 - CSS Syntax</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/004%20CSS%20Selectors">004 - CSS Selectors</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/005%20CSS%20Comments">005 - CSS Comments</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/006%20CSS%20Colors">006 - CSS Colors</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/007%20CSS%20Background">007 - CSS Background</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/008%20CSS%20Borders">008 - CSS Borders</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/009%20CSS%20Border%20Radius">009 - CSS Border Radius</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/010%20CSS%20Margin">010 - CSS Margin</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/011%20CSS%20Padding">011 - CSS Padding</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/012%20CSS%20Size">012 - CSS Size</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/013%20CSS%20Box%20Model">013 - CSS Box Model</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/014%20CSS%20Outline">014 - CSS Outline</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/015%20CSS%20Text%20Alignment">015 - CSS Text Alignment</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/016%20CSS%20Text%20Decoration">016 - CSS Text Decoration</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/017%20CSS%20Text%20Transform">017 - CSS Text Transform</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/018%20CSS%20Fonts">018 - CSS Fonts</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/019%20CSS%20Web%20Font">019 - CSS Web Font</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/020%20CSS%20Google%20Fonts">020 - CSS Google Fonts</a>
+                            </div>
+                        </div>
+                        
+                        <div class="topics-column">
+                            <div class="column-title">CSS Layout (021-040)</div>
+                            <div class="topics-links">
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/021%20CSS%20Icons">021 - CSS Icons</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/022%20CSS%20Lists">022 - CSS Lists</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/023%20CSS%20Display">023 - CSS Display</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/024%20CSS%20Position">024 - CSS Position</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/025%20CSS%20Z%20Index">025 - CSS Z Index</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/026%20CSS%20Overflow">026 - CSS Overflow</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/027%20CSS%20Float">027 - CSS Float</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/028%20CSS%20Combinators">028 - CSS Combinators</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/029%20CSS%20Pseudo%20Classes">029 - CSS Pseudo Classes</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/030%20CSS%20Pseudo%20Elements">030 - CSS Pseudo Elements</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/031%20CSS%20Opacity">031 - CSS Opacity</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/032%20CSS%20Attribute%20Selectors">032 - CSS Attribute Selectors</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/033%20CSS%20Counters">033 - CSS Counters</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/034%20CSS%20Units">034 - CSS Units</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/035%20CSS%20Specificity">035 - CSS Specificity</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/036%20CSS%20Important">036 - CSS Important</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/037%20CSS%20Math%20Function">037 - CSS Math Function</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/038%20CSS%20Border%20Image">038 - CSS Border Image</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/039%20CSS%20Gradient">039 - CSS Gradient</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/040%20CSS%20Shadow">040 - CSS Shadow</a>
+                            </div>
+                        </div>
+
+                        <div class="topics-column">
+                            <div class="column-title">CSS Advanced (041-058)</div>
+                            <div class="topics-links">
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/041%20CSS%20Word%20Wrap">041 - CSS Word Wrap</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/042%20CSS%20Word%20Spacing">042 - CSS Word Spacing</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/043%20CSS%20Writing%20Mode">043 - CSS Writing Mode</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/044%20CSS%20Transform">044 - CSS Transform</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/045%20CSS%20Transitions">045 - CSS Transitions</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/047%20CSS%20Image%20Filter">047 - CSS Image Filter</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/048%20CSS%20Object%20Fit">048 - CSS Object Fit</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/049%20CSS%20Object%20Position">049 - CSS Object Position</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/050%20CSS%20Button">050 - CSS Button</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/051%20CSS%20Column">051 - CSS Column</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/053%20CSS%20Custom%20Property">053 - CSS Custom Property</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/054%20CSS%20Box%20Sizing">054 - CSS Box Sizing</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/055%20CSS%20Media%20Query">055 - CSS Media Query</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/056%20CSS%20Flexbox">056 - CSS Flexbox</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/057%20CSS%20Grid">057 - CSS Grid</a>
+                                <a href="https://github.com/hamadazein/web/tree/main/CSS-Materials/058%20CSS%20Animation">058 - CSS Animation</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Pembelajaran CSS Lengkap. Materi pembelajaran untuk semua level.</p>
+                <p>Dibuat dengan ❤️ untuk memudahkan pembelajaran CSS</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
