@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id-ID" data-theme="system">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Customization & Theming - Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f5f3ff',
+                            500: '#a855f7',
+                            600: '#9333ea',
+                            700: '#7e22ce'
+                        },
+                        accent: {
+                            500: '#f97316',
+                            600: '#ea580c'
+                        }
+                    },
+                    boxShadow: {
+                        glass: '0 25px 60px -15px rgba(79, 70, 229, 0.45)'
+                    },
+                    backdropBlur: {
+                        xl: '28px'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui']
+                    }
+                }
+            }
+        };
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .theme-preview { transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease; }
+        .theme-preview:hover { transform: translateY(-6px); }
+    </style>
+</head>
+<body class="bg-slate-950 text-white">
+    <div class="min-h-screen">
+        <header class="mx-auto flex max-w-5xl flex-col gap-6 px-6 py-16 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+                <p class="text-sm uppercase tracking-[0.35em] text-brand-300">Materi 006</p>
+                <h1 class="mt-4 text-4xl font-bold sm:text-5xl">Customization & Theming</h1>
+                <p class="mt-3 max-w-2xl text-base text-white/70">Tailwind mudah dikustomisasi untuk mengikuti brand guideline. Contoh di sini menunjukkan penggunaan config extend, design tokens, plugin, dan toggle tema multi state.</p>
+            </div>
+            <div class="flex flex-wrap items-center gap-3 text-xs font-semibold">
+                <button data-theme-target="light" class="theme-btn rounded-full border border-white/20 px-4 py-2 text-white/70 transition hover:bg-white/10">Light</button>
+                <button data-theme-target="dark" class="theme-btn rounded-full border border-white/20 px-4 py-2 text-white/70 transition hover:bg-white/10">Dark</button>
+                <button data-theme-target="system" class="theme-btn rounded-full border border-white/20 px-4 py-2 text-white/70 transition hover:bg-white/10">System</button>
+            </div>
+        </header>
+
+        <main class="mx-auto flex max-w-6xl flex-col gap-12 px-6 pb-20">
+            <section class="grid gap-8 rounded-3xl border border-white/10 bg-white/5 p-8 lg:grid-cols-[1.1fr,0.9fr]">
+                <article class="space-y-6">
+                    <div class="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
+                        <h2 class="text-2xl font-semibold">Design Tokens</h2>
+                        <p class="mt-3 text-sm text-white/70">Konfigurasi custom warna dan spacing mendefinisikan identitas brand. Contoh di bawah menggunakan <code class="rounded bg-white/10 px-2 py-1">brand</code> dan <code class="rounded bg-white/10 px-2 py-1">accent</code> color scale.</p>
+                        <div class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                            <div class="space-y-2">
+                                <p class="text-xs uppercase tracking-[0.3em] text-white/50">brand</p>
+                                <div class="flex gap-2">
+                                    <div class="h-10 w-full rounded-xl bg-brand-500"></div>
+                                    <div class="h-10 w-full rounded-xl bg-brand-600"></div>
+                                    <div class="h-10 w-full rounded-xl bg-brand-700"></div>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <p class="text-xs uppercase tracking-[0.3em] text-white/50">accent</p>
+                                <div class="flex gap-2">
+                                    <div class="h-10 w-full rounded-xl bg-accent-500"></div>
+                                    <div class="h-10 w-full rounded-xl bg-accent-600"></div>
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <p class="text-xs uppercase tracking-[0.3em] text-white/50">Spacing</p>
+                                <div class="flex items-center gap-2 text-xs text-white/60">
+                                    <span class="rounded-full bg-white/10 px-3 py-1">space-3</span>
+                                    <span class="rounded-full bg-white/10 px-3 py-1">space-6</span>
+                                    <span class="rounded-full bg-white/10 px-3 py-1">space-10</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-3xl border border-white/10 bg-white/5 p-6">
+                        <h3 class="text-lg font-semibold">Konfigurasi Tailwind</h3>
+                        <pre class="mt-4 overflow-x-auto rounded-2xl bg-slate-950/70 p-4 text-xs text-brand-100">// tailwind.config.js
+module.exports = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        brand: {
+          50: '#f5f3ff',
+          500: '#a855f7',
+          600: '#9333ea',
+        },
+        accent: {
+          500: '#f97316',
+          600: '#ea580c'
+        }
+      },
+      boxShadow: {
+        glass: '0 25px 60px -15px rgba(79, 70, 229, 0.45)'
+      }
+    }
+  },
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
+  ]
+}</pre>
+                    </div>
+                </article>
+                <aside class="space-y-6">
+                    <div class="rounded-3xl border border-white/10 bg-gradient-to-br from-brand-600/30 to-indigo-600/20 p-6 text-sm text-white/80 shadow-glass">
+                        <h3 class="text-lg font-semibold">Glassmorphism Utility</h3>
+                        <p class="mt-2">Tambahkan custom utility melalui <code class="rounded bg-white/10 px-2 py-1">@layer utilities</code>.</p>
+                        <pre class="mt-4 overflow-x-auto rounded-2xl bg-slate-950/60 p-4 text-xs text-brand-100">@layer utilities {
+  .glass-panel {
+    @apply bg-white/10 backdrop-blur-xl border border-white/15
+           shadow-glass rounded-3xl;
+  }
+}</pre>
+                    </div>
+                    <div class="rounded-3xl border border-white/10 bg-white/5 p-6 text-sm text-white/70">
+                        <h3 class="text-lg font-semibold">Multi Theme Toggle</h3>
+                        <p class="mt-2">Simulasikan data-theme pada root dan gunakan variant arbitrary <code class="rounded bg-white/10 px-2 py-1">[data-theme=dark]:bg-slate-950</code>.</p>
+                    </div>
+                    <div class="rounded-3xl border border-white/10 bg-white/5 p-6 text-sm text-white/70">
+                        <h3 class="text-lg font-semibold">Safelist</h3>
+                        <p class="mt-2">Tambahkan ke config untuk kelas dinamis:</p>
+                        <pre class="mt-3 overflow-x-auto rounded-2xl bg-slate-950/70 p-4 text-xs text-brand-100">safelist: [
+  { pattern: /bg-brand-(500|600)/ },
+  'text-accent-500',
+  'border-accent-600',
+]</pre>
+                    </div>
+                </aside>
+            </section>
+
+            <section class="rounded-3xl border border-white/10 bg-white/5 p-8">
+                <div class="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+                    <div>
+                        <p class="text-xs uppercase tracking-[0.3em] text-brand-300">Theme Gallery</p>
+                        <h2 class="text-2xl font-semibold">Preview Light · Dark · Neon</h2>
+                    </div>
+                    <span class="text-xs text-white/60">Gunakan tombol di atas untuk switch tema</span>
+                </div>
+                <div class="mt-8 grid gap-6 lg:grid-cols-3">
+                    <div class="theme-preview glass-panel flex flex-col gap-4 rounded-3xl border border-white/10 bg-white/5 p-6" data-theme-card="light">
+                        <span class="inline-flex w-fit items-center gap-2 rounded-full bg-brand-500/15 px-3 py-1 text-xs font-semibold text-brand-200">Light Theme</span>
+                        <h3 class="text-xl font-semibold text-white">Clean & Minimal</h3>
+                        <p class="text-sm text-white/70">`bg-white`, `text-slate-900`, highlight dengan `accent-500`.</p>
+                        <button class="rounded-full bg-white px-4 py-2 text-xs font-semibold text-slate-900">Apply Theme</button>
+                    </div>
+                    <div class="theme-preview glass-panel flex flex-col gap-4 rounded-3xl border border-white/10 bg-slate-900/60 p-6" data-theme-card="dark">
+                        <span class="inline-flex w-fit items-center gap-2 rounded-full bg-white/15 px-3 py-1 text-xs font-semibold text-white/70">Dark Theme</span>
+                        <h3 class="text-xl font-semibold text-white">Elegant & Focus</h3>
+                        <p class="text-sm text-white/60">`bg-slate-950`, `text-white`, aksen `brand-500`.</p>
+                        <button class="rounded-full border border-white/20 px-4 py-2 text-xs font-semibold text-white/80">Apply Theme</button>
+                    </div>
+                    <div class="theme-preview glass-panel flex flex-col gap-4 rounded-3xl border border-white/10 bg-gradient-to-br from-brand-500/40 via-indigo-500/30 to-accent-500/30 p-6" data-theme-card="neon">
+                        <span class="inline-flex w-fit items-center gap-2 rounded-full bg-white/20 px-3 py-1 text-xs font-semibold text-white">Neon Theme</span>
+                        <h3 class="text-xl font-semibold text-white">Vibrant & Playful</h3>
+                        <p class="text-sm text-white/80">Eksperimen dengan gradient dan glow effect.</p>
+                        <button class="rounded-full bg-white/20 px-4 py-2 text-xs font-semibold text-white">Apply Theme</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="rounded-3xl border border-white/10 bg-white/5 p-8">
+                <div class="flex flex-col gap-3">
+                    <p class="text-xs uppercase tracking-[0.3em] text-brand-300">Typography Plugin</p>
+                    <h2 class="text-2xl font-semibold">Blog Post Preview</h2>
+                    <p class="text-sm text-white/60">Gunakan plugin `@tailwindcss/typography` untuk styling konten Markdown.</p>
+                </div>
+                <article class="prose prose-invert mt-6 max-w-none">
+                    <h3>Utility-First Design System</h3>
+                    <p>Dengan Tailwind, design system dapat dikelola melalui konfigurasi. Warna, spacing, dan typography didefinisikan sekali lalu digunakan di seluruh aplikasi.</p>
+                    <ul>
+                        <li>Konfigurasi theme yang konsisten</li>
+                        <li>Penggunaan plugin resmi untuk konten khusus</li>
+                        <li>Safelist untuk class dinamis di runtime</li>
+                    </ul>
+                    <blockquote>
+                        <p>"Tailwind memungkinkan tim frontend dan design berbicara bahasa yang sama: utility classes."</p>
+                    </blockquote>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        const buttons = document.querySelectorAll('.theme-btn');
+        const root = document.documentElement;
+        const storageKey = 'tailwind-theme-mode';
+        const savedTheme = localStorage.getItem(storageKey);
+
+        const applyTheme = (mode) => {
+            document.body.dataset.theme = mode;
+            if (mode === 'dark') {
+                root.classList.add('dark');
+            } else if (mode === 'light') {
+                root.classList.remove('dark');
+            } else {
+                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                root.classList.toggle('dark', prefersDark);
+            }
+            localStorage.setItem(storageKey, mode);
+            buttons.forEach((btn) => {
+                btn.classList.toggle('bg-white/15', btn.dataset.themeTarget === mode);
+                btn.classList.toggle('text-white', btn.dataset.themeTarget === mode);
+            });
+        };
+
+        if (savedTheme) {
+            applyTheme(savedTheme);
+        } else {
+            applyTheme('system');
+        }
+
+        buttons.forEach((btn) => {
+            btn.addEventListener('click', () => applyTheme(btn.dataset.themeTarget));
+        });
+    </script>
+</body>
+</html>

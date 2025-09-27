@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id-ID">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout & Responsive Design - Tailwind CSS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            500: '#06b6d4',
+                            600: '#0891b2',
+                            700: '#0e7490'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'ui-sans-serif', 'system-ui']
+                    }
+                }
+            }
+        };
+    </script>
+</head>
+<body class="bg-slate-950 text-white font-sans">
+    <div class="min-h-screen">
+        <header class="mx-auto max-w-6xl px-6 py-16">
+            <p class="text-sm uppercase tracking-[0.4em] text-primary-500">Materi 003</p>
+            <h1 class="mt-4 text-4xl font-bold sm:text-5xl">Layout & Responsive Design</h1>
+            <p class="mt-4 max-w-3xl text-base text-white/70">Tailwind menyediakan utilitas layout lengkap untuk Flexbox, CSS Grid, positioning, dan responsive design. Contoh di bawah menunjukkan cara mengombinasikannya untuk membangun struktur halaman real-world.</p>
+        </header>
+
+        <main class="mx-auto flex max-w-6xl flex-col gap-10 px-6 pb-20">
+            <!-- Hero Layout -->
+            <section class="grid gap-10 rounded-3xl border border-white/10 bg-white/5 p-8 lg:grid-cols-[1.1fr,0.9fr]">
+                <div class="flex flex-col justify-center">
+                    <span class="inline-flex w-fit items-center gap-2 rounded-full bg-primary-500/15 px-3 py-1 text-xs font-semibold text-primary-200">Hero Layout</span>
+                    <h2 class="mt-4 text-3xl font-bold sm:text-4xl">Layout responsif tanpa meninggalkan HTML</h2>
+                    <p class="mt-4 text-sm text-white/70">Grid diatur dengan <code class="rounded bg-white/10 px-2 py-1">lg:grid-cols-[1.1fr,0.9fr]</code>, artinya pada layar besar konten dibagi 2 kolom dengan proporsi fleksibel. Pada layar kecil, grid otomatis menjadi 1 kolom.</p>
+                    <div class="mt-6 flex flex-wrap gap-3 text-xs text-white/60">
+                        <span class="rounded-full bg-white/10 px-3 py-1">grid gap-10</span>
+                        <span class="rounded-full bg-white/10 px-3 py-1">lg:grid-cols-[1.1fr,0.9fr]</span>
+                        <span class="rounded-full bg-white/10 px-3 py-1">rounded-3xl border</span>
+                    </div>
+                    <div class="mt-8 flex flex-wrap items-center gap-4">
+                        <button class="rounded-full bg-white px-5 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100">Mulai Simulasi</button>
+                        <button class="rounded-full border border-white/20 px-5 py-3 text-sm font-semibold text-white/80 transition hover:bg-white/10">Lihat Dokumentasi</button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -inset-4 rounded-[2rem] bg-gradient-to-br from-primary-500/30 via-sky-500/20 to-indigo-500/20 blur-3xl"></div>
+                    <div class="relative grid gap-4 rounded-[2rem] border border-white/10 bg-slate-900/60 p-6">
+                        <div class="rounded-2xl bg-white/5 p-6">
+                            <h3 class="text-sm font-semibold uppercase tracking-[0.4em] text-white/60">Grid Preview</h3>
+                            <div class="mt-4 grid grid-cols-2 gap-3 text-xs text-white/60 sm:grid-cols-4">
+                                <div class="rounded-xl bg-primary-500/20 px-3 py-4 text-center">1</div>
+                                <div class="rounded-xl bg-primary-500/20 px-3 py-4 text-center">2</div>
+                                <div class="rounded-xl bg-primary-500/20 px-3 py-4 text-center">3</div>
+                                <div class="rounded-xl bg-primary-500/20 px-3 py-4 text-center">4</div>
+                            </div>
+                        </div>
+                        <div class="grid gap-3 sm:grid-cols-2">
+                            <div class="rounded-2xl border border-white/10 bg-white/5 p-4 text-xs text-white/70">
+                                <p><code class="rounded bg-white/10 px-2 py-1">flex flex-col gap-3 sm:flex-row sm:items-center</code></p>
+                                <p class="mt-3">Gunakan Flexbox utilities untuk alignment horizontal/vertikal.</p>
+                            </div>
+                            <div class="rounded-2xl border border-white/10 bg-white/5 p-4 text-xs text-white/70">
+                                <p><code class="rounded bg-white/10 px-2 py-1">aspect-video rounded-2xl overflow-hidden</code></p>
+                                <p class="mt-3">Utility aspect ratio memudahkan embed media responsif.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Feature Grid -->
+            <section class="rounded-3xl border border-white/10 bg-white/5 p-8">
+                <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+                    <div>
+                        <p class="text-xs uppercase tracking-[0.3em] text-primary-300">Responsive Grid</p>
+                        <h2 class="mt-2 text-2xl font-semibold">Auto-fit card grid</h2>
+                    </div>
+                    <p class="max-w-xl text-sm text-white/70">Menggunakan <code class="rounded bg-white/10 px-2 py-1">grid-cols-1 sm:grid-cols-2 xl:grid-cols-3</code> untuk kontrol manual atau <code class="rounded bg-white/10 px-2 py-1">grid-cols-[repeat(auto-fit,minmax(220px,1fr))]</code> untuk auto layout.</p>
+                </div>
+                <div class="mt-8 grid gap-4 [grid-template-columns:repeat(auto-fit,minmax(220px,1fr))]">
+                    <div class="rounded-2xl border border-white/10 bg-gradient-to-br from-primary-500/20 to-indigo-500/10 p-5">
+                        <span class="text-xs uppercase tracking-[0.4em] text-white/70">Flexbox</span>
+                        <p class="mt-3 text-lg font-semibold">Kontrol axis & alignment</p>
+                        <p class="mt-2 text-sm text-white/60">Gunakan <code class="rounded bg-white/10 px-2 py-1">flex-col</code>, <code class="rounded bg-white/10 px-2 py-1">items-center</code>, <code class="rounded bg-white/10 px-2 py-1">justify-between</code>.</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-white/10 p-5">
+                        <span class="text-xs uppercase tracking-[0.4em] text-white/70">Grid</span>
+                        <p class="mt-3 text-lg font-semibold">Masonry sederhana</p>
+                        <p class="mt-2 text-sm text-white/60">Kombinasikan <code class="rounded bg-white/10 px-2 py-1">grid-row</code>, <code class="rounded bg-white/10 px-2 py-1">col-span</code> untuk layout dinamis.</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-white/10 p-5">
+                        <span class="text-xs uppercase tracking-[0.4em] text-white/70">Stacking</span>
+                        <p class="mt-3 text-lg font-semibold">Overlay & position</p>
+                        <p class="mt-2 text-sm text-white/60">Gunakan <code class="rounded bg-white/10 px-2 py-1">absolute</code>, <code class="rounded bg-white/10 px-2 py-1">inset-0</code>, <code class="rounded bg-white/10 px-2 py-1">z-[value]</code>.</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-white/10 p-5">
+                        <span class="text-xs uppercase tracking-[0.4em] text-white/70">Gap System</span>
+                        <p class="mt-3 text-lg font-semibold">Kontrol spacing antar elemen</p>
+                        <p class="mt-2 text-sm text-white/60">Utility <code class="rounded bg-white/10 px-2 py-1">gap-x-</code> & <code class="rounded bg-white/10 px-2 py-1">gap-y-</code> memisahkan horizontal/vertical.</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-white/10 p-5">
+                        <span class="text-xs uppercase tracking-[0.4em] text-white/70">Order</span>
+                        <p class="mt-3 text-lg font-semibold">Reorder responsif</p>
+                        <p class="mt-2 text-sm text-white/60">Gunakan <code class="rounded bg-white/10 px-2 py-1">order-last md:order-first</code> untuk reflow konten.</p>
+                    </div>
+                    <div class="rounded-2xl border border-white/10 bg-white/10 p-5">
+                        <span class="text-xs uppercase tracking-[0.4em] text-white/70">Container</span>
+                        <p class="mt-3 text-lg font-semibold">Max-width adaptif</p>
+                        <p class="mt-2 text-sm text-white/60">Utility <code class="rounded bg-white/10 px-2 py-1">container</code> + <code class="rounded bg-white/10 px-2 py-1">mx-auto</code> + <code class="rounded bg-white/10 px-2 py-1">px-6</code>.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pricing Table -->
+            <section class="rounded-3xl border border-white/10 bg-white/5 p-8">
+                <div class="flex flex-col gap-4 text-center">
+                    <span class="text-xs uppercase tracking-[0.3em] text-primary-300">Responsive Pricing</span>
+                    <h2 class="text-3xl font-semibold">Stack to columns</h2>
+                    <p class="text-sm text-white/60">Menggunakan <code class="rounded bg-white/10 px-2 py-1">grid grid-cols-1 gap-6 md:grid-cols-3</code> untuk menumpuk di mobile dan menjadi kolom pada desktop.</p>
+                </div>
+                <div class="mt-8 grid gap-6 md:grid-cols-3">
+                    <div class="flex flex-col gap-6 rounded-3xl border border-white/10 bg-white/10 p-6 text-left">
+                        <div>
+                            <p class="text-xs uppercase tracking-[0.3em] text-white/50">Starter</p>
+                            <h3 class="mt-3 text-2xl font-bold">$19</h3>
+                        </div>
+                        <ul class="space-y-3 text-sm text-white/60">
+                            <li>All utility classes</li>
+                            <li>Responsive variants</li>
+                            <li>Basic layout patterns</li>
+                        </ul>
+                        <button class="mt-auto rounded-2xl border border-white/15 px-4 py-3 text-sm font-semibold text-white/80 transition hover:bg-white/10">Pilih Paket</button>
+                    </div>
+                    <div class="flex flex-col gap-6 rounded-3xl border border-primary-500/40 bg-gradient-to-br from-primary-500/20 to-sky-500/20 p-6 text-left shadow-lg shadow-primary-500/10">
+                        <div>
+                            <p class="text-xs uppercase tracking-[0.3em] text-primary-200">Popular</p>
+                            <h3 class="mt-3 text-2xl font-bold">$39</h3>
+                        </div>
+                        <ul class="space-y-3 text-sm text-white/70">
+                            <li>Advanced layout recipes</li>
+                            <li>Dark mode patterns</li>
+                            <li>Accessibility tips</li>
+                            <li>Component templates</li>
+                        </ul>
+                        <button class="mt-auto rounded-2xl bg-white px-4 py-3 text-sm font-semibold text-slate-900 transition hover:bg-slate-100">Mulai Sekarang</button>
+                    </div>
+                    <div class="flex flex-col gap-6 rounded-3xl border border-white/10 bg-white/10 p-6 text-left">
+                        <div>
+                            <p class="text-xs uppercase tracking-[0.3em] text-white/50">Enterprise</p>
+                            <h3 class="mt-3 text-2xl font-bold">$79</h3>
+                        </div>
+                        <ul class="space-y-3 text-sm text-white/60">
+                            <li>Cross-team design system</li>
+                            <li>Custom plugin support</li>
+                            <li>Performance audit</li>
+                        </ul>
+                        <button class="mt-auto rounded-2xl border border-white/15 px-4 py-3 text-sm font-semibold text-white/80 transition hover:bg-white/10">Hubungi Kami</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

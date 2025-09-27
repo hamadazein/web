@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 60" fill="none">
+  <rect x="10" y="15" width="60" height="30" rx="6" fill="#6366F1" opacity="0.12" />
+  <text x="40" y="36" text-anchor="middle" font-family="'Inter', sans-serif" font-size="18" fill="#6366F1" font-weight="600">Nova</text>
+
+  <rect x="100" y="15" width="60" height="30" rx="6" fill="#F97316" opacity="0.12" />
+  <text x="130" y="36" text-anchor="middle" font-family="'Inter', sans-serif" font-size="18" fill="#F97316" font-weight="600">Flux</text>
+
+  <rect x="190" y="15" width="60" height="30" rx="6" fill="#22D3EE" opacity="0.12" />
+  <text x="220" y="36" text-anchor="middle" font-family="'Inter', sans-serif" font-size="18" fill="#22D3EE" font-weight="600">Pulse</text>
+
+  <rect x="280" y="15" width="60" height="30" rx="6" fill="#34D399" opacity="0.12" />
+  <text x="310" y="36" text-anchor="middle" font-family="'Inter', sans-serif" font-size="18" fill="#34D399" font-weight="600">Coda</text>
+</svg>
