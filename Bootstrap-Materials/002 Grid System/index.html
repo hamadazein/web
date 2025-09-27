@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Grid System - Interactive Examples</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        .grid-demo .row > * {
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            font-weight: 500;
+        }
+        .grid-demo .row {
+            margin-bottom: 2rem;
+        }
+        .code-example {
+            background-color: #f8f9fa;
+            border-left: 4px solid #0d6efd;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+        .breakpoint-demo {
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: white;
+        }
+        .xs-bg { background-color: #6f42c1; }
+        .sm-bg { background-color: #20c997; }
+        .md-bg { background-color: #fd7e14; }
+        .lg-bg { background-color: #dc3545; }
+        .xl-bg { background-color: #0dcaf0; }
+        .xxl-bg { background-color: #198754; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-primary text-white py-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold text-center">Bootstrap Grid System</h1>
+            <p class="lead text-center">Sistem layout responsif dengan 12 kolom yang fleksibel</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <!-- Introduction -->
+        <section class="mb-5">
+            <h2 class="text-center mb-4">Pengenalan Grid System</h2>
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <p class="lead text-center">Grid System Bootstrap menggunakan flexbox untuk membuat layout yang responsif dengan sistem 12 kolom. Terdiri dari container, row, dan column.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Breakpoints Demo -->
+        <section class="mb-5">
+            <h3 class="mb-4">Breakpoints Bootstrap</h3>
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Breakpoint</th>
+                            <th>Class infix</th>
+                            <th>Dimensions</th>
+                            <th>Preview</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Extra small</td>
+                            <td><code>None</code></td>
+                            <td>&lt;576px</td>
+                            <td><div class="breakpoint-demo xs-bg">XS</div></td>
+                        </tr>
+                        <tr>
+                            <td>Small</td>
+                            <td><code>sm</code></td>
+                            <td>≥576px</td>
+                            <td><div class="breakpoint-demo sm-bg">SM</div></td>
+                        </tr>
+                        <tr>
+                            <td>Medium</td>
+                            <td><code>md</code></td>
+                            <td>≥768px</td>
+                            <td><div class="breakpoint-demo md-bg">MD</div></td>
+                        </tr>
+                        <tr>
+                            <td>Large</td>
+                            <td><code>lg</code></td>
+                            <td>≥992px</td>
+                            <td><div class="breakpoint-demo lg-bg">LG</div></td>
+                        </tr>
+                        <tr>
+                            <td>Extra large</td>
+                            <td><code>xl</code></td>
+                            <td>≥1200px</td>
+                            <td><div class="breakpoint-demo xl-bg">XL</div></td>
+                        </tr>
+                        <tr>
+                            <td>Extra extra large</td>
+                            <td><code>xxl</code></td>
+                            <td>≥1400px</td>
+                            <td><div class="breakpoint-demo xxl-bg">XXL</div></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Basic Grid Examples -->
+        <section class="mb-5">
+            <h3 class="mb-4">Contoh Dasar Grid</h3>
+            
+            <!-- Equal Columns -->
+            <div class="mb-4">
+                <h5>Equal Width Columns</h5>
+                <div class="code-example">
+                    <code>&lt;div class="row"&gt;&lt;div class="col"&gt;...&lt;/div&gt;&lt;div class="col"&gt;...&lt;/div&gt;&lt;/div&gt;</code>
+                </div>
+                <div class="grid-demo">
+                    <div class="row">
+                        <div class="col">1 dari 2</div>
+                        <div class="col">2 dari 2</div>
+                    </div>
+                    <div class="row">
+                        <div class="col">1 dari 3</div>
+                        <div class="col">2 dari 3</div>
+                        <div class="col">3 dari 3</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Specified Width -->
+            <div class="mb-4">
+                <h5>Specified Width Columns</h5>
+                <div class="code-example">
+                    <code>&lt;div class="row"&gt;&lt;div class="col-8"&gt;...&lt;/div&gt;&lt;div class="col-4"&gt;...&lt;/div&gt;&lt;/div&gt;</code>
+                </div>
+                <div class="grid-demo">
+                    <div class="row">
+                        <div class="col-8">col-8 (8/12)</div>
+                        <div class="col-4">col-4 (4/12)</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">col-6 (6/12)</div>
+                        <div class="col-6">col-6 (6/12)</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Auto Width -->
+            <div class="mb-4">
+                <h5>Auto Width Content</h5>
+                <div class="code-example">
+                    <code>&lt;div class="row"&gt;&lt;div class="col"&gt;...&lt;/div&gt;&lt;div class="col-auto"&gt;...&lt;/div&gt;&lt;/div&gt;</code>
+                </div>
+                <div class="grid-demo">
+                    <div class="row">
+                        <div class="col">Flexible column</div>
+                        <div class="col-auto">Auto width content</div>
+                        <div class="col">Flexible column</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Responsive Grid -->
+        <section class="mb-5">
+            <h3 class="mb-4">Responsive Grid</h3>
+            <p>Resize browser untuk melihat efek responsive:</p>
+            
+            <div class="mb-4">
+                <h5>Mobile First Approach</h5>
+                <div class="code-example">
+                    <code>&lt;div class="col-12 col-md-6 col-lg-4"&gt;Responsive column&lt;/div&gt;</code>
+                </div>
+                <div class="grid-demo">
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-4">12 → 6 → 4</div>
+                        <div class="col-12 col-md-6 col-lg-4">12 → 6 → 4</div>
+                        <div class="col-12 col-md-12 col-lg-4">12 → 12 → 4</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <h5>Mixed Responsive</h5>
+                <div class="code-example">
+                    <code>&lt;div class="col-sm-6 col-lg-8"&gt;...&lt;/div&gt;&lt;div class="col-sm-6 col-lg-4"&gt;...&lt;/div&gt;</code>
+                </div>
+                <div class="grid-demo">
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-8">col-sm-6 col-lg-8</div>
+                        <div class="col-sm-6 col-lg-4">col-sm-6 col-lg-4</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Alignment -->
+        <section class="mb-5">
+            <h3 class="mb-4">Alignment</h3>
+            
+            <!-- Vertical Alignment -->
+            <div class="mb-4">
+                <h5>Vertical Alignment (Row Level)</h5>
+                <div class="grid-demo">
+                    <div class="row align-items-start" style="height: 100px; background: #e9ecef;">
+                        <div class="col">align-items-start</div>
+                        <div class="col">align-items-start</div>
+                    </div>
+                    <div class="row align-items-center" style="height: 100px; background: #e9ecef;">
+                        <div class="col">align-items-center</div>
+                        <div class="col">align-items-center</div>
+                    </div>
+                    <div class="row align-items-end" style="height: 100px; background: #e9ecef;">
+                        <div class="col">align-items-end</div>
+                        <div class="col">align-items-end</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Horizontal Alignment -->
+            <div class="mb-4">
+                <h5>Horizontal Alignment</h5>
+                <div class="grid-demo">
+                    <div class="row justify-content-start">
+                        <div class="col-4">justify-content-start</div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-4">justify-content-center</div>
+                    </div>
+                    <div class="row justify-content-end">
+                        <div class="col-4">justify-content-end</div>
+                    </div>
+                    <div class="row justify-content-between">
+                        <div class="col-3">between</div>
+                        <div class="col-3">between</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ordering -->
+        <section class="mb-5">
+            <h3 class="mb-4">Column Ordering</h3>
+            
+            <div class="mb-4">
+                <h5>Order Classes</h5>
+                <div class="code-example">
+                    <code>&lt;div class="col order-3"&gt;First&lt;/div&gt;&lt;div class="col order-1"&gt;Second&lt;/div&gt;</code>
+                </div>
+                <div class="grid-demo">
+                    <div class="row">
+                        <div class="col order-3">First in code (order-3)</div>
+                        <div class="col order-1">Second in code (order-1)</div>
+                        <div class="col order-2">Third in code (order-2)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <h5>Offsetting Columns</h5>
+                <div class="code-example">
+                    <code>&lt;div class="col-md-4 offset-md-4"&gt;Centered column&lt;/div&gt;</code>
+                </div>
+                <div class="grid-demo">
+                    <div class="row">
+                        <div class="col-md-4">.col-md-4</div>
+                        <div class="col-md-4 offset-md-4">.col-md-4 .offset-md-4</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gutters -->
+        <section class="mb-5">
+            <h3 class="mb-4">Gutters (Spacing)</h3>
+            
+            <div class="mb-4">
+                <h5>Row Gutters</h5>
+                <div class="grid-demo">
+                    <div class="row g-0">
+                        <div class="col">g-0 (no gutters)</div>
+                        <div class="col">g-0 (no gutters)</div>
+                    </div>
+                    <div class="row g-2">
+                        <div class="col">g-2 (small gutters)</div>
+                        <div class="col">g-2 (small gutters)</div>
+                    </div>
+                    <div class="row g-5">
+                        <div class="col">g-5 (large gutters)</div>
+                        <div class="col">g-5 (large gutters)</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nested Grid -->
+        <section class="mb-5">
+            <h3 class="mb-4">Nested Grid</h3>
+            <div class="code-example">
+                <code>&lt;div class="col-9"&gt;&lt;div class="row"&gt;&lt;div class="col-6"&gt;Nested&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;</code>
+            </div>
+            <div class="grid-demo">
+                <div class="row">
+                    <div class="col-sm-3">
+                        Level 1: col-sm-3
+                    </div>
+                    <div class="col-sm-9" style="background: #fff3cd;">
+                        <div class="row">
+                            <div class="col-8 col-sm-6">
+                                Level 2: col-8 col-sm-6
+                            </div>
+                            <div class="col-4 col-sm-6">
+                                Level 2: col-4 col-sm-6
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Common Patterns -->
+        <section class="mb-5">
+            <h3 class="mb-4">Common Layout Patterns</h3>
+            
+            <!-- Sidebar Layout -->
+            <div class="mb-4">
+                <h5>Sidebar Layout</h5>
+                <div class="row g-3">
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title">Sidebar</h6>
+                                <ul class="list-unstyled">
+                                    <li><a href="#" class="text-decoration-none">Menu 1</a></li>
+                                    <li><a href="#" class="text-decoration-none">Menu 2</a></li>
+                                    <li><a href="#" class="text-decoration-none">Menu 3</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title">Main Content</h6>
+                                <p class="card-text">Ini adalah area konten utama dengan lebar yang responsif.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Three Column Layout -->
+            <div class="mb-4">
+                <h5>Three Column Layout</h5>
+                <div class="row g-3">
+                    <div class="col-lg-3">
+                        <div class="card bg-primary text-white">
+                            <div class="card-body text-center">
+                                <h6>Left Sidebar</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="card bg-success text-white">
+                            <div class="card-body text-center">
+                                <h6>Main Content</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card bg-warning text-dark">
+                            <div class="card-body text-center">
+                                <h6>Right Sidebar</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Grid -->
+            <div class="mb-4">
+                <h5>Card Grid</h5>
+                <div class="row g-4">
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title">Card 1</h6>
+                                <p class="card-text">Grid responsif untuk cards.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title">Card 2</h6>
+                                <p class="card-text">Otomatis menyesuaikan ukuran.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-lg-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title">Card 3</h6>
+                                <p class="card-text">Mobile-first responsive.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Demo -->
+        <section class="mb-5">
+            <h3 class="mb-4">Interactive Grid Builder</h3>
+            <div class="card">
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="gridColumns" class="form-label">Jumlah Kolom:</label>
+                            <input type="range" class="form-range" min="1" max="4" value="3" id="gridColumns">
+                            <div class="form-text">Nilai: <span id="columnValue">3</span></div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="gridGutters" class="form-label">Gutter Size:</label>
+                            <select class="form-select" id="gridGutters">
+                                <option value="g-0">No Gutters (g-0)</option>
+                                <option value="g-1">Small (g-1)</option>
+                                <option value="g-3" selected>Medium (g-3)</option>
+                                <option value="g-5">Large (g-5)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h6>Preview:</h6>
+                        <div id="gridPreview" class="grid-demo">
+                            <!-- Dynamic grid will be generated here -->
+                        </div>
+                    </div>
+                    
+                    <div class="mt-3">
+                        <h6>Generated Code:</h6>
+                        <div class="code-example">
+                            <code id="generatedCode"></code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Best Practices -->
+        <section class="mb-5">
+            <div class="card bg-light">
+                <div class="card-body">
+                    <h4 class="card-title">Best Practices</h4>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <h6><i class="bi bi-check-circle-fill text-success"></i> Do:</h6>
+                            <ul class="list-unstyled">
+                                <li>✅ Gunakan container sebagai wrapper</li>
+                                <li>✅ Row langsung di dalam container</li>
+                                <li>✅ Column langsung di dalam row</li>
+                                <li>✅ Konten di dalam column</li>
+                                <li>✅ Mobile-first approach</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h6><i class="bi bi-x-circle-fill text-danger"></i> Don't:</h6>
+                            <ul class="list-unstyled">
+                                <li>❌ Nested grid terlalu dalam</li>
+                                <li>❌ Konten langsung di row</li>
+                                <li>❌ Lupa responsive classes</li>
+                                <li>❌ Menggunakan inline styles</li>
+                                <li>❌ Columns tanpa row</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p>&copy; 2024 Bootstrap Grid System Tutorial. Responsive design made easy.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Interactive Grid Builder
+        function updateGridPreview() {
+            const columns = document.getElementById('gridColumns').value;
+            const gutters = document.getElementById('gridGutters').value;
+            const preview = document.getElementById('gridPreview');
+            const codeDisplay = document.getElementById('generatedCode');
+            
+            // Update column value display
+            document.getElementById('columnValue').textContent = columns;
+            
+            // Calculate column class
+            const colSize = Math.floor(12 / columns);
+            const colClass = `col-${colSize}`;
+            
+            // Generate HTML
+            let html = `<div class="row ${gutters}">`;
+            for (let i = 1; i <= columns; i++) {
+                html += `<div class="${colClass}">Column ${i}</div>`;
+            }
+            html += '</div>';
+            
+            preview.innerHTML = html;
+            
+            // Generate code display
+            let code = `&lt;div class="row ${gutters}"&gt;`;
+            for (let i = 1; i <= columns; i++) {
+                code += `\n    &lt;div class="${colClass}"&gt;Column ${i}&lt;/div&gt;`;
+            }
+            code += '\n&lt;/div&gt;';
+            
+            codeDisplay.innerHTML = code;
+        }
+        
+        // Event listeners
+        document.getElementById('gridColumns').addEventListener('input', updateGridPreview);
+        document.getElementById('gridGutters').addEventListener('change', updateGridPreview);
+        
+        // Initialize
+        updateGridPreview();
+    </script>
+</body>
+</html>

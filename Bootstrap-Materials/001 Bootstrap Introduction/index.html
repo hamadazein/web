@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Introduction - Example</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Bootstrap Introduction</h1>
+            <p class="lead">Framework CSS yang powerful untuk website responsif</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <!-- Introduction Section -->
+        <section class="row mb-5">
+            <div class="col-12">
+                <h2 class="text-center mb-4">Apa itu Bootstrap?</h2>
+                <p class="lead text-center">Bootstrap adalah framework front-end yang paling populer untuk mengembangkan website responsif dan mobile-first.</p>
+            </div>
+        </section>
+
+        <!-- Features Grid -->
+        <section class="row g-4 mb-5">
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="bi bi-phone display-4 text-primary mb-3"></i>
+                        <h5 class="card-title">Mobile-First</h5>
+                        <p class="card-text">Dirancang khusus untuk perangkat mobile dengan pendekatan responsive design.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="bi bi-grid-3x3 display-4 text-success mb-3"></i>
+                        <h5 class="card-title">Grid System</h5>
+                        <p class="card-text">Sistem grid 12 kolom yang fleksibel untuk membuat layout yang sempurna.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="bi bi-puzzle display-4 text-warning mb-3"></i>
+                        <h5 class="card-title">Komponen</h5>
+                        <p class="card-text">Berbagai komponen UI siap pakai seperti navbar, cards, buttons, dan forms.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body text-center">
+                        <i class="bi bi-palette display-4 text-info mb-3"></i>
+                        <h5 class="card-title">Customizable</h5>
+                        <p class="card-text">Mudah dikustomisasi sesuai kebutuhan dengan Sass variables dan mixins.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Code Example -->
+        <section class="row mb-5">
+            <div class="col-12">
+                <h3 class="mb-3">Contoh Struktur Dasar Bootstrap</h3>
+                <div class="card">
+                    <div class="card-header bg-dark text-white">
+                        <h6 class="mb-0">basic-bootstrap.html</h6>
+                    </div>
+                    <div class="card-body">
+                        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Bootstrap Example&lt;/title&gt;
+    &lt;!-- Bootstrap CSS --&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class="container mt-5"&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="col-12"&gt;
+                &lt;h1 class="text-primary"&gt;Hello Bootstrap!&lt;/h1&gt;
+                &lt;p class="lead"&gt;Framework yang mudah dan powerful&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;!-- Bootstrap JavaScript --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Installation Methods -->
+        <section class="row mb-5">
+            <div class="col-12">
+                <h3 class="mb-4">Cara Menggunakan Bootstrap</h3>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="card h-100">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Via CDN</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Cara tercepat untuk mulai menggunakan Bootstrap:</p>
+                        <code class="small">
+                            &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+                        </code>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="card h-100">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="mb-0">Download</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Download file Bootstrap dan include dalam project:</p>
+                        <a href="https://getbootstrap.com/docs/5.3/getting-started/download/" class="btn btn-success btn-sm" target="_blank">
+                            Download Bootstrap
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="card h-100">
+                    <div class="card-header bg-warning text-dark">
+                        <h5 class="mb-0">Package Manager</h5>
+                    </div>
+                    <div class="card-body">
+                        <p>Install via NPM atau Yarn:</p>
+                        <code class="small">npm install bootstrap</code><br>
+                        <code class="small">yarn add bootstrap</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Version Information -->
+        <section class="row mb-5">
+            <div class="col-12">
+                <h3 class="mb-3">Versi Bootstrap</h3>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Versi</th>
+                                <th>Release</th>
+                                <th>Fitur Utama</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Bootstrap 5.x</td>
+                                <td>2021</td>
+                                <td>Tanpa jQuery, Improved Grid, Utilities API</td>
+                                <td><span class="badge bg-success">Terbaru</span></td>
+                            </tr>
+                            <tr>
+                                <td>Bootstrap 4.x</td>
+                                <td>2018</td>
+                                <td>Flexbox, Card component, Utilities</td>
+                                <td><span class="badge bg-warning text-dark">Support</span></td>
+                            </tr>
+                            <tr>
+                                <td>Bootstrap 3.x</td>
+                                <td>2013</td>
+                                <td>Mobile-first, Flat design</td>
+                                <td><span class="badge bg-secondary">Legacy</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Next Steps -->
+        <section class="row">
+            <div class="col-12">
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <h4 class="card-title">Langkah Selanjutnya</h4>
+                        <p class="card-text">Setelah memahami pengenalan Bootstrap, lanjutkan dengan mempelajari:</p>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                    <span>Grid System Bootstrap</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                    <span>Typography & Colors</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                    <span>Components & Utilities</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                                    <span>JavaScript Plugins</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p>&copy; 2024 Bootstrap Learning Materials. Created for educational purposes.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
