@@ -1,0 +1,34 @@
+# Weblab design
+
+## Direction
+
+Pelajar membuka laptop di ruang kelas yang terang dan ingin segera mencoba konsep baru. Permukaan terang menjaga materi terbaca; editor gelap memisahkan kode dari hasilnya. Beranda memadukan ruang belajar yang tenang dengan satu demonstrasi interaktif yang berkesan.
+
+## Palette
+
+- Canvas: #f7f9f8
+- Surface: #ffffff
+- Ink: #172b26
+- Muted text: #586760
+- Brand: #087c5c
+- Mint: #d9f4e8
+- HTML: #fff0e7 / #a94d20
+- CSS: #e8edff / #3d55b0
+- Tailwind: #e3f4fa / #136783
+- Bootstrap: #f0e8ff / #7442a6
+
+## Typography
+
+Body: "OpenAI Sans", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif. Inter variable Latin is self-hosted with font-display: swap. OpenAI Sans uses local() only when installed; no unprovided proprietary font asset is assumed. Code: ui-monospace, SFMono-Regular, Consolas, monospace. Display uses the same sans, weight 600–700, tracking -0.04em or looser. Reader text is 17px / 1.8 and limited to 72ch.
+
+## Layout
+
+Desktop persistent 224px sidebar, top utility bar, generous main canvas. Homepage: greeting, interactive split hero, four real learning paths, next-lesson entry and practical challenges. Mobile: compact header, collapsible navigation, stacked hero and learning paths. Reader: lesson outline plus article and next/previous navigation.
+
+## Signature
+
+The hero shows editable HTML/CSS producing a real preview. Its accent swatches alter the displayed result and invite opening the full playground.
+
+## Components and motion
+
+12–16px card radius, pill badges, 44px touch controls, solid border or restrained shadow. 180ms hover/focus feedback. Reduced-motion turns transitions off. Progress and bookmarks always reflect real browser-local data.

@@ -147,7 +147,7 @@ Banyak keunggulan yang terasa ketika anda menggunakan CSS variabel, diantaranya:
 
 ## Browser support
 
-Berikut adalah data browser support dari [caniuse.com](caniuse.com) untuk **_custom properties_**.
+Berikut adalah data browser support dari [caniuse.com](https://caniuse.com/css-variables) untuk **_custom properties_**.
 
 ![Data browser support dari caniuse.com](https://res.cloudinary.com/ireaderinokun/image/upload/v1633265298932/caniuse-embed/all/CSS-Variables.webp)
 

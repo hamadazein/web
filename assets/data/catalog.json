@@ -1,0 +1,1216 @@
+{
+  "courses": [
+    {
+      "id": "html",
+      "name": "HTML",
+      "label": "Fondasi web",
+      "description": "Bangun struktur. Wujudkan halaman pertamamu.",
+      "detail": "Kenali struktur halaman, teks, media, formulir, dan elemen semantik. Mulai dari nol, satu konsep setiap langkah.",
+      "folder": ".",
+      "symbol": "</>",
+      "level": "Pemula"
+    },
+    {
+      "id": "css",
+      "name": "CSS",
+      "label": "Desain & layout",
+      "description": "Beri karakter. Buat setiap piksel berarti.",
+      "detail": "Ubah struktur menjadi pengalaman visual. Pelajari warna, tipografi, Flexbox, Grid, hingga animasi dan desain responsif.",
+      "folder": "CSS-Materials",
+      "symbol": "{ }",
+      "level": "Pemula"
+    },
+    {
+      "id": "tailwind",
+      "name": "Tailwind CSS",
+      "label": "Utility-first",
+      "description": "Rangkai utility. Bangun lebih leluasa.",
+      "detail": "Eksplorasi pendekatan utility-first, komponen, layout, dan pengoptimalan proyek Tailwind. Materi ini menggunakan Tailwind v3.",
+      "folder": "Tailwind-Materials",
+      "symbol": "≈",
+      "level": "Menengah"
+    },
+    {
+      "id": "bootstrap",
+      "name": "Bootstrap",
+      "label": "Komponen siap pakai",
+      "description": "Susun komponen. Percepat ide besarmu.",
+      "detail": "Pelajari fondasi Bootstrap dan sistem grid untuk membangun halaman yang responsif dengan komponen siap pakai.",
+      "folder": "Bootstrap-Materials",
+      "symbol": "B",
+      "level": "Menengah"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "html-000",
+      "course": "html",
+      "number": 0,
+      "title": "Definisi HTML",
+      "description": "HTML (Hypertext Markup Language) adalah bahasa markah yang digunakan untuk menentukan konten dan struktur halaman web.",
+      "path": "000 Definisi HTML/README.md",
+      "minutes": 2,
+      "demo": "000 Definisi HTML/Definisi.html"
+    },
+    {
+      "id": "html-001",
+      "course": "html",
+      "number": 1,
+      "title": "HTML Introduction",
+      "description": "Lihat contoh pada HTMLIntroduction.html",
+      "path": "001 HTML Introduction/README.md",
+      "minutes": 3,
+      "demo": "001 HTML Introduction/HTMLIntroduction.html"
+    },
+    {
+      "id": "html-002",
+      "course": "html",
+      "number": 2,
+      "title": "HTML Basic",
+      "description": "Pada beberapa IDE seperti Visual Studio Code, tersedia fitur Emmet yang berguna untuk mempermudah pembuatan dokumen HTML di atas, yaitu dengan mengetik tanda ! lalu tekan",
+      "path": "002 HTML Basic/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "html-003",
+      "course": "html",
+      "number": 3,
+      "title": "HTML Editors",
+      "description": "Anda hanya perlu editor teks sederhana untuk mempelajari HTML.",
+      "path": "003 HTML Editors/README.md",
+      "minutes": 3,
+      "demo": "003 HTML Editors/HTMLEditors.html"
+    },
+    {
+      "id": "html-004",
+      "course": "html",
+      "number": 4,
+      "title": "HTML Elements",
+      "description": "Elemen HTML dapat dikatakan sebagai segala sesuatu mulai dari tag pembuka hingga tag penutup. Elemen HTML didefinisikan oleh tag pembuka. Jika elemen berisi konten lain, ",
+      "path": "004 HTML Elements/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "html-005",
+      "course": "html",
+      "number": 5,
+      "title": "HTML Attributes",
+      "description": "Atribut HTML adalah atribut yang digunakan untuk melengkapi informasi dari suatu elemen HTML.",
+      "path": "005 HTML Attributes/README.md",
+      "minutes": 4,
+      "demo": null
+    },
+    {
+      "id": "html-006",
+      "course": "html",
+      "number": 6,
+      "title": "HTML Headings",
+      "description": "Heading HTML adalah judul atau subjudul yang ingin ditampilkan pada halaman website HTML.",
+      "path": "006 HTML Headings/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "html-007",
+      "course": "html",
+      "number": 7,
+      "title": "HTML Paragraphs",
+      "description": "Paragraf HTML adalah kalimat atau kumpulan kalimat yang ditampilkan pada baris baru dan biasanya berupa blok teks.",
+      "path": "007 HTML Paragraphs/README.md",
+      "minutes": 3,
+      "demo": null
+    },
+    {
+      "id": "html-008",
+      "course": "html",
+      "number": 8,
+      "title": "HTML Style",
+      "description": "Gaya HTML (HTML Style) adalah atribut yang digunakan untuk memberikan gaya pada suatu elemen, seperti warna, jenis huruf, ukuran, dan sebagainya.",
+      "path": "008 HTML Style/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "html-009",
+      "course": "html",
+      "number": 9,
+      "title": "HTML Text Formatting",
+      "description": "Pemformatan teks HTML adalah elemen-elemen yang digunakan untuk mendefinisikan teks dengan makna khusus.",
+      "path": "009 HTML Text Formatting/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "html-010",
+      "course": "html",
+      "number": 10,
+      "title": "HTML Quotation",
+      "description": "Kutipan HTML berisi elemen-elemen yang ditujukan untuk menyajikan kutipan pada halaman HTML.",
+      "path": "010 HTML Quotation/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "html-011",
+      "course": "html",
+      "number": 11,
+      "title": "HTML Comments",
+      "description": "Komentar HTML berfungsi untuk membantu mendokumentasikan kode sumber (source code) HTML Anda.",
+      "path": "011 HTML Comments/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "html-012",
+      "course": "html",
+      "number": 12,
+      "title": "HTML Color",
+      "description": "Warna HTML adalah warna yang telah didefinisikan dengan nama atau dengan nilai RGB, HEX, HSL, RGBA, atau HSLA.",
+      "path": "012 HTML Color/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "html-013",
+      "course": "html",
+      "number": 13,
+      "title": "HTML CSS",
+      "description": "CSS (Cascading Style Sheets) berfungsi untuk mengatur tata letak dan tampilan sebuah situs web.",
+      "path": "CSS-Materials/013 HTML CSS/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "html-014",
+      "course": "html",
+      "number": 14,
+      "title": "HTML HyperLink",
+      "description": "Hyperlink HTML adalah tag HTML yang berfungsi untuk navigasi antarkonten: antarhalaman maupun ke tautan eksternal.",
+      "path": "014 HTML HyperLink/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "html-015",
+      "course": "html",
+      "number": 15,
+      "title": "HTML Images",
+      "description": "HTML memiliki elemen <img yang sangat berguna saat membangun situs web. Tanpa gambar, situs web akan terasa membosankan; karena itu, penting mempelajari penggunaan gambar",
+      "path": "015 HTML Images/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "html-016",
+      "course": "html",
+      "number": 16,
+      "title": "HTML Picture",
+      "description": "HTML memiliki elemen <picture yang sangat berguna saat membangun situs web. Tanpa gambar, situs web terasa membosankan; karena itu, penting mempelajari penggunaan <pictur",
+      "path": "016 HTML Picture/README.md",
+      "minutes": 2,
+      "demo": "016 HTML Picture/index.html"
+    },
+    {
+      "id": "html-017",
+      "course": "html",
+      "number": 17,
+      "title": "HTML Tables",
+      "description": "Tabel HTML adalah elemen untuk menyajikan data dalam bentuk tabel.",
+      "path": "017 HTML Tables/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "html-018",
+      "course": "html",
+      "number": 18,
+      "title": "HTML Lists",
+      "description": "Daftar HTML adalah elemen untuk menyajikan data berupa daftar (list).",
+      "path": "018 HTML Lists/README.md",
+      "minutes": 3,
+      "demo": null
+    },
+    {
+      "id": "html-019",
+      "course": "html",
+      "number": 19,
+      "title": "HTML Block & Inline",
+      "description": "Pelajari HTML Block & Inline melalui penjelasan dan contoh kode.",
+      "path": "019 HTML Block & Inline/README.md",
+      "minutes": 3,
+      "demo": null
+    },
+    {
+      "id": "html-020",
+      "course": "html",
+      "number": 20,
+      "title": "HTML Classes",
+      "description": "Kelas (class) di HTML digunakan untuk melakukan pengelompokan elemen. Misalnya, membuat class untuk header dan class untuk paragraf.",
+      "path": "020 HTML Classes/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "html-021",
+      "course": "html",
+      "number": 21,
+      "title": "HTML Id",
+      "description": "ID adalah atribut pada HTML yang digunakan untuk memberikan tanda pada elemen HTML yang bersifat unik. Artinya, Anda tidak boleh memiliki elemen dengan ID yang sama dalam",
+      "path": "021 HTML Id/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "html-022",
+      "course": "html",
+      "number": 22,
+      "title": "HTML IFrame",
+      "description": "Iframe adalah singkatan dari Inline Frame, sebuah komponen HTML yang memungkinkan Anda menyematkan video, dokumen, dan berkas lainnya ke dalam halaman situs web.",
+      "path": "022 HTML IFrame/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "html-023",
+      "course": "html",
+      "number": 23,
+      "title": "HTML Script",
+      "description": "Dalam HTML, tag <script digunakan untuk menyisipkan skrip (script), biasanya menggunakan JavaScript. Mengapa kita membutuhkan skrip? Agar situs web menjadi interaktif. An",
+      "path": "023 HTML Script/README.md",
+      "minutes": 2,
+      "demo": "023 HTML Script/script.html"
+    },
+    {
+      "id": "html-024",
+      "course": "html",
+      "number": 24,
+      "title": "HTML FilePath",
+      "description": "File path menjelaskan lokasi berkas, gambar, dan sebagainya—yakni struktur folder pada situs web.",
+      "path": "024 HTML FilePath/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "html-025",
+      "course": "html",
+      "number": 25,
+      "title": "HTML Head",
+      "description": "Pada beberapa IDE seperti Visual Studio Code, tersedia Emmet yang berguna untuk mempermudah pembuatan template HTML, yaitu dengan mengetik tanda ! lalu menekan Enter.",
+      "path": "025 HTML Head/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "html-026",
+      "course": "html",
+      "number": 26,
+      "title": "HTML Link",
+      "description": "Sebagian besar browser akan menampilkan elemen <link dengan nilai bawaan berikut:",
+      "path": "026 HTML Link/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "html-027",
+      "course": "html",
+      "number": 27,
+      "title": "HTML Meta",
+      "description": "Tag <meta di dalam HTML mendefinisikan metadata tentang dokumen HTML. Metadata adalah informasi tentang data.",
+      "path": "027 HTML Meta/README.md",
+      "minutes": 3,
+      "demo": null
+    },
+    {
+      "id": "html-028",
+      "course": "html",
+      "number": 28,
+      "title": "HTML Base",
+      "description": "Elemen <base berfungsi untuk menentukan URL dasar dan/atau target untuk semua URL relatif dalam dokumen. URL relatif adalah URL yang tidak memiliki protokol, domain, atau",
+      "path": "028 HTML Base/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "html-029",
+      "course": "html",
+      "number": 29,
+      "title": "HTML Responsive",
+      "description": "HTML responsif berfungsi agar situs web terlihat baik di semua perangkat, seperti PC/laptop, tablet, dan ponsel.",
+      "path": "029 HTML Responsive/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "html-030",
+      "course": "html",
+      "number": 30,
+      "title": "HTML Computer Code",
+      "description": "HTML <kbd adalah elemen yang digunakan untuk menentukan input keyboard. Konten di dalamnya ditampilkan dalam font monospace default browser.",
+      "path": "030 HTML Computer Code/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "html-031",
+      "course": "html",
+      "number": 31,
+      "title": "HTML Semantic",
+      "description": "HTML semantik adalah dokumen HTML yang terstruktur dengan elemen yang bermakna. Elemen semantik diperkenalkan pada HTML5 untuk memberikan makna atau arti pada halaman web",
+      "path": "031 HTML Semantic/README.md",
+      "minutes": 3,
+      "demo": null
+    },
+    {
+      "id": "html-032",
+      "course": "html",
+      "number": 32,
+      "title": "HTML Entity",
+      "description": "Entitas HTML dapat direpresentasikan sebagai potongan string. Dalam penggunaannya, entitas menggunakan & (ampersand) sebagai awalan, yang sering kita temukan saat membuat",
+      "path": "032 HTML Entity/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "html-033",
+      "course": "html",
+      "number": 33,
+      "title": "HTML Symbols",
+      "description": "Simbol yang tidak ada di papan ketik Anda dapat ditambahkan menggunakan entitas HTML.",
+      "path": "033 HTML Symbols/README.md",
+      "minutes": 4,
+      "demo": null
+    },
+    {
+      "id": "html-034",
+      "course": "html",
+      "number": 34,
+      "title": "HTML Emojis",
+      "description": "HTML dapat menampilkan emoji menggunakan kode desimal atau heksadesimal. Agar peramban memahami bahwa kita sedang menampilkan karakter emoji, awali dengan & dan akhiri de",
+      "path": "034 HTML Emojis/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "html-035",
+      "course": "html",
+      "number": 35,
+      "title": "HTML Forms",
+      "description": "Formulir pada HTML berfungsi untuk mengirim data melalui elemen-elemen formulir di dalamnya seperti bidang teks, tombol radio, menu tarik-bawah, dan lain-lain.",
+      "path": "035 HTML Forms/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "html-036",
+      "course": "html",
+      "number": 36,
+      "title": "HTML Input Types",
+      "description": "Dalam HTML, <input type=\"...\" merupakan elemen penting dari formulir. Atribut type pada elemen input dapat memiliki berbagai nilai yang menentukan jenis bidang masukan. C",
+      "path": "036 HTML Input Types/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "html-037",
+      "course": "html",
+      "number": 37,
+      "title": "HTML Input Attributes",
+      "description": "Elemen <input digunakan untuk membuat berbagai jenis masukan seperti teks, kata sandi, kotak centang, tombol radio, dan banyak lagi. Anda dapat mengontrol perilaku dan ta",
+      "path": "037 HTML Input Attributes/README.md",
+      "minutes": 3,
+      "demo": null
+    },
+    {
+      "id": "html-038",
+      "course": "html",
+      "number": 38,
+      "title": "HTML Label",
+      "description": "Elemen <label digunakan untuk mendefinisikan label bagi elemen lain seperti <input, <textarea, dan <select. Label ini dapat diklik untuk memfokuskan elemen yang ditunjuk.",
+      "path": "038 HTML Label/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "html-039",
+      "course": "html",
+      "number": 39,
+      "title": "HTML Select",
+      "description": "Elemen <select digunakan untuk membuat daftar tarik-bawah (drop-down list).",
+      "path": "039 HTML Select/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "html-040",
+      "course": "html",
+      "number": 40,
+      "title": "HTML Button",
+      "description": "Pelajari HTML Button melalui penjelasan dan contoh kode.",
+      "path": "040 HTML Button/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "html-041",
+      "course": "html",
+      "number": 41,
+      "title": "HTML Textarea",
+      "description": "Elemen HTML <textarea mewakili kontrol pengeditan teks multibaris. Elemen ini berguna saat Anda ingin mengizinkan pengguna memasukkan teks bentuk bebas dalam jumlah cukup",
+      "path": "041 HTML Textarea/README.md",
+      "minutes": 3,
+      "demo": null
+    },
+    {
+      "id": "html-042",
+      "course": "html",
+      "number": 42,
+      "title": "HTML Data",
+      "description": "Tag <data digunakan untuk menambahkan representasi yang dapat dibaca mesin dari konten tertentu.",
+      "path": "042 HTML Data/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "html-043",
+      "course": "html",
+      "number": 43,
+      "title": "HTML Canvas",
+      "description": "Pada HTML5 terdapat elemen <canvas. Elemen ini berguna untuk menggambar grafik atau objek pada halaman web dengan bantuan JavaScript. Anda sebaiknya menguasai dasar-dasar",
+      "path": "043 HTML Canvas/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "html-044",
+      "course": "html",
+      "number": 44,
+      "title": "HTML Multimedia",
+      "description": "Multimedia memiliki banyak format. Hampir semua hal yang dapat Anda dengar atau lihat termasuk multimedia: gambar, musik, suara, video, rekaman, film, animasi, dan banyak",
+      "path": "044 HTML Multimedia/README.md",
+      "minutes": 4,
+      "demo": null
+    },
+    {
+      "id": "html-045",
+      "course": "html",
+      "number": 45,
+      "title": "HTML SVG",
+      "description": "Scalable Vector Graphics (SVG) adalah format gambar vektor, baik berupa garis, goresan (stroke), diagram, peta, maupun ilustrasi lainnya.",
+      "path": "045 HTML SVG/README.md",
+      "minutes": 3,
+      "demo": "045 HTML SVG/index.html"
+    },
+    {
+      "id": "html-046",
+      "course": "html",
+      "number": 46,
+      "title": "HTML Figure",
+      "description": "Figure adalah elemen semantik HTML5 yang digunakan untuk menandai atau menjelaskan sebuah konten. Elemen <figure memberi tahu peramban bahwa ia adalah wadah yang menampun",
+      "path": "046 HTML Figure/README.md",
+      "minutes": 2,
+      "demo": "046 HTML Figure/index.html"
+    },
+    {
+      "id": "html-047",
+      "course": "html",
+      "number": 47,
+      "title": "HTML Video",
+      "description": "HTML memiliki elemen <video untuk menampilkan video di peramban atau situs web. Tidak semua peramban mendukung semua format video, jadi sediakan beberapa format untuk mem",
+      "path": "047 HTML Video/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "html-048",
+      "course": "html",
+      "number": 48,
+      "title": "HTML Audio",
+      "description": "Audio HTML menggunakan elemen <audio untuk memutar suara di peramban. Umumnya didukung beberapa format, seperti:",
+      "path": "048 HTML Audio/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "html-049",
+      "course": "html",
+      "number": 49,
+      "title": "HTML Lang Code",
+      "description": "HTML lang code terdiri atas kode bahasa (language code) dan kode negara (country code).",
+      "path": "049 HTML Lang Code/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "html-050",
+      "course": "html",
+      "number": 50,
+      "title": "HTML Tags List",
+      "description": "Berkas ini memuat semua tag HTML beserta deskripsinya (termasuk tag HTML5 terbaru). Sebagian tag dari versi HTML sebelumnya sudah dihapus di HTML5, sementara tag lain dip",
+      "path": "050 HTML Tags List/README.md",
+      "minutes": 10,
+      "demo": null
+    },
+    {
+      "id": "html-051",
+      "course": "html",
+      "number": 51,
+      "title": "HTML Section",
+      "description": "Tag <section</section mendefinisikan sebuah bagian (section) dalam dokumen.",
+      "path": "051 HTML Section/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-000",
+      "course": "css",
+      "number": 0,
+      "title": "CSS Introduction",
+      "description": "CSS digunakan untuk menentukan gaya halaman web kita, termasuk desain, tata letak, dan variasi tampilan untuk berbagai perangkat dan ukuran layar.",
+      "path": "CSS-Materials/000 CSS Introduction/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-002",
+      "course": "css",
+      "number": 2,
+      "title": "CSS Basic",
+      "description": "Ada 3 cara untuk menuliskan CSS. Antara lain:",
+      "path": "CSS-Materials/002 CSS Basic/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-003",
+      "course": "css",
+      "number": 3,
+      "title": "CSS Syntax",
+      "description": "CSS Syntax sendiri mencerminkan tujuan dari penulisan Syntax CSS yang baku, terdiri dari selector dan declaration.",
+      "path": "CSS-Materials/003 CSS Syntax/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-004",
+      "course": "css",
+      "number": 4,
+      "title": "CSS Selectors",
+      "description": "CSS Selectors adalah cara yang digunakan untuk memilih elemen HTML yang ingin diberi gaya.",
+      "path": "CSS-Materials/004 CSS Selectors/README.md",
+      "minutes": 3,
+      "demo": null
+    },
+    {
+      "id": "css-005",
+      "course": "css",
+      "number": 5,
+      "title": "CSS Comments",
+      "description": "Anda dapat menggunakan Comments pada CSS dengan bentuk penulisan style internal, external hingga inline style",
+      "path": "CSS-Materials/005 CSS Comments/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-006",
+      "course": "css",
+      "number": 6,
+      "title": "CSS Colors",
+      "description": "Sesuai dengan namanya, css colors adalah syntax untuk memberi warna pada elemen HTML. Warna dapat ditentukan menggunakan:",
+      "path": "CSS-Materials/006 CSS Colors/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-007",
+      "course": "css",
+      "number": 7,
+      "title": "CSS Background",
+      "description": "Properti untuk menentukan sebuah background elemen.",
+      "path": "CSS-Materials/007 CSS Background/README.md",
+      "minutes": 3,
+      "demo": null
+    },
+    {
+      "id": "css-008",
+      "course": "css",
+      "number": 8,
+      "title": "CSS Borders",
+      "description": "Properti CSS border ini adalah untuk memberikan efek garis ke sekitar elemen yang diterapkan properti ini.",
+      "path": "CSS-Materials/008 CSS Borders/README.md",
+      "minutes": 3,
+      "demo": null
+    },
+    {
+      "id": "css-009",
+      "course": "css",
+      "number": 9,
+      "title": "CSS Border Radius",
+      "description": "CSS Border Radius adalah syntax untuk membuat lengkungan di tag HTML.",
+      "path": "CSS-Materials/009 CSS Border Radius/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-010",
+      "course": "css",
+      "number": 10,
+      "title": "CSS Margin",
+      "description": "Properti CSS margin digunakan untuk membuat jarak pada antar elemen, di bagian luar.",
+      "path": "CSS-Materials/010 CSS Margin/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-011",
+      "course": "css",
+      "number": 11,
+      "title": "CSS Padding",
+      "description": "Properti CSS padding digunakan untuk membuat jarak pada antar elemen, di bagian dalam.",
+      "path": "CSS-Materials/011 CSS Padding/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-012",
+      "course": "css",
+      "number": 12,
+      "title": "CSS Size",
+      "description": "CSS size adalah property CSS yang digunakan untuk mengatur ukuran pada suatu element",
+      "path": "CSS-Materials/012 CSS Size/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-013",
+      "course": "css",
+      "number": 13,
+      "title": "CSS Box Model",
+      "description": "CSS box model adalah sebuah desain yang dimana digunakan untuk membuat pembungkus pada elemen html. Properti css yang diperlukan untuk membuat box model, diantaranya yait",
+      "path": "CSS-Materials/013 CSS Box Model/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-014",
+      "course": "css",
+      "number": 14,
+      "title": "CSS Outline",
+      "description": "Properti CSS outline adalah garis yang terletak setelah border dari sebuah elemen.",
+      "path": "CSS-Materials/014 CSS Outline/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-015",
+      "course": "css",
+      "number": 15,
+      "title": "CSS Text Alignment",
+      "description": "CSS text-align adalah sebuah properti yang dimana mengatur posisi text pada html sesuai yang di inginkan.",
+      "path": "CSS-Materials/015 CSS Text Alignment/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-016",
+      "course": "css",
+      "number": 16,
+      "title": "CSS Text Decoration",
+      "description": "Text decoration adalah sebuah property css yang berfungsi untuk memberi garis bawah terhadap suatu element. ada beberapa value untuk text decoration ini yaitu :",
+      "path": "CSS-Materials/016 CSS Text Decoration/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-017",
+      "course": "css",
+      "number": 17,
+      "title": "CSS Text Transform",
+      "description": "Text transformation atau text transform digunakan untuk mengubah huruf menjadi besar atau kecil. ada beberapa property text transfrom yaitu :",
+      "path": "CSS-Materials/017 CSS Text Transform/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-018",
+      "course": "css",
+      "number": 18,
+      "title": "CSS Fonts",
+      "description": "Properti CSS Fonts untuk merubah style dari tulisan di tag tersebut.",
+      "path": "CSS-Materials/018 CSS Fonts/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-019",
+      "course": "css",
+      "number": 19,
+      "title": "CSS Web Font",
+      "description": "CSS WEB FONT adalah sebuah font untuk web yang digunakan jika font pada web ingin anda custom sendiri, untuk menggunakan web font anda harus menggunakan property @font-fa",
+      "path": "CSS-Materials/019 CSS Web Font/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-020",
+      "course": "css",
+      "number": 20,
+      "title": "CSS Google Fonts",
+      "description": "Kalau kamu tidak mau menggunakan font standar yang ada di HTML, kamu bisa menggunakan Google Fonts.",
+      "path": "CSS-Materials/020 CSS Google Fonts/README.MD",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-021",
+      "course": "css",
+      "number": 21,
+      "title": "CSS Icons",
+      "description": "Cara paling gampang untuk menambahkan icon di halaman HTML kamu adalah dengan menggunakan icon dari icon library seperti Font Awesome.",
+      "path": "CSS-Materials/021 CSS Icons/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-022",
+      "course": "css",
+      "number": 22,
+      "title": "CSS Lists",
+      "description": "Pada CSS, List adalah sebuah elemen yang digunakan untuk membuat daftar item yang tersusun. List biasa digunakan untuk menampilkan daftar barang semacam to-do list.",
+      "path": "CSS-Materials/022 CSS Lists/README.md",
+      "minutes": 2,
+      "demo": "CSS-Materials/022 CSS Lists/index.html"
+    },
+    {
+      "id": "css-023",
+      "course": "css",
+      "number": 23,
+      "title": "CSS Display",
+      "description": "Setiap elemen pada halaman web didefinisikan sebagai kotak persegi panjang dan properti display di CSS lah yang menentukan bagaimana perilaku dari kotak persegi panjang t",
+      "path": "CSS-Materials/023 CSS Display/README.md",
+      "minutes": 18,
+      "demo": null
+    },
+    {
+      "id": "css-024",
+      "course": "css",
+      "number": 24,
+      "title": "CSS Position",
+      "description": "CSS Properti posisi menentukan jenis metode penentuan posisi yang digunakan untuk elemen (static, relative, fixed, absolute atau sticky). CSS Properti posisi mengatur bag",
+      "path": "CSS-Materials/024 CSS Position/README.md",
+      "minutes": 5,
+      "demo": null
+    },
+    {
+      "id": "css-025",
+      "course": "css",
+      "number": 25,
+      "title": "CSS Z Index",
+      "description": "Properti z-index adalah properti untuk menentukan urutan tumpukan elemen (elemen mana yang harus ditempatkan di depan, atau di belakang).",
+      "path": "CSS-Materials/025 CSS Z Index/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-026",
+      "course": "css",
+      "number": 26,
+      "title": "CSS Overflow",
+      "description": "NOTE : Properti overflow digunakan untuk menentukan sifat dari sebuah element yang keluar dari container atau pembungkusnya akan dipotong atau menambahkan scroll. Default",
+      "path": "CSS-Materials/026 CSS Overflow/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-027",
+      "course": "css",
+      "number": 27,
+      "title": "CSS Float",
+      "description": "CSS float adalah property css yang digunakan untuk membuat element mengambang. Biasanya property ini digunakan untuk membuat element di samping element lain.",
+      "path": "CSS-Materials/027 CSS Float/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-028",
+      "course": "css",
+      "number": 28,
+      "title": "CSS Combinators",
+      "description": "Pelajari CSS Combinators melalui penjelasan dan contoh kode.",
+      "path": "CSS-Materials/028 CSS Combinators/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-029",
+      "course": "css",
+      "number": 29,
+      "title": "CSS Pseudo Classes",
+      "description": "Biasa pseudo-classes digunakan untuk; - Mengubah gaya elemen saat pengguna mengarahkan mouse ke elemennya. - Mengubah gaya tautan yang dikunjungi dan yang belum dikunjung",
+      "path": "CSS-Materials/029 CSS Pseudo Classes/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-030",
+      "course": "css",
+      "number": 30,
+      "title": "CSS Pseudo Elements",
+      "description": "Pseudo element adalah element semu atau element palsu. Element semu? Sebenarnya setiap kita membuat element pada HTML, ada element semu yang bisa kita beri style. Pseudo ",
+      "path": "CSS-Materials/030 CSS Pseudo Elements/README.md",
+      "minutes": 3,
+      "demo": null
+    },
+    {
+      "id": "css-031",
+      "course": "css",
+      "number": 31,
+      "title": "CSS Opacity",
+      "description": "CSS opacity adalah sebuah property CSS, yang dimana berfungsi untuk memberikan effect, seperti effect transparan, blur, dan yang lainnya.",
+      "path": "CSS-Materials/031 CSS Opacity/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-032",
+      "course": "css",
+      "number": 32,
+      "title": "CSS Attribute Selectors",
+      "description": "CSS Attribute Selectors merupakan cara yang digunakan untuk memilih elemen HTML yang ingin diberikan style berdasarkan keberadaan atau nilai attribute tertentu.",
+      "path": "CSS-Materials/032 CSS Attribute Selectors/README.md",
+      "minutes": 3,
+      "demo": null
+    },
+    {
+      "id": "css-033",
+      "course": "css",
+      "number": 33,
+      "title": "CSS Counters",
+      "description": "CSS Counters adalah sebuah fitur dalam Cascading Style Sheets (CSS) yang memungkinkan kamu untuk menghitung elemen-elemen dalam dokumen HTML dan menampilkan jumlah terseb",
+      "path": "CSS-Materials/033 CSS Counters/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-034",
+      "course": "css",
+      "number": 34,
+      "title": "CSS Units",
+      "description": "Pelajari CSS Units melalui penjelasan dan contoh kode.",
+      "path": "CSS-Materials/034 CSS Units/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-035",
+      "course": "css",
+      "number": 35,
+      "title": "CSS Specificity",
+      "description": "Jika kamu memberikan style CSS tapi style tersebut tidak diterapkan oleh browser, maka besar kemungkinan masalah kamu di CSS Specificity",
+      "path": "CSS-Materials/035 CSS Specificity/README.md",
+      "minutes": 6,
+      "demo": "CSS-Materials/035 CSS Specificity/index.html"
+    },
+    {
+      "id": "css-036",
+      "course": "css",
+      "number": 36,
+      "title": "CSS Important",
+      "description": "Perintah !important berfungsi untuk mengambil alih style yang sudah ditulis pada selector lain, atau bisa juga dikatakan untuk memprioritaskan nilai yang berada di sampin",
+      "path": "CSS-Materials/036 CSS Important/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-037",
+      "course": "css",
+      "number": 37,
+      "title": "CSS Math Function",
+      "description": "CSS Math Function memungkinkan perhitungan dengan matematika pada properti.",
+      "path": "CSS-Materials/037 CSS Math Function/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-038",
+      "course": "css",
+      "number": 38,
+      "title": "CSS Border Image",
+      "description": "CSS Border Image merupakan fitur yang hanya didukung pada browser yang support CSS3, yang memungkinkan untuk menggunakan gambar sebagai border pada elemen HTML.",
+      "path": "CSS-Materials/038 CSS Border Image/README.md",
+      "minutes": 2,
+      "demo": "CSS-Materials/038 CSS Border Image/index.html"
+    },
+    {
+      "id": "css-039",
+      "course": "css",
+      "number": 39,
+      "title": "CSS Gradient",
+      "description": "CSS gradient adalah sebuah property dari CSS untuk memberikan sebuah gradasi pada sebuah element, ada 2 property dalam gradient. yaitu",
+      "path": "CSS-Materials/039 CSS Gradient/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-040",
+      "course": "css",
+      "number": 40,
+      "title": "CSS Shadow",
+      "description": "text shadow merupakan sebuah property CSS yang digunakan untuk memberikan bayangan pada text",
+      "path": "CSS-Materials/040 CSS Shadow/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-041",
+      "course": "css",
+      "number": 41,
+      "title": "CSS Word Wrap",
+      "description": "CSS word-wrap adalah properti yang bertujuan untuk mengatur elemen tulisan dalam elemen parent-nya.",
+      "path": "CSS-Materials/041 CSS Word Wrap/README.md",
+      "minutes": 3,
+      "demo": null
+    },
+    {
+      "id": "css-042",
+      "course": "css",
+      "number": 42,
+      "title": "CSS Word Spacing",
+      "description": "Properti word-spacing pada CSS mengatur jarak spasi antara kata dalam suatu elemen.",
+      "path": "CSS-Materials/042 CSS Word Spacing/readme.md",
+      "minutes": 3,
+      "demo": null
+    },
+    {
+      "id": "css-043",
+      "course": "css",
+      "number": 43,
+      "title": "CSS Writing Mode",
+      "description": "CSS writing-mode menentukan arah menulis teks apakah itu vertikal atau horizontal",
+      "path": "CSS-Materials/043 CSS Writing Mode/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-044",
+      "course": "css",
+      "number": 44,
+      "title": "CSS Transform",
+      "description": "CSS Transform merupakan property yang mengatur transformasi dari elemen baik secara 2D ataupun 3D",
+      "path": "CSS-Materials/044 CSS Transform/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-045",
+      "course": "css",
+      "number": 45,
+      "title": "CSS Transitions",
+      "description": "CSS transition adalah format CSS yang memberikan efek smooth atau lembut pada sebuah element",
+      "path": "CSS-Materials/045 CSS Transitions/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-047",
+      "course": "css",
+      "number": 47,
+      "title": "CSS Image Filter",
+      "description": "CSS filter adalah css properti yang bisa memberikan efek pada suatu element.",
+      "path": "CSS-Materials/047 CSS Image Filter/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-048",
+      "course": "css",
+      "number": 48,
+      "title": "CSS Object Fit",
+      "description": "Property CSS object-fit digunakan untuk menentukan bagaimana tag <img atau <video diubah ukurannya agar sesuai dengan wadah atau containernya.",
+      "path": "CSS-Materials/048 CSS Object Fit/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-049",
+      "course": "css",
+      "number": 49,
+      "title": "CSS Object Position",
+      "description": "Contohnya jika object-position:20% 80%, maka objek akan ditetapkan memilki jarak 20% dari sisi kiri (left) dan 80% dari bagian atas (top) element. contoh lain, object-pos",
+      "path": "CSS-Materials/049 CSS Object Position/README.md",
+      "minutes": 2,
+      "demo": "CSS-Materials/049 CSS Object Position/index.html"
+    },
+    {
+      "id": "css-050",
+      "course": "css",
+      "number": 50,
+      "title": "CSS Button",
+      "description": "CSS button adalah sebuah property CSS, yang dimana berfungsi untuk membuat desain tombol , dan bisa untuk desain tag button pada html.",
+      "path": "CSS-Materials/050 CSS Button/README.md",
+      "minutes": 3,
+      "demo": null
+    },
+    {
+      "id": "css-051",
+      "course": "css",
+      "number": 51,
+      "title": "CSS Column",
+      "description": "Ada beberapa properti yang bisa digunakan untuk menggunakan <strongColumns</strong:",
+      "path": "CSS-Materials/051 CSS Column/Readme.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-053",
+      "course": "css",
+      "number": 53,
+      "title": "CSS Custom Property",
+      "description": "Dan diakses menggunakan fungsi var() seperti:",
+      "path": "CSS-Materials/053 CSS Custom Property/README.md",
+      "minutes": 4,
+      "demo": null
+    },
+    {
+      "id": "css-054",
+      "course": "css",
+      "number": 54,
+      "title": "CSS Box Sizing",
+      "description": "CSS Box Sizing adalah cara untuk menentukan bagaimana lebar dan tinggi suatu elemen dihitung.",
+      "path": "CSS-Materials/054 CSS Box Sizing/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "css-055",
+      "course": "css",
+      "number": 55,
+      "title": "CSS Media Query",
+      "description": "Teknik media query akan menerapkan custom style yang bisa kita tentukan hanya jika kondisi tertentu benar, misalnya kita ingin mengubah ukuran font hanya ketika lebar lay",
+      "path": "CSS-Materials/055 CSS Media Query/README.md",
+      "minutes": 6,
+      "demo": null
+    },
+    {
+      "id": "css-056",
+      "course": "css",
+      "number": 56,
+      "title": "CSS Flexbox",
+      "description": "Flexbox adalah metode tata letak satu dimensi untuk mengatur item dalam baris atau kolom. Flexbox diperkenalkan di CSS versi terbaru yaitu, CSS3. Dengan flexbox, mudah un",
+      "path": "CSS-Materials/056 CSS Flexbox/README.md",
+      "minutes": 7,
+      "demo": null
+    },
+    {
+      "id": "css-057",
+      "course": "css",
+      "number": 57,
+      "title": "CSS Grid",
+      "description": "Grid adalah metode tata letak dua dimensi, yaitu dengan menggunakan CSS Grid kita dapat mengatur baris dan kolom pada sebuah element sekaligus. Hal ini berbeda dengan CSS",
+      "path": "CSS-Materials/057 CSS Grid/README.md",
+      "minutes": 20,
+      "demo": null
+    },
+    {
+      "id": "css-058",
+      "course": "css",
+      "number": 58,
+      "title": "CSS Animation",
+      "description": "Sedikit berbeda dengan transition, yang terjadinya animasi hanya ketika ada perubahan kondisi. Animation digunakan untuk membuat animasi saat halaman dimuat. Animasi dibu",
+      "path": "CSS-Materials/058 CSS Animation/README.md",
+      "minutes": 2,
+      "demo": null
+    },
+    {
+      "id": "tailwind-001",
+      "course": "tailwind",
+      "number": 1,
+      "title": "Tailwind Introduction",
+      "description": "Pada materi pertama ini, Anda akan mengenal Tailwind CSS sebagai framework utility-first. Fokus utamanya adalah memahami mindset, struktur dasar, dan bagaimana memulai pr",
+      "path": "Tailwind-Materials/001 Tailwind Introduction/README.md",
+      "minutes": 2,
+      "demo": "Tailwind-Materials/001 Tailwind Introduction/index.html"
+    },
+    {
+      "id": "tailwind-002",
+      "course": "tailwind",
+      "number": 2,
+      "title": "Utility-First Fundamentals",
+      "description": "Materi ini mendalami utilitas inti yang membuat Tailwind CSS sangat powerful. Anda akan mempelajari pola penamaan kelas, variant responsive dan state, serta teknik kombin",
+      "path": "Tailwind-Materials/002 Utility-First Fundamentals/README.md",
+      "minutes": 2,
+      "demo": "Tailwind-Materials/002 Utility-First Fundamentals/index.html"
+    },
+    {
+      "id": "tailwind-003",
+      "course": "tailwind",
+      "number": 3,
+      "title": "Layout & Responsive Design",
+      "description": "Materi ini fokus pada teknik layout responsif menggunakan Tailwind CSS. Anda akan belajar memanfaatkan Flexbox, CSS Grid, dan utilities positioning untuk membangun strukt",
+      "path": "Tailwind-Materials/003 Layout & Responsive Design/README.md",
+      "minutes": 2,
+      "demo": "Tailwind-Materials/003 Layout & Responsive Design/index.html"
+    },
+    {
+      "id": "tailwind-004",
+      "course": "tailwind",
+      "number": 4,
+      "title": "Components & Patterns",
+      "description": "Setelah memahami layout, saatnya membangun komponen UI yang reusable menggunakan Tailwind CSS. Materi ini menunjukkan cara menyusun pola desain (design patterns) tanpa ke",
+      "path": "Tailwind-Materials/004 Components & Patterns/README.md",
+      "minutes": 2,
+      "demo": "Tailwind-Materials/004 Components & Patterns/index.html"
+    },
+    {
+      "id": "tailwind-005",
+      "course": "tailwind",
+      "number": 5,
+      "title": "Forms & Interactivity",
+      "description": "Tailwind CSS menyediakan utilitas lengkap untuk men-styling form controls dan menambahkan interaktivitas ringan. Materi ini membahas prinsip aksesibilitas, state manageme",
+      "path": "Tailwind-Materials/005 Forms & Interactivity/README.md",
+      "minutes": 2,
+      "demo": "Tailwind-Materials/005 Forms & Interactivity/index.html"
+    },
+    {
+      "id": "tailwind-006",
+      "course": "tailwind",
+      "number": 6,
+      "title": "Customization & Theming",
+      "description": "Materi ini membahas cara mengkustomisasi Tailwind CSS agar sesuai dengan brand identity dan kebutuhan proyek Anda. Fokusnya pada konfigurasi tailwind.config.js, membuat d",
+      "path": "Tailwind-Materials/006 Customization & Theming/README.md",
+      "minutes": 2,
+      "demo": "Tailwind-Materials/006 Customization & Theming/index.html"
+    },
+    {
+      "id": "tailwind-007",
+      "course": "tailwind",
+      "number": 7,
+      "title": "Production & Optimization",
+      "description": "Materi terakhir membahas strategi menerapkan Tailwind CSS di lingkungan production. Fokus pada optimasi bundle, otomatisasi build, integrasi dengan framework modern, dan ",
+      "path": "Tailwind-Materials/007 Production & Optimization/README.md",
+      "minutes": 2,
+      "demo": "Tailwind-Materials/007 Production & Optimization/index.html"
+    },
+    {
+      "id": "bootstrap-001",
+      "course": "bootstrap",
+      "number": 1,
+      "title": "Bootstrap Introduction",
+      "description": "Bootstrap adalah framework front-end yang paling populer untuk mengembangkan website responsif dan mobile-first. Bootstrap menyediakan komponen-komponen siap pakai yang m",
+      "path": "Bootstrap-Materials/001 Bootstrap Introduction/README.md",
+      "minutes": 4,
+      "demo": "Bootstrap-Materials/001 Bootstrap Introduction/index.html"
+    },
+    {
+      "id": "bootstrap-002",
+      "course": "bootstrap",
+      "number": 2,
+      "title": "Grid System",
+      "description": "Grid System adalah salah satu fitur paling powerful dari Bootstrap. Sistem ini menggunakan flexbox untuk membuat layout yang responsif dan fleksibel dengan sistem 12 kolo",
+      "path": "Bootstrap-Materials/002 Grid System/README.md",
+      "minutes": 5,
+      "demo": "Bootstrap-Materials/002 Grid System/index.html"
+    }
+  ]
+}

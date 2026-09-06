@@ -65,3 +65,8 @@ Thumbs.db
 *.backup
 *.tmp
 *.temp
+
+# Browser verification artifacts
+test-results/
+playwright-report/
+artifacts/
