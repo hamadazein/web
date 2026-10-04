@@ -24,7 +24,7 @@ Body: "OpenAI Sans", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif. 
 
 ## Layout
 
-Desktop persistent 224px sidebar, top utility bar, generous main canvas. Homepage: greeting, interactive split hero, five real learning paths (four frontend paths followed by introductory backend/database theory), next-lesson entry and practical challenges. Mobile: compact header, collapsible navigation, stacked hero and learning paths. Reader: lesson outline plus article and next/previous navigation.
+Desktop and mobile share a sticky header with an explicit Menu button. Global navigation stays hidden until opened in a native modal drawer, closes after selection or dismissal, and returns keyboard focus to the button. Homepage: greeting, interactive split hero, five real learning paths (four frontend paths followed by introductory backend/database theory), next-lesson entry and practical challenges. Mobile: compact header, stacked hero and learning paths. Reader: centered single-column article, a collapsed native lesson-list disclosure, and next/previous navigation.
 
 ## Signature
 

@@ -22,6 +22,7 @@ Buka **http://localhost:4173**. File aset yang sudah dibangun ikut disertakan da
 - **Progres dan bookmark** tersimpan di browser. Lanjut belajar menuju materi yang belum diselesaikan. Penyimpanan yang diblokir tetap memungkinkan belajar selama sesi berjalan.
 - **Playground HTML/CSS** dengan tiga eksperimen, pilihan tab kode, pratinjau desktop/ponsel, draft otomatis, konfirmasi reset, dan unduh file HTML.
 - **Kenyamanan akses**: navigasi keyboard, tautan lewati navigasi, pengaturan teks besar, reduced motion, menu ponsel, dan status yang terbaca pembaca layar.
+- **Navigasi ringkas**: menu utama tersembunyi di desktop dan ponsel, dibuka lewat tombol Menu pada header yang tetap tersedia saat menggulir. Panel otomatis tertutup setelah memilih halaman, menekan Esc, atau mengklik area luar. Daftar materi dilipat agar pembaca mendapat ruang yang lebih tenang.
 - **Materi asli** beserta contoh proyek Grid/Flexbox dan Tailwind tetap tersedia. URL landing CSS, Bootstrap, dan Tailwind lama mengarah ke jalur barunya.
 
 Progres dan draft bersifat lokal pada browser/perangkat ini, belum disinkronkan antarperangkat. Pratinjau playground menggunakan iframe sandbox; skrip dan sumber eksternal dibatasi. File unduhan dapat dibuka sebagai HTML biasa.

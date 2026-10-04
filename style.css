@@ -40,6 +40,7 @@
 }
 html {
   scroll-behavior: smooth;
+  scrollbar-gutter: stable;
   scroll-padding-top: 100px;
 }
 body {
@@ -421,10 +422,13 @@ progress::-moz-progress-bar {
   margin-top: 3px;
 }
 .workspace {
-  margin-left: var(--sidebar);
+  margin-left: 0;
   min-width: 0;
 }
 .topbar {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
   height: 77px;
   padding: 0 40px;
   display: flex;
@@ -508,8 +512,32 @@ progress::-moz-progress-bar {
   background: #edece4;
   color: #5b5946;
 }
-.mobile-menu-toggle {
-  display: none;
+.nav-menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 600;
+}
+.nav-menu-toggle:hover {
+  background: var(--soft);
+}
+.header-brand {
+  font-size: 23px;
+  letter-spacing: -1px;
+  font-weight: 750;
+  line-height: 1;
+}
+.topbar-location > span {
+  border-left: 1px solid var(--line);
+  padding-left: 14px;
+  color: var(--muted);
 }
 .page-content {
   max-width: 1460px;
@@ -1891,7 +1919,7 @@ progress::-moz-progress-bar {
 }
 /* Long-form learning */
 .reader-view {
-  max-width: 1600px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: 21px 30px 0;
 }
@@ -1910,27 +1938,43 @@ progress::-moz-progress-bar {
   margin-left: auto;
 }
 .reader-layout {
-  display: grid;
-  grid-template-columns: 215px minmax(0, 1fr);
-  gap: 36px;
+  display: block;
+  max-width: 960px;
+  margin: 0 auto;
 }
 .lesson-outline {
-  position: sticky;
-  top: 22px;
-  align-self: start;
-  max-height: calc(100vh - 44px);
-  overflow-y: auto;
-  padding-top: 25px;
-  padding-right: 10px;
+  margin-top: 20px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
 }
-.lesson-outline h2 {
+.lesson-outline summary {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  font-size: 14px;
-  padding: 0 9px 17px;
+  gap: 10px;
+  min-height: 48px;
+  padding: 12px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
 }
-.lesson-outline h2 > span {
+.lesson-outline summary::-webkit-details-marker {
+  display: none;
+}
+.lesson-outline summary:hover {
+  background: var(--soft);
+  border-radius: 8px;
+}
+.lesson-outline summary > .icon:last-child {
+  margin-left: auto;
+  width: 16px;
+  transition: transform 180ms ease;
+}
+.lesson-outline[open] summary > .icon:last-child {
+  transform: rotate(90deg);
+}
+.outline-count {
   font-size: 10px;
   font-weight: 400;
   color: var(--muted);
@@ -1939,6 +1983,11 @@ progress::-moz-progress-bar {
   display: flex;
   flex-direction: column;
   gap: 3px;
+  max-height: min(360px, 50dvh);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 8px;
+  border-top: 1px solid var(--line);
 }
 .lesson-outline a {
   display: flex;
@@ -1978,6 +2027,8 @@ progress::-moz-progress-bar {
   border: 1px solid var(--line);
   border-radius: 12px;
   margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .lesson-kicker {
   display: flex;
@@ -2591,7 +2642,7 @@ dialog form > p {
 }
 .toast {
   position: fixed;
-  left: calc(50% + var(--sidebar) / 2);
+  left: 50%;
   bottom: 24px;
   transform: translate(-50%, 16px);
   padding: 13px 20px;
@@ -2616,7 +2667,7 @@ dialog form > p {
 #mobile-nav {
   margin: 0;
   inset: 0 auto 0 0;
-  width: 280px;
+  width: 310px;
   max-width: 90vw;
   max-height: 100dvh;
   height: 100dvh;
@@ -2627,6 +2678,23 @@ dialog form > p {
 #mobile-nav[open] {
   display: flex;
   flex-direction: column;
+}
+.nav-panel {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+.navigation-open {
+  overflow: hidden;
+}
+.lesson-article h2,
+.lesson-article h3,
+.lesson-article h4 {
+  scroll-margin-top: 100px;
+}
+#mobile-nav .brand {
+  padding-right: 60px;
 }
 .close-nav {
   position: absolute;
@@ -2929,8 +2997,7 @@ dialog form > p {
     display: none;
   }
   .reader-layout {
-    grid-template-columns: 180px minmax(0, 1fr);
-    gap: 22px;
+    display: block;
   }
   .reader-content {
     padding: 26px;
@@ -3185,7 +3252,7 @@ dialog form > p {
     display: block;
   }
   .lesson-outline {
-    display: none;
+    display: block;
   }
   .reader-content {
     padding: 32px;
@@ -3254,9 +3321,15 @@ dialog form > p {
     padding: 0 18px;
     gap: 10px;
   }
-  .mobile-menu-toggle {
-    display: inline-flex;
-    margin-left: -9px;
+  .nav-menu-toggle {
+    padding: 0 10px;
+    gap: 6px;
+  }
+  .header-brand {
+    font-size: 21px;
+  }
+  .topbar-location > span {
+    display: none;
   }
   .topbar-location {
     font-size: 12px;

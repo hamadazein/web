@@ -50,18 +50,27 @@ function sidebarContent(route) {
 }
 
 function shell(route) {
+  document.body.classList.remove("navigation-open");
   document.querySelector("#app").innerHTML =
-    `<aside class="sidebar">${sidebarContent(route)}</aside><div class="workspace"><header class="topbar"><div class="topbar-location"><button class="icon-button mobile-menu-toggle" id="open-menu" aria-label="Buka navigasi">${icon("menu")}</button><span class="desktop-crumb">Ruang belajar ${icon("chevron")}</span><span>${titles[route] || "Weblab"}</span></div><div class="topbar-tools"><button class="global-search" id="global-search">${icon("search")}<span>Cari sesuatu untuk dipelajari</span><kbd>Ctrl K</kbd></button><span class="topbar-divider"></span><button class="icon-button" id="open-settings" aria-label="Pengaturan kenyamanan" title="Pengaturan kenyamanan">${icon("settings")}</button><span class="header-avatar" aria-label="Pembelajar tanpa akun">P</span></div></header><main id="main" tabindex="-1"></main></div><dialog id="mobile-nav" aria-label="Menu navigasi"><button class="icon-button close-nav" aria-label="Tutup navigasi">${icon("close")}</button>${sidebarContent(route)}</dialog><dialog id="settings-dialog" aria-labelledby="settings-title"><div class="dialog-heading"><div><span class="intro-icon">${icon("settings")}</span><h2 id="settings-title">Nyaman dengan caramu.</h2></div><button class="icon-button close-settings" aria-label="Tutup pengaturan">${icon("close")}</button></div><p>Sesuaikan ruang ini agar belajar terasa lebih nyaman.</p><label class="setting-row"><span><strong>Teks lebih besar</strong><small>Perbesar teks materi dan antarmuka.</small></span><input type="checkbox" id="large-text" ${store.get().preferences.largeText ? "checked" : ""}></label><label class="setting-row"><span><strong>Kurangi animasi</strong><small>Tampilan lebih tenang, tanpa transisi.</small></span><input type="checkbox" id="reduce-motion" ${store.get().preferences.reduceMotion ? "checked" : ""}></label><div class="settings-note">${icon("bookmark")} Preferensi dan progres disimpan di browser ini.</div><button class="button primary close-settings">Selesai ${icon("check")}</button></dialog>`;
+    `<div class="workspace"><header class="topbar"><div class="topbar-location"><button class="nav-menu-toggle" id="open-menu" aria-label="Buka navigasi" aria-controls="mobile-nav" aria-expanded="false" aria-haspopup="dialog">${icon("menu")}<span>Menu</span></button><a class="header-brand" href="#/home" aria-label="Weblab beranda">web<span class="brand-light">lab</span><span class="logo-dot">.</span></a><span>${titles[route] || "Weblab"}</span></div><div class="topbar-tools"><button class="global-search" id="global-search">${icon("search")}<span>Cari sesuatu untuk dipelajari</span><kbd>Ctrl K</kbd></button><span class="topbar-divider"></span><button class="icon-button" id="open-settings" aria-label="Pengaturan kenyamanan" title="Pengaturan kenyamanan">${icon("settings")}</button></div></header><main id="main" tabindex="-1"></main></div><dialog id="mobile-nav" aria-label="Menu navigasi"><button class="icon-button close-nav" aria-label="Tutup navigasi">${icon("close")}</button><div class="nav-panel">${sidebarContent(route)}</div></dialog><dialog id="settings-dialog" aria-labelledby="settings-title"><div class="dialog-heading"><div><span class="intro-icon">${icon("settings")}</span><h2 id="settings-title">Nyaman dengan caramu.</h2></div><button class="icon-button close-settings" aria-label="Tutup pengaturan">${icon("close")}</button></div><p>Sesuaikan ruang ini agar belajar terasa lebih nyaman.</p><label class="setting-row"><span><strong>Teks lebih besar</strong><small>Perbesar teks materi dan antarmuka.</small></span><input type="checkbox" id="large-text" ${store.get().preferences.largeText ? "checked" : ""}></label><label class="setting-row"><span><strong>Kurangi animasi</strong><small>Tampilan lebih tenang, tanpa transisi.</small></span><input type="checkbox" id="reduce-motion" ${store.get().preferences.reduceMotion ? "checked" : ""}></label><div class="settings-note">${icon("bookmark")} Preferensi dan progres disimpan di browser ini.</div><button class="button primary close-settings">Selesai ${icon("check")}</button></dialog>`;
   const menu = document.querySelector("#mobile-nav");
-  document
-    .querySelector("#open-menu")
-    .addEventListener("click", () => menu.showModal());
+  const menuToggle = document.querySelector("#open-menu");
+  menuToggle.addEventListener("click", () => {
+    menu.querySelector(".nav-panel").innerHTML = sidebarContent(route);
+    menu.showModal();
+    document.body.classList.add("navigation-open");
+    menuToggle.setAttribute("aria-expanded", "true");
+  });
+  menu.addEventListener("close", () => {
+    document.body.classList.remove("navigation-open");
+    menuToggle.setAttribute("aria-expanded", "false");
+  });
   menu
     .querySelector(".close-nav")
     .addEventListener("click", () => menu.close());
-  menu
-    .querySelectorAll("a")
-    .forEach((link) => link.addEventListener("click", () => menu.close()));
+  menu.addEventListener("click", (event) => {
+    if (event.target.closest("a")) menu.close();
+  });
   const settings = document.querySelector("#settings-dialog");
   document
     .querySelector("#open-settings")
@@ -308,7 +317,6 @@ async function render() {
                     .filter((item) => item.course === lesson.course)
                     .findIndex((item) => item.id === id) + 1,
                 ).padStart(2, "0");
-          document.querySelector(".sidebar").innerHTML = sidebarContent(route);
           toast(
             completed
               ? "Satu langkah maju! Progresmu sudah dicatat."
