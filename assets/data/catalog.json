@@ -51,6 +51,32 @@
       "level": "Pengantar"
     }
   ],
+  "upcomingCourses": [
+    {
+      "id": "crud",
+      "name": "CRUD & Pengelolaan Data",
+      "label": "Dari data ke aplikasi",
+      "description": "Kenali cara menampilkan, mengubah, dan menghapus data.",
+      "symbol": "CRUD",
+      "level": "Menengah"
+    },
+    {
+      "id": "auth",
+      "name": "Login & Hak Akses",
+      "label": "Akun & keamanan",
+      "description": "Pahami sesi pengguna, autentikasi, dan pembagian peran.",
+      "symbol": "ID",
+      "level": "Menengah"
+    },
+    {
+      "id": "deployment",
+      "name": "Proyek Web & Deployment",
+      "label": "Dari lokal ke publik",
+      "description": "Rangkai proyek web dan pelajari proses penerbitannya.",
+      "symbol": "↗",
+      "level": "Lanjutan"
+    }
+  ],
   "lessons": [
     {
       "id": "html-000",

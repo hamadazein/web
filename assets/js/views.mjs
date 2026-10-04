@@ -19,6 +19,13 @@ export function courseCard(course, lessons, state) {
   </a>`;
 }
 
+function upcomingCourseCard(course) {
+  return `<article class="course-card is-upcoming ${e(course.id)}">
+    <div class="course-art"><span class="art-code" aria-hidden="true">${e(course.symbol)}</span><span class="course-level">${e(course.level)}</span><span class="art-caption">${e(course.label)}</span></div>
+    <div class="course-info"><h3>${e(course.name)}</h3><p>${e(course.description)}</p><div class="course-meta"><span class="upcoming-status"><span aria-hidden="true"></span>Segera hadir</span></div></div>
+  </article>`;
+}
+
 export function homeView(catalog, state) {
   const next = getContinueLesson(catalog.lessons, state);
   const nextCourse = catalog.courses.find(
@@ -42,7 +49,7 @@ export function homeView(catalog, state) {
         <span class="lab-label label-preview">${icon("spark")} lihat jadi nyata</span>
       </div>
     </section>
-    <section class="learning-paths" aria-labelledby="paths-title"><div class="section-heading"><div><h2 id="paths-title">Mau belajar apa hari ini?</h2><p>Dari fondasi pertama sampai website yang kamu impikan.</p></div><a class="text-link" href="#/catalog">Jelajahi semua ${icon("arrow")}</a></div><div class="course-grid">${catalog.courses.map((course) => courseCard(course, catalog.lessons, state)).join("")}</div></section>
+    <section class="learning-paths" aria-labelledby="paths-title"><div class="section-heading"><div><h2 id="paths-title">Mau belajar apa hari ini?</h2><p>Dari fondasi pertama sampai website yang kamu impikan.</p></div><a class="text-link" href="#/catalog">Jelajahi semua ${icon("arrow")}</a></div><div class="course-grid">${catalog.courses.map((course) => courseCard(course, catalog.lessons, state)).join("")}${(catalog.upcomingCourses || []).map(upcomingCourseCard).join("")}</div></section>
     <div class="home-bottom"><section class="next-section" aria-labelledby="next-title"><div class="section-heading"><h2 id="next-title">${state.last ? "Lanjut dari langkah terakhirmu" : "Mulai dari yang paling dasar"}</h2>${icon("route")}</div><a class="next-lesson" href="${lessonLink(next)}"><span class="lesson-symbol ${next.course}">${e(nextCourse.symbol)}</span><div><span class="small-label">${nextCourse.name} · ${state.last ? (next.id === state.last ? "Terakhir dibuka" : "Langkah berikutnya") : "Langkah pertama"}</span><h3>${e(next.title)}</h3><p>${icon("clock")} ${next.minutes} menit baca <span>·</span> ${state.completed.includes(next.id) ? "Sudah selesai" : "Siap dipelajari"}</p></div><span class="round-arrow">${icon("arrow")}</span></a><div class="encouragement">${icon("leaf")} Sedikit setiap hari, jadi banyak suatu nanti.</div></section>
     <section class="practice-callout"><div class="practice-top"><span class="practice-symbol">${icon("code")}</span><span class="badge">Belajar sambil membuat</span></div><h2>Ide bagus dimulai<br>dari coba-coba.</h2><p>Tempat aman untuk bereksperimen.<br>Ubah kode, lihat hasilnya, ulangi.</p><a href="#/playground" class="text-link">Buka playground ${icon("arrow")}</a><span class="practice-braces" aria-hidden="true">{ }</span></section></div>
     <section class="project-section"><div class="section-heading"><div><h2>Dari “sudah paham” ke “sudah bikin”.</h2><p>Terapkan yang kamu pelajari lewat tantangan kecil.</p></div><span class="handy-note">Kecil proyeknya, besar rasanya.</span></div><div class="project-grid"><a class="project-item" href="#/playground?project=profile"><span class="project-thumbnail profile-art" aria-hidden="true"><span class="profile-dot"></span><i></i><i></i></span><div><span class="small-label">HTML + CSS · Pemula</span><h3>Kartu profil pertamamu</h3><p>Kenalkan dirimu lewat kode.</p></div>${icon("arrow")}</a><a class="project-item" href="#/playground?project=layout"><span class="project-thumbnail layout-art" aria-hidden="true"><i></i><i></i><i></i><i></i></span><div><span class="small-label">CSS Grid · Menengah</span><h3>Layout yang ikut beradaptasi</h3><p>Satu desain, berbagai ukuran layar.</p></div>${icon("arrow")}</a></div></section>

@@ -32,6 +32,8 @@ The hero shows editable HTML/CSS producing a real preview. Its accent swatches a
 
 BelajarKode is presented as the next learning destination through a compact lowercase wordmark, using its live brand colors (#142d22 and #b8f3a8). Links appear in the homepage footer and navigation drawer. A restrained continuation section follows the second backend lesson; it is hidden during focus mode and printing. Promotional copy stays brief and factual, with no pop-ups or interruption of reading.
 
+The homepage follows the five available paths with three upcoming cards: CRUD, authentication, and deployment. These complete the two-row desktop grid while explicitly showing Segera hadir. Upcoming cards have no links, lesson counts, or progress and do not appear in the available catalog filters or roadmap. Card metadata aligns at the bottom of each row.
+
 ## Components and motion
 
 12–16px card radius, pill badges, 44px touch controls, solid border or restrained shadow. 180ms hover/focus feedback. Reduced-motion turns transitions off. Progress and bookmarks always reflect real browser-local data.

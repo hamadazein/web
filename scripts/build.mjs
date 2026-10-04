@@ -64,6 +64,32 @@ const courses = [
     level: "Pengantar",
   },
 ];
+const upcomingCourses = [
+  {
+    id: "crud",
+    name: "CRUD & Pengelolaan Data",
+    label: "Dari data ke aplikasi",
+    description: "Kenali cara menampilkan, mengubah, dan menghapus data.",
+    symbol: "CRUD",
+    level: "Menengah",
+  },
+  {
+    id: "auth",
+    name: "Login & Hak Akses",
+    label: "Akun & keamanan",
+    description: "Pahami sesi pengguna, autentikasi, dan pembagian peran.",
+    symbol: "ID",
+    level: "Menengah",
+  },
+  {
+    id: "deployment",
+    name: "Proyek Web & Deployment",
+    label: "Dari lokal ke publik",
+    description: "Rangkai proyek web dan pelajari proses penerbitannya.",
+    symbol: "↗",
+    level: "Lanjutan",
+  },
+];
 const lessons = [];
 for (const course of courses) {
   const directories = (await readdir(course.folder, { withFileTypes: true }))
@@ -126,7 +152,7 @@ for (const folder of ["assets/data", "assets/vendor", "assets/fonts"])
   await mkdir(folder, { recursive: true });
 await writeFile(
   "assets/data/catalog.json",
-  JSON.stringify({ courses, lessons }, null, 2) + "\n",
+  JSON.stringify({ courses, upcomingCourses, lessons }, null, 2) + "\n",
 );
 await Promise.all([
   copyFile("node_modules/marked/lib/marked.esm.js", "assets/vendor/marked.mjs"),

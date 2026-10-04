@@ -43,6 +43,23 @@ test("database theory follows frontend courses as a separate learning path", asy
   );
 });
 
+test("upcoming paths follow database without contributing lessons or available courses", async () => {
+  const catalog = JSON.parse(
+    await readFile("assets/data/catalog.json", "utf8"),
+  );
+  assert.deepEqual(
+    catalog.upcomingCourses.map((course) => course.id),
+    ["crud", "auth", "deployment"],
+  );
+  assert.equal(catalog.courses.length, 5);
+  for (const course of catalog.upcomingCourses) {
+    assert.equal(
+      catalog.lessons.some((lesson) => lesson.course === course.id),
+      false,
+    );
+  }
+});
+
 test("HTML CSS lesson is categorized in HTML and Tailwind duplicate is excluded", async () => {
   const { lessons } = JSON.parse(
     await readFile("assets/data/catalog.json", "utf8"),

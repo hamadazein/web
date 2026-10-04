@@ -5,9 +5,9 @@ test("database theory is discoverable after frontend paths and progress persists
 }) => {
   await page.goto("/#/home");
   const cards = page.locator(".learning-paths .course-card");
-  await expect(cards).toHaveCount(5);
-  await expect(cards.last()).toContainText("Form, PHP & Database");
-  await cards.last().click();
+  await expect(cards).toHaveCount(8);
+  await expect(cards.nth(4)).toContainText("Form, PHP & Database");
+  await cards.nth(4).click();
   await page.getByRole("link", { name: /Mulai jalur ini/ }).click();
   await expect(page).toHaveURL(/lesson\/backend-000/);
   await expect(page.locator(".lesson-article h2")).toHaveCount(10);

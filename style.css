@@ -652,6 +652,18 @@ progress::-moz-progress-bar {
   --course-bg: var(--backend-bg);
   --course-ink: var(--backend-ink);
 }
+.crud {
+  --course-bg: #fff1dc;
+  --course-ink: #875510;
+}
+.auth {
+  --course-bg: #f4e8f0;
+  --course-ink: #854567;
+}
+.deployment {
+  --course-bg: #e6eff8;
+  --course-ink: #365e87;
+}
 .tag.html,
 .tag.css,
 .tag.tailwind,
@@ -1055,7 +1067,8 @@ progress::-moz-progress-bar {
   gap: 17px;
 }
 .course-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   min-width: 0;
   border-radius: 11px;
   background: white;
@@ -1065,11 +1078,12 @@ progress::-moz-progress-bar {
     transform 0.2s ease,
     border-color 0.2s ease;
 }
-.course-card:hover {
+a.course-card:hover {
   transform: translateY(-4px);
   border-color: #94b8a4;
 }
 .course-art {
+  flex: none;
   height: 126px;
   position: relative;
   background: var(--course-bg);
@@ -1149,6 +1163,9 @@ progress::-moz-progress-bar {
 }
 .course-info {
   padding: 17px 17px 14px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 .course-info h3 {
   font-size: 16px;
@@ -1163,7 +1180,8 @@ progress::-moz-progress-bar {
   min-height: 38px;
 }
 .course-meta {
-  margin-top: 18px;
+  margin-top: auto;
+  padding-top: 18px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1183,6 +1201,29 @@ progress::-moz-progress-bar {
 }
 .course-info progress {
   margin-top: 14px;
+}
+.upcoming-status {
+  color: var(--course-ink);
+  font-weight: 550;
+}
+.upcoming-status > span {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.crud .art-code {
+  font-size: 31px;
+  letter-spacing: -2px;
+}
+.auth .art-code {
+  letter-spacing: -2px;
+}
+.deployment .art-code {
+  font-family: Inter, sans-serif;
+  font-size: 43px;
+  line-height: 0.95;
+  letter-spacing: 0;
 }
 .home-bottom {
   display: grid;
