@@ -41,10 +41,34 @@ test("database theory is discoverable after frontend paths and progress persists
   );
   await page.goto("/#/catalog");
   await page.getByRole("button", { name: /Form, PHP & Database/ }).click();
-  await expect(page.locator(".lesson-result")).toHaveCount(1);
-  await expect(page.locator(".lesson-result")).toContainText(
+  await expect(page.locator(".lesson-result")).toHaveCount(2);
+  await expect(page.locator(".lesson-result").first()).toContainText(
     "Teori Koneksi Database",
   );
+});
+
+test("second database lesson follows theory and renders its practical steps", async ({
+  page,
+}) => {
+  await page.goto("/#/lesson/backend-000");
+  await page
+    .locator(".lesson-pagination")
+    .getByRole("link", { name: /Praktik Koneksi Database dengan PHP/ })
+    .click();
+  await expect(page).toHaveURL(/lesson\/backend-001/);
+  await expect(page.locator(".lesson-article h2")).toHaveCount(10);
+  await expect(page.locator(".lesson-article")).toContainText(
+    "PDO::ATTR_EMULATE_PREPARES",
+  );
+  const diagram = page.locator(".lesson-article img");
+  await diagram.scrollIntoViewIfNeeded();
+  await diagram.evaluate((img) => img.decode());
+  expect(await diagram.evaluate((img) => img.naturalWidth)).toBeGreaterThan(0);
+  await page
+    .locator(".lesson-pagination")
+    .getByRole("link", { name: /Teori Koneksi Database/ })
+    .click();
+  await expect(page).toHaveURL(/lesson\/backend-000/);
 });
 
 test("database course and lesson fit narrow screens", async ({ page }) => {
@@ -55,6 +79,7 @@ test("database course and lesson fit narrow screens", async ({ page }) => {
     "roadmap",
     "courses/backend",
     "lesson/backend-000",
+    "lesson/backend-001",
   ]) {
     await page.goto(`/#/${route}`);
     await expect(page.locator("#main h1")).toBeVisible();

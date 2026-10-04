@@ -1231,6 +1231,16 @@
       "path": "Backend-Materials/000 Teori Koneksi Database/README.md",
       "minutes": 7,
       "demo": null
+    },
+    {
+      "id": "backend-001",
+      "course": "backend",
+      "number": 1,
+      "title": "Praktik Koneksi Database dengan PHP",
+      "description": "Materi kedua pada jalur Form, PHP & Database: mempraktikkan teori koneksi melalui form pendaftaran mahasiswa. Ikuti langkah dari membuat tabel, membuka koneksi PHP, sampa",
+      "path": "Backend-Materials/001 Praktik Koneksi Database dengan PHP/README.md",
+      "minutes": 9,
+      "demo": null
     }
   ]
 }

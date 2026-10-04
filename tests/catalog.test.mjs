@@ -30,8 +30,13 @@ test("database theory follows frontend courses as a separate learning path", asy
     await readFile("assets/data/catalog.json", "utf8"),
   );
   assert.equal(courses.at(-1).id, "backend");
-  assert.equal(lessons.at(-1).id, "backend-000");
-  assert.equal(lessons.at(-1).title, "Teori Koneksi Database");
+  const backend = lessons.filter((lesson) => lesson.course === "backend");
+  assert.deepEqual(
+    backend.map((lesson) => lesson.id),
+    ["backend-000", "backend-001"],
+  );
+  assert.equal(backend[0].title, "Teori Koneksi Database");
+  assert.equal(backend[1].title, "Praktik Koneksi Database dengan PHP");
   assert.equal(
     lessons.some((lesson) => lesson.id === "html-052"),
     false,

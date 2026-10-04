@@ -68,7 +68,7 @@ test("lesson list is collapsed, keyboard accessible, and available on phones", a
       .getByRole("button", { name: "Buka navigasi", exact: true })
       .click();
     await expect(page.locator("#mobile-nav .sidebar-progress")).toContainText(
-      "1 / 118",
+      "1 / 119",
     );
     await page.keyboard.press("Escape");
     await page

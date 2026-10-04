@@ -1,6 +1,6 @@
 # Weblab — Belajar. Coba. Tumbuh.
 
-Ruang belajar pengembangan web dalam bahasa Indonesia, dikembangkan dari materi [hamadazein/web](https://github.com/hamadazein/web). Pelajari **118 materi** melalui lima jalur: HTML, CSS, Tailwind CSS, Bootstrap, lalu **Form, PHP & Database** sebagai materi lanjutan. Situs materi berjalan tanpa akun dan tanpa backend; contoh PHP dipelajari melalui server latihan lokal.
+Ruang belajar pengembangan web dalam bahasa Indonesia, dikembangkan dari materi [hamadazein/web](https://github.com/hamadazein/web). Pelajari **119 materi** melalui lima jalur: HTML, CSS, Tailwind CSS, Bootstrap, lalu **Form, PHP & Database** sebagai materi lanjutan. Situs materi berjalan tanpa akun dan tanpa backend; contoh PHP dipelajari melalui server latihan lokal.
 
 ## Jalankan lokal
 
