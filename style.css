@@ -28,6 +28,8 @@
   --tailwind-ink: #136783;
   --bootstrap-bg: #f0e8ff;
   --bootstrap-ink: #7442a6;
+  --backend-bg: #e1f3ef;
+  --backend-ink: #166653;
   --sidebar: 232px;
   --z-sticky: 10;
   --z-toast: 40;
@@ -618,10 +620,15 @@ progress::-moz-progress-bar {
   --course-bg: var(--bootstrap-bg);
   --course-ink: var(--bootstrap-ink);
 }
+.backend {
+  --course-bg: var(--backend-bg);
+  --course-ink: var(--backend-ink);
+}
 .tag.html,
 .tag.css,
 .tag.tailwind,
-.tag.bootstrap {
+.tag.bootstrap,
+.tag.backend {
   background: var(--course-bg);
   color: var(--course-ink);
 }

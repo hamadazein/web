@@ -10,7 +10,7 @@ Pembelajar berbahasa Indonesia yang mulai belajar pengembangan web, melalui lapt
 
 ## Product Purpose
 
-Mengubah koleksi materi HTML, CSS, Bootstrap, dan Tailwind di repositori ini menjadi ruang belajar yang terarah dan mudah diakses. Materi tetap bersumber dari file Markdown asli.
+Mengubah koleksi materi HTML, CSS, Bootstrap, dan Tailwind di repositori ini menjadi ruang belajar yang terarah dan mudah diakses, dilanjutkan teori form, PHP, dan koneksi database. Materi tetap bersumber dari file Markdown.
 
 ## Brand Personality
 

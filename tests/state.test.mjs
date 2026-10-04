@@ -14,6 +14,18 @@ function memory(value = null) {
   };
 }
 
+test("database lesson completion, bookmark, and last visit survive reload", () => {
+  const storage = memory();
+  const store = createStore(storage);
+  store.complete("backend-000", true);
+  store.bookmark("backend-000");
+  store.visit("backend-000");
+  const restored = createStore(storage).get();
+  assert.deepEqual(restored.completed, ["backend-000"]);
+  assert.deepEqual(restored.saved, ["backend-000"]);
+  assert.equal(restored.last, "backend-000");
+});
+
 test("completion is unique, reversible, and survives reload", () => {
   const storage = memory();
   const store = createStore(storage);

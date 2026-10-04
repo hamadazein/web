@@ -52,11 +52,11 @@ export function homeView(catalog, state) {
 
 export function lessonRow(lesson, state) {
   const done = state.completed.includes(lesson.id);
-  return `<div class="lesson-result"><a href="${lessonLink(lesson)}"><span class="lesson-index ${done ? "is-done" : ""}">${done ? icon("check") : String(lesson.number + 1).padStart(2, "0")}</span><div class="result-content"><h3>${e(lesson.title)}</h3><p>${e(lesson.description)}</p></div><span class="lesson-duration">${icon("clock")} ${lesson.minutes} mnt</span><span class="tag ${lesson.course}">${lesson.course === "tailwind" ? "Tailwind" : lesson.course === "bootstrap" ? "Bootstrap" : lesson.course.toUpperCase()}</span>${icon("chevron")}</a><button class="icon-button bookmark-button ${state.saved.includes(lesson.id) ? "saved" : ""}" data-bookmark="${lesson.id}" aria-label="${state.saved.includes(lesson.id) ? "Hapus simpanan" : "Simpan"} ${e(lesson.title)}" aria-pressed="${state.saved.includes(lesson.id)}">${icon("bookmark")}</button></div>`;
+  return `<div class="lesson-result"><a href="${lessonLink(lesson)}"><span class="lesson-index ${done ? "is-done" : ""}">${done ? icon("check") : String(lesson.number + 1).padStart(2, "0")}</span><div class="result-content"><h3>${e(lesson.title)}</h3><p>${e(lesson.description)}</p></div><span class="lesson-duration">${icon("clock")} ${lesson.minutes} mnt</span><span class="tag ${lesson.course}">${lesson.course === "tailwind" ? "Tailwind" : lesson.course === "bootstrap" ? "Bootstrap" : lesson.course === "backend" ? "PHP & Database" : lesson.course.toUpperCase()}</span>${icon("chevron")}</a><button class="icon-button bookmark-button ${state.saved.includes(lesson.id) ? "saved" : ""}" data-bookmark="${lesson.id}" aria-label="${state.saved.includes(lesson.id) ? "Hapus simpanan" : "Simpan"} ${e(lesson.title)}" aria-pressed="${state.saved.includes(lesson.id)}">${icon("bookmark")}</button></div>`;
 }
 
 export function catalogView(catalog, state, query = "", selected = "all") {
-  return `<div class="page-content catalog-view"><div class="page-intro"><span class="intro-icon">${icon("grid")}</span><h1>Temukan hal baru hari ini.</h1><p>${catalog.lessons.length} materi, empat jalur, dan banyak kemungkinan. Mulai dari rasa ingin tahumu.</p></div><div class="catalog-tools"><label class="search-field">${icon("search")}<input type="search" id="catalog-search" aria-label="Cari materi" placeholder="Cari konsep, misalnya: flexbox, forms, animation…" value="${e(query)}"><kbd>/</kbd></label><div class="filter-row" role="group" aria-label="Filter jalur belajar"><button class="filter-chip ${selected === "all" ? "active" : ""}" data-filter="all" aria-pressed="${selected === "all"}">Semua materi <span>${catalog.lessons.length}</span></button>${catalog.courses.map((course) => `<button class="filter-chip ${selected === course.id ? "active" : ""}" data-filter="${course.id}" aria-pressed="${selected === course.id}">${course.name}<span>${catalog.lessons.filter((lesson) => lesson.course === course.id).length}</span></button>`).join("")}</div></div><div class="results-heading"><h2>Materi pembelajaran</h2><span id="result-count" aria-live="polite"></span></div><div id="catalog-results"></div></div>`;
+  return `<div class="page-content catalog-view"><div class="page-intro"><span class="intro-icon">${icon("grid")}</span><h1>Temukan hal baru hari ini.</h1><p>${catalog.lessons.length} materi, ${catalog.courses.length} jalur, dan banyak kemungkinan. Mulai dari rasa ingin tahumu.</p></div><div class="catalog-tools"><label class="search-field">${icon("search")}<input type="search" id="catalog-search" aria-label="Cari materi" placeholder="Cari konsep, misalnya: flexbox, forms, animation…" value="${e(query)}"><kbd>/</kbd></label><div class="filter-row" role="group" aria-label="Filter jalur belajar"><button class="filter-chip ${selected === "all" ? "active" : ""}" data-filter="all" aria-pressed="${selected === "all"}">Semua materi <span>${catalog.lessons.length}</span></button>${catalog.courses.map((course) => `<button class="filter-chip ${selected === course.id ? "active" : ""}" data-filter="${course.id}" aria-pressed="${selected === course.id}">${course.name}<span>${catalog.lessons.filter((lesson) => lesson.course === course.id).length}</span></button>`).join("")}</div></div><div class="results-heading"><h2>Materi pembelajaran</h2><span id="result-count" aria-live="polite"></span></div><div id="catalog-results"></div></div>`;
 }
 
 export function courseView(course, catalog, state) {
@@ -80,12 +80,7 @@ export function savedView(catalog, state) {
 }
 
 export function roadmapView(catalog, state) {
-  return `<div class="page-content roadmap-view"><div class="page-intro"><span class="intro-icon">${icon("route")}</span><h1>Tujuan besar. Langkah yang jelas.</h1><p>Jalur yang disarankan untuk membangun website pertamamu. Belajar sesuai ritmemu; semua materi terbuka.</p></div><div class="roadmap">${[
-    catalog.courses[0],
-    catalog.courses[1],
-    catalog.courses[2],
-    catalog.courses[3],
-  ]
+  return `<div class="page-content roadmap-view"><div class="page-intro"><span class="intro-icon">${icon("route")}</span><h1>Tujuan besar. Langkah yang jelas.</h1><p>Jalur yang disarankan untuk membangun website pertamamu. Belajar sesuai ritmemu; semua materi terbuka.</p></div><div class="roadmap">${catalog.courses
     .map((course, index) => {
       const items = catalog.lessons.filter(
         (lesson) => lesson.course === course.id,
@@ -93,7 +88,7 @@ export function roadmapView(catalog, state) {
       const count = items.filter((lesson) =>
         state.completed.includes(lesson.id),
       ).length;
-      return `<section class="roadmap-step"><span class="step-number">${String(index + 1).padStart(2, "0")}</span><div><span class="small-label">${index < 2 ? "Fondasi utama" : "Pilihan framework"} · ${course.level}</span><h2>${course.name}</h2><p>${course.detail}</p><div class="roadmap-meta"><span>${items.length} materi · ${count} selesai</span><a href="#/courses/${course.id}" class="text-link">Buka jalur ${icon("arrow")}</a></div></div><span class="roadmap-symbol ${course.id}" aria-hidden="true">${e(course.symbol)}</span></section>`;
+      return `<section class="roadmap-step"><span class="step-number">${String(index + 1).padStart(2, "0")}</span><div><span class="small-label">${index < 2 ? "Fondasi utama" : course.id === "backend" ? "Materi lanjutan" : "Pilihan framework"} · ${course.level}</span><h2>${course.name}</h2><p>${course.detail}</p><div class="roadmap-meta"><span>${items.length} materi · ${count} selesai</span><a href="#/courses/${course.id}" class="text-link">Buka jalur ${icon("arrow")}</a></div></div><span class="roadmap-symbol ${course.id}" aria-hidden="true">${e(course.symbol)}</span></section>`;
     })
     .join(
       "",

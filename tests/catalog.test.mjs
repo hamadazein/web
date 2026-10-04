@@ -2,13 +2,13 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile, access } from "node:fs/promises";
 
-test("all four learning paths contain real, unique, readable local lessons", async () => {
+test("all five learning paths contain real, unique, readable local lessons", async () => {
   const catalog = JSON.parse(
     await readFile("assets/data/catalog.json", "utf8"),
   );
   assert.deepEqual(
     catalog.courses.map((course) => course.id),
-    ["html", "css", "tailwind", "bootstrap"],
+    ["html", "css", "tailwind", "bootstrap", "backend"],
   );
   assert.ok(catalog.lessons.length >= 115);
   assert.equal(
@@ -22,6 +22,19 @@ test("all four learning paths contain real, unique, readable local lessons", asy
       await access(lesson.path);
       assert.ok((await readFile(lesson.path, "utf8")).trim().length > 0);
     }),
+  );
+});
+
+test("database theory follows frontend courses as a separate learning path", async () => {
+  const { courses, lessons } = JSON.parse(
+    await readFile("assets/data/catalog.json", "utf8"),
+  );
+  assert.equal(courses.at(-1).id, "backend");
+  assert.equal(lessons.at(-1).id, "backend-000");
+  assert.equal(lessons.at(-1).title, "Teori Koneksi Database");
+  assert.equal(
+    lessons.some((lesson) => lesson.id === "html-052"),
+    false,
   );
 });
 

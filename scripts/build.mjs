@@ -52,6 +52,17 @@ const courses = [
     symbol: "B",
     level: "Menengah",
   },
+  {
+    id: "backend",
+    name: "Form, PHP & Database",
+    label: "Materi lanjutan",
+    description: "Pahami bagaimana isian form menjadi data tersimpan.",
+    detail:
+      "Setelah HTML, CSS, Bootstrap, dan Tailwind, kenali peran PHP, koneksi database, dan alur penyimpanan data melalui teori sederhana serta contoh pendaftaran mahasiswa.",
+    folder: "Backend-Materials",
+    symbol: "DB",
+    level: "Pengantar",
+  },
 ];
 const lessons = [];
 for (const course of courses) {

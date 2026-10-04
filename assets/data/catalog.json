@@ -39,6 +39,16 @@
       "folder": "Bootstrap-Materials",
       "symbol": "B",
       "level": "Menengah"
+    },
+    {
+      "id": "backend",
+      "name": "Form, PHP & Database",
+      "label": "Materi lanjutan",
+      "description": "Pahami bagaimana isian form menjadi data tersimpan.",
+      "detail": "Setelah HTML, CSS, Bootstrap, dan Tailwind, kenali peran PHP, koneksi database, dan alur penyimpanan data melalui teori sederhana serta contoh pendaftaran mahasiswa.",
+      "folder": "Backend-Materials",
+      "symbol": "DB",
+      "level": "Pengantar"
     }
   ],
   "lessons": [
@@ -1211,6 +1221,16 @@
       "path": "Bootstrap-Materials/002 Grid System/README.md",
       "minutes": 5,
       "demo": "Bootstrap-Materials/002 Grid System/index.html"
+    },
+    {
+      "id": "backend-000",
+      "course": "backend",
+      "number": 0,
+      "title": "Teori Koneksi Database",
+      "description": "Materi lanjutan setelah HTML, CSS, Bootstrap, dan Tailwind: memahami bagaimana data dari form diproses oleh PHP lalu disimpan ke database. Sepuluh slide pengantar ini mem",
+      "path": "Backend-Materials/000 Teori Koneksi Database/README.md",
+      "minutes": 7,
+      "demo": null
     }
   ]
 }

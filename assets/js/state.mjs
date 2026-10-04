@@ -13,7 +13,7 @@ const ids = (value) =>
           value.filter(
             (item) =>
               typeof item === "string" &&
-              /^(html|css|tailwind|bootstrap)-\d{3}$/.test(item),
+              /^(html|css|tailwind|bootstrap|backend)-\d{3}$/.test(item),
           ),
         ),
       ]

@@ -1,6 +1,6 @@
 # Weblab — Belajar. Coba. Tumbuh.
 
-Ruang belajar pengembangan web dalam bahasa Indonesia, dikembangkan dari materi [hamadazein/web](https://github.com/hamadazein/web). Pelajari **117 materi** melalui empat jalur: HTML, CSS, Tailwind CSS, dan Bootstrap. Tanpa akun dan tanpa backend.
+Ruang belajar pengembangan web dalam bahasa Indonesia, dikembangkan dari materi [hamadazein/web](https://github.com/hamadazein/web). Pelajari **118 materi** melalui lima jalur: HTML, CSS, Tailwind CSS, Bootstrap, lalu **Form, PHP & Database** sebagai materi lanjutan. Situs materi berjalan tanpa akun dan tanpa backend; contoh PHP dipelajari melalui server latihan lokal.
 
 ## Jalankan lokal
 
@@ -58,6 +58,7 @@ tests/                     Pengujian data, alur pengguna, dan aksesibilitas
 CSS-Materials/             Sumber materi CSS
 Tailwind-Materials/        Sumber materi dan contoh Tailwind v3
 Bootstrap-Materials/       Sumber materi dan contoh Bootstrap
+Backend-Materials/         Teori lanjutan form, PHP, dan koneksi database
 ```
 
 Tambahkan atau edit README materi pada folder bernomor yang sesuai, kemudian jalankan `npm run build`. Generator mempertahankan kapitalisasi nama file, mengategorikan materi `013 HTML CSS` ke HTML, dan mengambil satu versi materi Tailwind 007 yang duplikat.

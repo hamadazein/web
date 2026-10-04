@@ -16,6 +16,7 @@ Pelajar membuka laptop di ruang kelas yang terang dan ingin segera mencoba konse
 - CSS: #e8edff / #3d55b0
 - Tailwind: #e3f4fa / #136783
 - Bootstrap: #f0e8ff / #7442a6
+- Form, PHP & Database: #e1f3ef / #166653
 
 ## Typography
 
@@ -23,7 +24,7 @@ Body: "OpenAI Sans", "Inter", system-ui, -apple-system, "Segoe UI", sans-serif. 
 
 ## Layout
 
-Desktop persistent 224px sidebar, top utility bar, generous main canvas. Homepage: greeting, interactive split hero, four real learning paths, next-lesson entry and practical challenges. Mobile: compact header, collapsible navigation, stacked hero and learning paths. Reader: lesson outline plus article and next/previous navigation.
+Desktop persistent 224px sidebar, top utility bar, generous main canvas. Homepage: greeting, interactive split hero, five real learning paths (four frontend paths followed by introductory backend/database theory), next-lesson entry and practical challenges. Mobile: compact header, collapsible navigation, stacked hero and learning paths. Reader: lesson outline plus article and next/previous navigation.
 
 ## Signature
 

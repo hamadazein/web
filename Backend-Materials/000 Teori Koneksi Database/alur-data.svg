@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="420" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+  <title id="title">Alur data dari form HTML hingga hasil</title>
+  <desc id="desc">Form HTML mengirim POST ke PHP. PHP memvalidasi input dan melakukan insert ke database. Database mengembalikan status ke PHP, kemudian PHP mengirim hasil ke browser.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#334155"/></marker>
+  </defs>
+  <rect width="960" height="420" rx="24" fill="#f8fafc"/>
+  <g font-family="Segoe UI, Arial, sans-serif" text-anchor="middle">
+    <text x="480" y="46" font-size="25" font-weight="700" fill="#0f172a">Dari input menjadi data tersimpan</text>
+    <rect x="24" y="85" width="206" height="146" rx="16" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+    <rect x="270" y="85" width="206" height="146" rx="16" fill="#ede9fe" stroke="#7c3aed" stroke-width="2"/>
+    <rect x="516" y="85" width="206" height="146" rx="16" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+    <rect x="762" y="85" width="174" height="146" rx="16" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+    <g fill="#0f172a" font-size="23" font-weight="700">
+      <text x="127" y="127">Form HTML</text><text x="373" y="127">PHP</text><text x="619" y="127">Database</text><text x="849" y="127">Hasil</text>
+    </g>
+    <g fill="#334155" font-size="18">
+      <text x="127" y="163">Isi nama</text><text x="127" y="190">Browser</text>
+      <text x="373" y="163">Baca dan validasi</text><text x="373" y="190">Server</text>
+      <text x="619" y="163">Simpan data</text><text x="619" y="190">Tabel mahasiswa</text>
+      <text x="849" y="163">Sukses / gagal</text><text x="849" y="190">Browser</text>
+    </g>
+    <g fill="none" stroke="#334155" stroke-width="2.5" marker-end="url(#arrow)">
+      <path d="M230 156 H266"/><path d="M476 156 H512"/>
+      <path d="M619 231 V278 H373 V235"/>
+      <path d="M373 231 V326 H849 V235"/>
+    </g>
+    <g fill="#334155" font-size="16">
+      <text x="250" y="76">POST</text><text x="496" y="76">INSERT</text>
+      <text x="499" y="266">Status kembali ke PHP</text>
+      <text x="613" y="314">PHP mengirim respons ke browser</text>
+      <text x="480" y="386">Input tidak valid? PHP mengirim pesan perbaikan tanpa melakukan insert.</text>
+    </g>
+  </g>
+</svg>
