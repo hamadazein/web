@@ -30,6 +30,8 @@ Desktop and mobile share a sticky header with an explicit Menu button. Global na
 
 The hero shows editable HTML/CSS producing a real preview. Its accent swatches alter the displayed result and invite opening the full playground.
 
+BelajarKode is presented as the next learning destination through a compact lowercase wordmark, using its live brand colors (#142d22 and #b8f3a8). Links appear in the homepage footer and navigation drawer. A restrained continuation section follows the second backend lesson; it is hidden during focus mode and printing. Promotional copy stays brief and factual, with no pop-ups or interruption of reading.
+
 ## Components and motion
 
 12–16px card radius, pill badges, 44px touch controls, solid border or restrained shadow. 180ms hover/focus feedback. Reduced-motion turns transitions off. Progress and bookmarks always reflect real browser-local data.

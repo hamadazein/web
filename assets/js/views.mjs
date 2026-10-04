@@ -6,6 +6,7 @@ import {
   emptyState,
 } from "./ui.mjs";
 import { getContinueLesson } from "./state.mjs";
+import { platformLink } from "./promotion.mjs";
 
 export function courseCard(course, lessons, state) {
   const items = lessons.filter((lesson) => lesson.course === course.id);
@@ -46,7 +47,7 @@ export function homeView(catalog, state) {
     <section class="practice-callout"><div class="practice-top"><span class="practice-symbol">${icon("code")}</span><span class="badge">Belajar sambil membuat</span></div><h2>Ide bagus dimulai<br>dari coba-coba.</h2><p>Tempat aman untuk bereksperimen.<br>Ubah kode, lihat hasilnya, ulangi.</p><a href="#/playground" class="text-link">Buka playground ${icon("arrow")}</a><span class="practice-braces" aria-hidden="true">{ }</span></section></div>
     <section class="project-section"><div class="section-heading"><div><h2>Dari “sudah paham” ke “sudah bikin”.</h2><p>Terapkan yang kamu pelajari lewat tantangan kecil.</p></div><span class="handy-note">Kecil proyeknya, besar rasanya.</span></div><div class="project-grid"><a class="project-item" href="#/playground?project=profile"><span class="project-thumbnail profile-art" aria-hidden="true"><span class="profile-dot"></span><i></i><i></i></span><div><span class="small-label">HTML + CSS · Pemula</span><h3>Kartu profil pertamamu</h3><p>Kenalkan dirimu lewat kode.</p></div>${icon("arrow")}</a><a class="project-item" href="#/playground?project=layout"><span class="project-thumbnail layout-art" aria-hidden="true"><i></i><i></i><i></i><i></i></span><div><span class="small-label">CSS Grid · Menengah</span><h3>Layout yang ikut beradaptasi</h3><p>Satu desain, berbagai ukuran layar.</p></div>${icon("arrow")}</a></div></section>
     <div class="reference-projects"><span>Intip proyek lengkap:</span><a href="CSS%20Grid%20Flexbox%20Project/beranda.html" target="_blank" rel="noopener">Website Grid & Flexbox ${icon("external")}<span class="sr-only"> (tab baru)</span></a><a href="Tailwind-Materials/Tailwind%20Best%20Practice%20Project/index.html" target="_blank" rel="noopener">Tailwind Best Practice ${icon("external")}<span class="sr-only"> (tab baru)</span></a></div>
-    <footer class="page-footer"><span>Dirangkai untuk rasa ingin tahumu.</span><span>Weblab <span class="footer-spark">✳</span> Belajar. Coba. Tumbuh.</span></footer>
+    <footer class="page-footer"><span>Dirangkai untuk rasa ingin tahumu.</span>${platformLink()}</footer>
   </div>`;
 }
 
