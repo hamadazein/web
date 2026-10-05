@@ -1263,7 +1263,7 @@
       "course": "backend",
       "number": 1,
       "title": "Praktik Koneksi Database dengan PHP",
-      "description": "Materi kedua pada jalur Form, PHP & Database: mempraktikkan teori koneksi melalui form pendaftaran mahasiswa. Ikuti langkah dari membuat tabel, membuka koneksi PHP, sampa",
+      "description": "Contoh tambahan untuk XAMPP tersedia pada folder contoh-koneksi-db: satu form HTML dengan isian nama, NIM, dan email, PHP untuk memeriksa dan menyimpan data, serta SQL un",
       "path": "Backend-Materials/001 Praktik Koneksi Database dengan PHP/README.md",
       "minutes": 9,
       "demo": null

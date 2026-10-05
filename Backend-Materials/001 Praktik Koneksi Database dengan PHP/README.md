@@ -1,5 +1,7 @@
 # Praktik Koneksi Database dengan PHP
 
+Contoh tambahan untuk XAMPP tersedia pada folder **`contoh-koneksi-db`**: satu form HTML dengan isian **nama, NIM, dan email**, PHP untuk memeriksa dan menyimpan data, serta SQL untuk membuat tabel. Ikuti [panduan contoh tiga isian](contoh-koneksi-db/README.md), lalu buka `http://localhost/contoh-koneksi-db/public/form.html` setelah folder disalin ke `htdocs` dan SQL diimpor. NIM disimpan sebagai teks dan harus unik.
+
 Materi kedua pada jalur Form, PHP & Database: mempraktikkan teori koneksi melalui form pendaftaran mahasiswa. Ikuti langkah dari membuat tabel, membuka koneksi PHP, sampai memastikan nama dan email benar-benar tersimpan.
 
 ## Slide 1 — Dari teori ke praktik

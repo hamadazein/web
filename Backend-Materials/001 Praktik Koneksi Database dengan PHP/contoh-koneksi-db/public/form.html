@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Form Pendaftaran Mahasiswa</title>
+  </head>
+  <body>
+    <h1>Pendaftaran Mahasiswa</h1>
+    <p>Isi nama, NIM, dan email untuk disimpan ke database latihan.</p>
+
+    <!-- POST mengirim isian ke proses.php untuk diperiksa dan disimpan. -->
+    <form action="proses.php" method="post">
+      <p>
+        <label for="nama">Nama lengkap</label><br />
+        <input id="nama" name="nama" type="text" maxlength="100" autocomplete="name" required />
+      </p>
+      <p>
+        <label for="nim">NIM</label><br />
+        <!-- NIM memakai teks agar nol di awal tetap tersimpan. -->
+        <input id="nim" name="nim" type="text" maxlength="20" required />
+      </p>
+      <p>
+        <label for="email">Email</label><br />
+        <input id="email" name="email" type="email" maxlength="254" autocomplete="email" required />
+      </p>
+      <button type="submit">Simpan data</button>
+    </form>
+    <p><a href="cek-koneksi.php">Cek koneksi database</a></p>
+  </body>
+</html>
