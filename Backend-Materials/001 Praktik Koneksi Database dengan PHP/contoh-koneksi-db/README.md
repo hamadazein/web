@@ -1,94 +1,99 @@
-# Contoh koneksi PHP ke MySQL
+# Contoh koneksi database PHP dengan XAMPP
 
-Contoh sederhana memakai PDO. Siapkan PHP dengan ekstensi `pdo_mysql`, layanan MySQL yang berjalan pada port 3306, dan akun database latihan.
+Contoh ini menggunakan PDO dan layanan MySQL/MariaDB milik XAMPP. Jalankan melalui Apache dengan alamat `localhost`, tanpa variabel lingkungan atau server PHP dari terminal.
+
+## 1. Jalankan XAMPP
+
+1. Pasang XAMPP dari [Apache Friends](https://www.apachefriends.org/download.html). Contoh lokasi pemasangan: `C:\xampp`.
+2. Buka **XAMPP Control Panel**.
+3. Klik **Start** pada **Apache** dan **MySQL**. Pastikan keduanya berjalan.
+4. Buka <http://localhost/> untuk memeriksa server web.
+
+Apache melayani halaman PHP. MySQL/MariaDB mengelola database. XAMPP menyertakan MariaDB, meskipun tombolnya berlabel MySQL; lihat [FAQ resmi XAMPP](https://www.apachefriends.org/faq_windows.html).
+
+## 2. Salin folder contoh ke htdocs
+
+Salin seluruh folder `contoh-koneksi-db` ke `C:\xampp\htdocs` sehingga strukturnya menjadi:
 
 ```text
-contoh-koneksi-db/
-├── koneksi.php
+C:\xampp\htdocs\contoh-koneksi-db\
+├── README.md
 ├── database.sql
-└── public/
+├── koneksi.php
+└── public\
     └── cek-koneksi.php
 ```
 
-## 1. Siapkan PHP dan database melalui XAMPP
+Sesuaikan lokasi jika XAMPP dipasang di folder lain. Apache memakai `htdocs` sebagai lokasi halaman web pada konfigurasi bawaan. Setelah menyalin, edit file dalam salinan tersebut untuk mengubah konfigurasi yang dijalankan.
 
-Database menyimpan data aplikasi secara terstruktur. MySQL/MariaDB adalah DBMS yang mengelola database, sedangkan phpMyAdmin adalah alat untuk mengelolanya melalui browser. XAMPP membundel lingkungan latihan tersebut bersama PHP dan Apache. XAMPP menyertakan MariaDB, meskipun tombol layanannya berlabel MySQL; lihat [FAQ resmi XAMPP](https://www.apachefriends.org/faq_windows.html).
+## 3. Buat database lewat phpMyAdmin
 
-Jika PHP dan MySQL/MariaDB sudah terpasang, lanjutkan ke langkah 2. Untuk latihan Windows dengan XAMPP:
+1. Buka <http://localhost/phpmyadmin/>.
+2. Pada halaman utama, pilih tab **Import**.
+3. Pilih file `database.sql` dari folder contoh.
+4. Klik **Go/Kirim** dan pastikan import berhasil.
+5. Periksa bahwa database `kampus_latihan` muncul pada daftar database.
 
-1. Unduh dan pasang XAMPP dari [Apache Friends](https://www.apachefriends.org/download.html). Contoh berikut menggunakan lokasi `C:\xampp`.
-2. Buka XAMPP Control Panel dan klik **Start** untuk Apache dan MySQL.
-3. Buka <http://localhost/phpmyadmin/>. Jika Apache memakai port lain, sesuaikan URL.
-4. Pastikan PHP dapat dijalankan dari PowerShell:
+phpMyAdmin adalah alat pengelola database melalui browser. Pengecekan contoh ini memakai `SELECT 1`, sehingga belum membutuhkan tabel dan belum menyimpan data mahasiswa.
 
-```powershell
-& 'C:\xampp\php\php.exe' -v
-& 'C:\xampp\php\php.exe' -m
+## 4. Periksa konfigurasi koneksi.php
+
+File `koneksi.php` sudah berisi konfigurasi latihan XAMPP:
+
+```php
+$host = '127.0.0.1';
+$port = 3306;
+$database = 'kampus_latihan';
+$user = 'root';
+$password = '';
 ```
 
-Daftar modul harus memuat `PDO` dan `pdo_mysql`. Sesuaikan lokasi executable jika XAMPP dipasang di folder berbeda.
+| Pengaturan | Fungsi |
+| --- | --- |
+| `$host` | Alamat server database pada komputer sendiri |
+| `$port` | Port layanan database; biasanya 3306 |
+| `$database` | Nama database hasil import |
+| `$user` | Akun database untuk latihan lokal |
+| `$password` | Password akun; kosong pada konfigurasi bawaan XAMPP lokal |
 
-Apache diperlukan untuk membuka phpMyAdmin. Halaman contoh ini akan dilayani server bawaan PHP pada port 8000. MySQL harus tetap berjalan untuk melayani koneksi database.
+Jika akun `root` sudah memiliki password, isi `$password` sesuai pengaturanmu. Jika menggunakan akun latihan sendiri, ganti `$user` dan `$password` dengan akun tersebut. Contoh akun `root` ini ditujukan untuk latihan lokal. Untuk server publik, gunakan akun berizin terbatas dan konfigurasi di luar folder web. Jangan commit password asli.
 
-## 2. Buat database dan akun latihan
+PDO membuka koneksi menggunakan charset `utf8mb4` dan mengembalikan objek koneksi untuk digunakan file pengecekan.
 
-Di phpMyAdmin, buka tab **Import**, pilih file `database.sql` dari folder ini, lalu jalankan import. File tersebut membuat database `kampus_latihan`. Contoh pengecekan ini menggunakan `SELECT 1`, sehingga tidak memerlukan tabel.
+## 5. Buka halaman pengecekan
 
-Dengan akun administrator, buka tab **SQL** dan jalankan perintah berikut setelah mengganti password contoh dengan password milikmu. Jangan simpan password asli ke repositori.
+Buka melalui browser:
 
-```sql
-CREATE USER 'latihan_user'@'127.0.0.1' IDENTIFIED BY 'GANTI_DENGAN_PASSWORD_SENDIRI';
-GRANT SELECT ON kampus_latihan.* TO 'latihan_user'@'127.0.0.1';
+<http://localhost/contoh-koneksi-db/public/cek-koneksi.php>
+
+Jika berhasil, halaman menampilkan:
+
+```text
+Koneksi database MySQL berhasil!
 ```
 
-Perintah ini membuat akun yang sesuai dengan `DB_HOST=127.0.0.1` dan memberi izin baca untuk latihan. Jalankan `CREATE USER` satu kali; jika akun sudah ada, gunakan akun tersebut dan periksa izin/passwordnya. Untuk materi penyimpanan berikutnya, tambahkan izin INSERT pada tabel latihan yang sudah dibuat.
+`cek-koneksi.php` memuat `koneksi.php` dan menjalankan `SELECT 1`. Pesan berhasil berarti koneksi dan query pengecekan berhasil; data mahasiswa belum disimpan.
 
-## 3. Atur koneksi dan jalankan server PHP
+Jika Apache menggunakan port 8080, buka `http://localhost:8080/contoh-koneksi-db/public/cek-koneksi.php` dan `http://localhost:8080/phpmyadmin/`. Port web ini berbeda dengan port database pada `$port`.
 
-Buka PowerShell pada folder `contoh-koneksi-db`, lalu atur akun yang sudah dibuat di database:
-
-```powershell
-$env:DB_HOST = '127.0.0.1'
-$env:DB_NAME = 'kampus_latihan'
-$env:DB_USER = 'latihan_user'
-$env:DB_PASSWORD = Read-Host 'Password akun database latihan' -MaskInput
-php -S 127.0.0.1:8000 -t public
-```
-
-`-MaskInput` memerlukan PowerShell 7.1 atau lebih baru. Pada Windows PowerShell 5.1, gunakan `Read-Host` tanpa `-MaskInput`; karakter password akan terlihat saat diketik. Akun `latihan_user` harus sudah tersedia dan diizinkan terhubung dari host tersebut; contoh ini tidak membuat akun otomatis.
-
-Jika `php` belum dikenali, ganti baris terakhir dengan executable PHP milik XAMPP:
-
-```powershell
-& 'C:\xampp\php\php.exe' -S 127.0.0.1:8000 -t public
-```
-
-Variabel lingkungan harus diatur pada terminal yang sama dengan perintah server. Folder contoh tidak perlu dipindah ke `htdocs` karena server ini melayani `public` langsung.
-
-## 4. Buka halaman pengecekan
-
-Buka <http://127.0.0.1:8000/cek-koneksi.php>. Jika berhasil, halaman menampilkan **Koneksi database MySQL berhasil!**
-
-Gunakan `Ctrl+C` untuk menghentikan server. Server bawaan PHP digunakan untuk latihan lokal. GitHub Pages tidak menjalankan PHP atau MySQL.
-
-`koneksi.php` mengembalikan objek PDO, yang dipakai halaman pengecekan untuk menjalankan `SELECT 1`. Query ini tidak mengubah data. Password dibaca dari lingkungan dan file koneksi berada di luar folder publik.
-
-## 5. Periksa masalah koneksi
+## 6. Periksa masalah yang muncul
 
 | Masalah | Pemeriksaan |
 | --- | --- |
-| `php` tidak dikenali | Gunakan executable `C:\xampp\php\php.exe` atau sesuaikan PATH |
-| `could not find driver` | Periksa `pdo_mysql` melalui `php -m` dan file konfigurasi melalui `php --ini` |
-| `Connection refused` | Pastikan layanan MySQL berjalan pada host yang benar dan port 3306 |
-| `Access denied` | Cocokkan akun, password, host akun, dan hak akses |
-| `Unknown database` | Pastikan import SQL berhasil dan `DB_NAME` bernilai `kampus_latihan` |
-| Port 8000 sudah dipakai | Jalankan server pada port 8001, lalu sesuaikan URL browser |
+| Halaman tidak terbuka | Apache berjalan dan port URL sesuai |
+| 404 / halaman tidak ditemukan | Lokasi folder di `htdocs`, nama file, dan URL |
+| `Connection refused` | MySQL berjalan serta `$host` dan `$port` sesuai |
+| `Access denied` | Username, password, dan izin akun database |
+| `Unknown database` | Import berhasil dan `$database` bernilai `kampus_latihan` |
+| `could not find driver` | Ekstensi `pdo_mysql` pada PHP XAMPP |
 
-Port 8000 melayani halaman web; port 3306 melayani database. Kode koneksi contoh memakai port database 3306 secara tetap. Jika port database diubah, sesuaikan `port=3306` pada `koneksi.php`.
+Halaman pengecekan menampilkan pesan gagal umum. Periksa status layanan, konfigurasi, dan log melalui XAMPP Control Panel. File contoh hanya mencatat jenis exception agar informasi koneksi tidak tampil di browser.
 
-Untuk memeriksa sintaks, jalankan perintah berikut. Gunakan path executable XAMPP seperti langkah 1 jika `php` belum dikenali.
+Pemeriksaan sintaks opsional melalui PowerShell dari folder contoh:
 
 ```powershell
-php -l koneksi.php
-php -l public/cek-koneksi.php
+& 'C:\xampp\php\php.exe' -l koneksi.php
+& 'C:\xampp\php\php.exe' -l public/cek-koneksi.php
 ```
+
+GitHub Pages menyediakan materi dan file contoh; PHP dan database dijalankan pada XAMPP lokal.

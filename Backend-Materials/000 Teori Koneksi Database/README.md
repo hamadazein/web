@@ -138,7 +138,7 @@ CREATE TABLE mahasiswa (
 
 Untuk mencoba `form.html` dan `proses.php` dari langkah sebelumnya melalui Apache, letakkan keduanya di `C:\xampp\htdocs\pendaftaran`, lalu buka `http://localhost/pendaftaran/form.html`. Membuka file dengan klik langsung atau alamat `file:///` tidak menjalankan PHP.
 
-Contoh folder `contoh-koneksi-db` memakai cara berbeda: server bawaan PHP melayani folder `public` pada port 8000. Ikuti README contoh tersebut agar file konfigurasi koneksi tetap berada di luar folder publik.
+Untuk contoh koneksi siap dicoba, salin folder `contoh-koneksi-db` dari materi praktik ke `C:\xampp\htdocs`, lalu ikuti README-nya. Halaman pengecekan dibuka melalui `http://localhost/contoh-koneksi-db/public/cek-koneksi.php`; konfigurasi contoh memakai akun XAMPP lokal.
 
 ### Kenali alamat, port, dan akun database
 
