@@ -1,32 +1,23 @@
 # Teori Koneksi Database
 
-Materi lanjutan setelah HTML, CSS, Bootstrap, dan Tailwind: memahami bagaimana data dari form diproses oleh PHP lalu disimpan ke database. Sepuluh slide pengantar ini memakai satu contoh sederhana, yaitu pendaftaran mahasiswa.
+Pelajari perjalanan data dari form HTML, pemeriksaan oleh PHP, hingga penyimpanan ke database melalui contoh pendaftaran mahasiswa. Ikuti langkah-langkah berikut secara berurutan setelah memahami dasar HTML dan CSS.
 
-## Slide 1 — Dari tampilan ke penyimpanan data
-
-**Teori Koneksi Database: Dari Form ke Data Tersimpan**
-
-- Jalur: Form, PHP & Database.
-- Pertemuan: Pengantar backend dan koneksi database.
-- Peserta: Mahasiswa yang sudah mengenal HTML, CSS, dan framework tampilan.
-- Contoh: Mengirim nama melalui form pendaftaran mahasiswa.
-
-HTML menyusun halaman. CSS, Bootstrap, dan Tailwind membantu mengatur tampilannya. Sekarang kita mempelajari apa yang terjadi **setelah tombol Kirim ditekan**.
-
-## Slide 2 — Tujuan pembelajaran
+## Tujuan pembelajaran
 
 **Mahasiswa dapat menceritakan perjalanan data dari form sampai tersimpan.**
 
-Setelah pertemuan ini, mahasiswa mampu menjelaskan:
+Setelah menyelesaikan modul ini, kamu dapat menjelaskan:
 
 - Tugas form HTML, PHP, dan database.
 - Empat informasi yang diperlukan untuk koneksi database.
 - Langkah menyimpan data dan memberi pesan hasil.
 - Mengapa input harus diperiksa terlebih dahulu.
 
-Fokus pertemuan adalah memahami alur. Contoh kode hanya membantu mengenali bentuknya.
+Modul ini berfokus pada pemahaman alur. Contoh HTML dan PHP memperlihatkan pengiriman serta pemeriksaan isian; bagian koneksi dan penyimpanan menggunakan pseudocode untuk mengenalkan langkahnya. Implementasi lengkap dibahas pada materi praktik berikutnya.
 
-## Slide 3 — Alur besar dan analogi sederhana
+## Langkah 1 — Kenali peran form, PHP, dan database
+
+HTML menyusun halaman. CSS, Bootstrap, dan Tailwind membantu mengatur tampilannya. Setelah tombol Kirim ditekan, isian perlu diproses di server sebelum disimpan.
 
 ![Alur form HTML mengirim data ke PHP, PHP memeriksa dan menyimpan ke database, status kembali ke PHP lalu hasil ditampilkan di browser.](alur-data.svg)
 
@@ -43,9 +34,11 @@ Bayangkan proses pendaftaran di bagian administrasi kampus:
 
 Browser adalah aplikasi untuk membuka web. Server adalah komputer yang menjalankan PHP dan melayani permintaan. Browser mengirim isian ke PHP; PHP yang berkomunikasi dengan database.
 
-**Pertanyaan kelas:** Jika nama belum diisi, apakah petugas seharusnya langsung mencatatnya?
+Jika nama belum diisi, PHP perlu menolak isian tersebut sebelum mencatatnya ke database.
 
-## Slide 4 — Form HTML: tempat mengisi data
+## Langkah 2 — Siapkan form untuk mengirim data
+
+Simpan contoh berikut sebagai `form.html`. Form ini mengirim nama mahasiswa ke file `proses.php` yang akan dibuat pada langkah berikutnya.
 
 ```html
 <form action="proses.php" method="post">
@@ -60,11 +53,11 @@ Browser adalah aplikasi untuk membuka web. Server adalah komputer yang menjalank
 - `action="proses.php"`: alamat tujuan pengiriman.
 - `method="post"`: cara mengirim isian di badan permintaan.
 
-**Cara menjelaskan:** Form seperti amplop. `action` adalah alamat penerima, sedangkan `name` adalah penanda isi amplop. POST tidak otomatis membuat pengiriman terenkripsi; gunakan HTTPS.
+`action` menentukan penerima isian, sedangkan `name` menentukan kunci data yang dibaca PHP. POST tidak otomatis membuat pengiriman terenkripsi; gunakan HTTPS.
 
-## Slide 5 — PHP: menerima dan memeriksa data
+## Langkah 3 — Terima dan periksa isian dengan PHP
 
-PHP berjalan di server. Contoh ringkas isi `proses.php`:
+PHP berjalan di server. Buat `proses.php` pada folder yang sama dengan `form.html`, lalu isi dengan contoh berikut:
 
 ```php
 <?php
@@ -83,9 +76,9 @@ echo 'Halo, ' . htmlspecialchars($nama, ENT_QUOTES, 'UTF-8');
 
 `echo` menampilkan pesan. `htmlspecialchars()` membuat input tampil sebagai teks ketika dimasukkan ke halaman HTML.
 
-**Poin utama:** Menampilkan “Halo, Siti” belum berarti nama Siti sudah tersimpan. Pemeriksaan di server tetap diperlukan meskipun form memiliki `required`.
+Untuk mencoba kedua file tersebut, gunakan server lokal yang mendukung PHP. Kirim nama melalui form dan perhatikan pesan yang muncul. Menampilkan “Halo, Siti” belum berarti nama Siti sudah tersimpan. Pemeriksaan di server tetap diperlukan meskipun form memiliki `required`.
 
-## Slide 6 — Koneksi database: membuka akses penyimpanan
+## Langkah 4 — Pahami cara membuka koneksi database
 
 Database menyimpan data dalam **tabel**. Bayangkan tabel seperti lembar daftar mahasiswa: kolom memberi nama informasi, baris berisi satu catatan mahasiswa.
 
@@ -112,9 +105,9 @@ jika gagal: tampilkan "Penyimpanan belum tersedia" dan hentikan proses
 jika berhasil: lanjutkan ke langkah penyimpanan
 ```
 
-**Poin utama:** Koneksi hanya membuka akses. Koneksi yang berhasil belum otomatis menyimpan data. Database dan tabel perlu disiapkan terlebih dahulu.
+Siapkan database dan tabel sebelum menjalankan penyimpanan. Koneksi yang berhasil membuka akses ke database; data baru tersimpan setelah perintah insert berhasil dijalankan.
 
-## Slide 7 — Insert: menambahkan catatan baru
+## Langkah 5 — Pahami cara menyimpan data dengan insert
 
 **Insert** berarti menambahkan baris baru ke tabel. SQL adalah bahasa perintah untuk berkomunikasi dengan database.
 
@@ -135,9 +128,9 @@ jika berhasil: tampilkan "Data berhasil disimpan"
 jika gagal: tampilkan "Data belum tersimpan"
 ```
 
-**Cara menjelaskan:** Petugas baru menulis ke buku induk setelah isian lengkap dan buku dapat diakses. Pesan sukses diberikan setelah penyimpanan dikonfirmasi.
+Jalankan penyimpanan setelah isian valid dan koneksi tersedia. Berikan pesan sukses setelah database mengonfirmasi bahwa data berhasil disimpan.
 
-## Slide 8 — Keamanan dasar
+## Langkah 6 — Terapkan keamanan dasar
 
 - **Periksa input di server.** Orang dapat mengirim isian tanpa memakai form kita. Cek nama tidak kosong dan panjangnya sesuai kolom tabel.
 - **Pisahkan data dari SQL.** Gunakan prepared statement agar input diperlakukan sebagai nilai, bukan perintah tambahan.
@@ -145,9 +138,20 @@ jika gagal: tampilkan "Data belum tersimpan"
 - **Simpan password di konfigurasi server.** Gunakan variabel lingkungan atau file di luar folder publik; jangan menaruhnya di HTML, JavaScript, atau repositori.
 - **Berikan pesan gagal yang sederhana.** Detail teknis dicatat di server, tanpa memperlihatkan password atau informasi koneksi kepada pengguna.
 
-**Analogi:** Petugas memeriksa formulir, menjaga kunci arsip, dan tidak mengikuti sembarang instruksi yang ditulis pendaftar.
+Gunakan pemeriksaan ini saat mengembangkan contoh menjadi aplikasi yang menyimpan data pengguna.
 
-## Slide 9 — Rangkuman
+## Langkah 7 — Periksa hasil setiap tahap
+
+Pastikan pesan yang diterima pengguna sesuai dengan tahap yang sudah berhasil:
+
+| Kondisi | Hasil yang diharapkan |
+| --- | --- |
+| Nama kosong | PHP meminta pengguna mengisi nama dan menghentikan proses |
+| Nama valid, baru ditampilkan dengan `echo` | Pesan sapaan muncul; data belum tersimpan |
+| Koneksi database gagal | PHP memberi pesan bahwa penyimpanan belum tersedia |
+| Insert berhasil | PHP memberi pesan bahwa data berhasil disimpan |
+
+## Rangkuman alur
 
 **Isi form → PHP memeriksa → buka koneksi → insert → tampilkan hasil.**
 
@@ -157,9 +161,9 @@ jika gagal: tampilkan "Data belum tersimpan"
 - `echo` menampilkan pesan, bukan menyimpan data.
 - Pesan sukses atau gagal harus sesuai dengan hasil proses.
 
-**Cek pemahaman:** Apa bedanya berhasil terhubung, berhasil menampilkan nama, dan berhasil menyimpan nama?
+Sebelum melanjutkan, pastikan kamu dapat membedakan koneksi yang berhasil, pesan yang berhasil ditampilkan, dan data yang berhasil disimpan.
 
-## Slide 10 — Latihan singkat
+## Latihan mandiri
 
 **Tugas teori: Jelaskan alur pendaftaran mahasiswa dengan nama dan email.**
 
@@ -169,6 +173,6 @@ jika gagal: tampilkan "Data belum tersimpan"
 4. Tulis pseudocode pemeriksaan, koneksi, dan penyimpanan.
 5. Tentukan pesan untuk tiga kondisi: nama kosong, database tidak dapat dihubungi, dan data berhasil disimpan.
 
-**Yang dikumpulkan:** Satu halaman berisi diagram, daftar field/kolom, dan pseudocode. Jelaskan alurnya dengan bahasa sendiri selama 2–3 menit.
+Tuliskan hasil latihan dalam satu halaman berisi diagram, daftar field/kolom, dan pseudocode. Gunakan bahasamu sendiri untuk menjelaskan setiap tahap.
 
-**Praktik pendamping:** Dengan bantuan pengajar, coba form dan PHP pada server latihan lokal, lalu lanjutkan insert dengan database yang sudah disiapkan. Playground HTML/CSS pada situs ini hanya menampilkan sisi browser; PHP memerlukan server yang mendukung PHP.
+Setelah memahami alurnya, lanjutkan ke materi **Praktik Koneksi Database dengan PHP** untuk membuat koneksi PDO dan menyimpan data pada server latihan lokal. Playground HTML/CSS pada situs ini hanya menampilkan sisi browser; PHP memerlukan server yang mendukung PHP.

@@ -1253,9 +1253,9 @@
       "course": "backend",
       "number": 0,
       "title": "Teori Koneksi Database",
-      "description": "Materi lanjutan setelah HTML, CSS, Bootstrap, dan Tailwind: memahami bagaimana data dari form diproses oleh PHP lalu disimpan ke database. Sepuluh slide pengantar ini mem",
+      "description": "Pelajari perjalanan data dari form HTML, pemeriksaan oleh PHP, hingga penyimpanan ke database melalui contoh pendaftaran mahasiswa. Ikuti langkah-langkah berikut secara b",
       "path": "Backend-Materials/000 Teori Koneksi Database/README.md",
-      "minutes": 7,
+      "minutes": 8,
       "demo": null
     },
     {
