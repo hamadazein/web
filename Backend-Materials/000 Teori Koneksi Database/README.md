@@ -9,6 +9,7 @@ Pelajari perjalanan data dari form HTML, pemeriksaan oleh PHP, hingga penyimpana
 Setelah menyelesaikan modul ini, kamu dapat menjelaskan:
 
 - Tugas form HTML, PHP, dan database.
+- Jenis database, contoh DBMS, dan perbedaan penggunaannya.
 - Empat informasi yang diperlukan untuk koneksi database.
 - Langkah menyimpan data dan memberi pesan hasil.
 - Mengapa input harus diperiksa terlebih dahulu.
@@ -56,6 +57,56 @@ Pada database relasional, data disusun dalam tabel yang dapat saling berhubungan
 | Query | Perintah yang dikirim ke DBMS | `SELECT nama FROM mahasiswa;` |
 
 **SQL** adalah bahasa untuk memberi perintah kepada DBMS relasional. **CRUD** adalah empat kegiatan dasar pengelolaan data: create (menambah, biasanya `INSERT`), read (membaca, `SELECT`), update (mengubah, `UPDATE`), dan delete (menghapus, `DELETE`). `CREATE TABLE` digunakan untuk membuat struktur tabel, berbeda dengan menambahkan baris.
+
+### Macam-macam database berdasarkan bentuk datanya
+
+Jenis database menjelaskan cara data disusun. Nama seperti MySQL dan MongoDB adalah produk DBMS yang menerapkan model tertentu. Satu produk dapat mendukung lebih dari satu bentuk data, jadi pembagian berikut merupakan pengantar, bukan batas mutlak.
+
+| Jenis | Bentuk data | Contoh produk | Contoh penggunaan |
+| --- | --- | --- | --- |
+| Relasional | Tabel berisi baris dan kolom, dengan aturan hubungan antartabel | MySQL, MariaDB, PostgreSQL, SQLite | Mahasiswa, pendaftaran, pesanan, dan pembayaran |
+| Dokumen | Dokumen dengan field dan struktur bertingkat, mirip JSON | MongoDB | Katalog produk dengan atribut yang berbeda-beda |
+| Key-value | Data diakses melalui kunci, misalnya `sesi:123` | Redis | Cache dan sesi login yang perlu diakses cepat |
+| Graf | Node mewakili objek; relationship menghubungkan objek | Neo4j | Pertemanan, rekomendasi, dan penelusuran hubungan |
+
+**Relasional** cocok ketika aturan data dan hubungan perlu dinyatakan jelas. Misalnya, satu mahasiswa dapat mempunyai beberapa pendaftaran. SQL digunakan untuk membaca dan mengolah tabel, termasuk menggabungkan tabel melalui `JOIN`.
+
+**Dokumen** dapat mengelompokkan informasi terkait dalam satu dokumen. Pada MongoDB, dokumen dalam satu collection dapat memiliki field berbeda. Struktur tetap perlu dirancang dan divalidasi. Pelajari [model data MongoDB](https://www.mongodb.com/docs/manual/data-modeling/).
+
+**Key-value** mengambil nilai berdasarkan kunci. Redis menyediakan tipe nilai seperti string, list, dan set serta berfokus pada penyimpanan di memori. Redis juga memiliki pilihan persistensi; penyimpanan setelah restart bergantung pada konfigurasinya. Lihat [konsep Redis](https://redis.io/docs/latest/develop/get-started/faq/).
+
+**Graf** menjadikan hubungan sebagai bagian utama model data. Contohnya, node mahasiswa terhubung ke node mata kuliah melalui hubungan MENGAMBIL. Lihat [konsep graf Neo4j](https://neo4j.com/docs/getting-started/appendix/graphdb-concepts/).
+
+Istilah **NoSQL** sering dipakai untuk model seperti dokumen, key-value, dan graf. NoSQL tidak berarti data boleh disimpan tanpa aturan, dan tidak otomatis lebih cepat daripada database relasional. Pilihan bergantung pada bentuk data, query, dan kebutuhan aplikasi.
+
+### Perbedaan produk database yang sering ditemui
+
+| Produk | Cara menjalankan | Pembeda utama | Contoh konteks penggunaan |
+| --- | --- | --- | --- |
+| MySQL | Layanan server yang diakses aplikasi | DBMS relasional dengan SQL dan akun akses | Aplikasi web dengan tabel pengguna dan transaksi |
+| MariaDB | Layanan server yang diakses aplikasi | Berkembang dari MySQL; banyak penggunaan dasar kompatibel, tetapi fitur dapat berbeda | Latihan PHP menggunakan paket XAMPP |
+| PostgreSQL | Layanan server yang diakses aplikasi | DBMS object-relational dengan fitur seperti tipe data yang dapat diperluas dan dukungan JSON | Aplikasi dengan query dan model data yang beragam |
+| SQLite | Pustaka di dalam aplikasi; database biasanya berupa satu file | Tidak membutuhkan layanan database terpisah | Aplikasi lokal, prototipe, dan penyimpanan pada perangkat |
+| MongoDB | Layanan server yang diakses aplikasi | Model dokumen dengan schema fleksibel | Data dengan struktur bertingkat dan variasi atribut |
+| Redis | Layanan server yang diakses aplikasi | Akses berbasis kunci dan struktur data di memori | Cache, sesi, dan penghitung |
+| Neo4j | Layanan server yang diakses aplikasi | Model graf; query menggunakan Cypher | Penelusuran hubungan antarobjek |
+
+Dokumentasi pengantar: [MySQL](https://dev.mysql.com/doc/refman/8.4/en/what-is-mysql.html), [MariaDB](https://mariadb.com/docs/server), [PostgreSQL](https://www.postgresql.org/about/), dan [SQLite](https://www.sqlite.org/whentouse.html).
+
+MySQL dan MariaDB merupakan produk berbeda. Driver PDO `mysql` dapat digunakan untuk latihan dasar dengan keduanya, tetapi migrasi aplikasi tetap perlu memeriksa versi, fitur, dan perilaku SQL. PostgreSQL dan SQLite juga memakai SQL, namun koneksi dan beberapa sintaksnya berbeda.
+
+SQLite mendukung banyak pembaca, tetapi hanya satu penulis pada satu waktu. Untuk aplikasi dengan banyak penulisan bersamaan dari beberapa server, pertimbangkan DBMS dengan arsitektur client-server. File SQLite juga perlu dikelola dengan benar saat membuat backup.
+
+### Membandingkan satu kebutuhan dengan beberapa model
+
+Misalnya, aplikasi kampus menyimpan profil Siti dan daftar mata kuliahnya:
+
+- **Relasional:** profil disimpan dalam tabel `mahasiswa`; mata kuliah dan pendaftaran disimpan pada tabel lain yang dihubungkan melalui id.
+- **Dokumen:** profil dapat disimpan sebagai satu dokumen dengan array informasi terkait; pilih data yang ditanam atau dipisahkan sesuai pola akses.
+- **Key-value:** ringkasan profil dapat disimpan dengan kunci `mahasiswa:1` sebagai cache agar tidak selalu membaca database utama.
+- **Graf:** mahasiswa dan mata kuliah menjadi node yang dihubungkan untuk menelusuri siapa mengambil mata kuliah tertentu.
+
+Dalam satu aplikasi, beberapa database dapat digunakan bersama jika diperlukan. Untuk latihan pendaftaran pada modul ini, gunakan **MariaDB/MySQL** terlebih dahulu karena tabel, SQL, dan koneksi PDO yang dipelajari sudah mengarah ke sana. Tidak perlu memasang semua produk pada tabel perbandingan.
 
 ### Kenali alat untuk latihan lokal
 
@@ -261,6 +312,7 @@ Sebelum melanjutkan, pastikan kamu dapat membedakan koneksi yang berhasil, pesan
 5. Tentukan pesan untuk tiga kondisi: nama kosong, database tidak dapat dihubungi, dan data berhasil disimpan.
 6. Jelaskan perbedaan XAMPP, Apache, MariaDB/MySQL, dan phpMyAdmin.
 7. Buat database `kampus_latihan` dan tabel `mahasiswa` di lingkungan lokal, lalu identifikasi kolom, tipe data, dan primary key melalui tab Structure.
+8. Bandingkan MySQL/MariaDB dengan SQLite dari sisi layanan server dan penyimpanan file. Jelaskan juga perbedaan bentuk data pada MongoDB, Redis, dan Neo4j.
 
 Tuliskan hasil latihan dalam satu halaman berisi diagram, daftar field/kolom, dan pseudocode. Gunakan bahasamu sendiri untuk menjelaskan setiap tahap.
 
